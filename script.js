@@ -1,16 +1,19 @@
-// Parallax Effect
-window.addEventListener("scroll", function() {
-  const hero = document.getElementById("heroTitle");
-  hero.style.transform = "translateY(" + (window.scrollY * -0.2) + "px)";
-});
-
-// Mobile Menu Toggle
+// Mobile Menu
 function toggleMenu(){
   const nav = document.getElementById("mobileNav");
-
-  if(nav.style.display === "flex"){
-    nav.style.display = "none";
-  } else {
-    nav.style.display = "flex";
-  }
+  nav.style.display = nav.style.display === "flex" ? "none" : "flex";
 }
+
+// Scroll Reveal
+const reveals = document.querySelectorAll(".reveal");
+
+window.addEventListener("scroll", () => {
+  const trigger = window.innerHeight * 0.85;
+
+  reveals.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if(top < trigger){
+      el.classList.add("active");
+    }
+  });
+});

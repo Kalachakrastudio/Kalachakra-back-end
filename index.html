@@ -5,109 +5,111 @@
   <title>Kalachakra Studio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Navbar -->
-  <header>
-    <div class="container nav">
-      <div class="logo">Kalachakra.</div>
+<header>
+  <div class="container nav">
+    <div class="logo">Kalachakra.</div>
 
-      <nav class="desktop-nav">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-      </nav>
+    <nav class="desktop-nav">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-      <div class="menu-toggle" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#home" onclick="toggleMenu()">Home</a>
+    <a href="#about" onclick="toggleMenu()">About</a>
+    <a href="#services" onclick="toggleMenu()">Services</a>
+    <a href="#contact" onclick="toggleMenu()">Contact</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="home" class="section hero">
+  <div class="container hero-content">
+    <div class="hero-text">
+      <h1>Elevating Brands Through Strategic Creativity</h1>
+      <p>We design immersive brand experiences that inspire trust and command attention.</p>
+      <button class="cta-btn">Start Your Project</button>
+    </div>
+
+    <!-- SVG Illustration -->
+    <div class="hero-illustration">
+      <svg viewBox="0 0 500 500">
+        <circle cx="250" cy="250" r="200" fill="url(#grad1)" />
+        <defs>
+          <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#ff4ecd"/>
+            <stop offset="100%" stop-color="#4e7cff"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section reveal">
+  <div class="container center">
+    <h2>About Us</h2>
+    <p>
+      Kalachakra Studio blends strategy, design, and digital innovation to build powerful brand systems that feel alive.
+    </p>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section">
+  <div class="container center">
+    <h2>Our Services</h2>
+
+    <div class="grid">
+      <div class="card reveal">
+        <h3>Brand Identity</h3>
+        <p>Bold identity systems with lasting impact.</p>
+      </div>
+
+      <div class="card reveal">
+        <h3>UI/UX Design</h3>
+        <p>Modern digital experiences that convert.</p>
+      </div>
+
+      <div class="card reveal">
+        <h3>Creative Direction</h3>
+        <p>Visual storytelling aligned with strategy.</p>
       </div>
     </div>
+  </div>
+</section>
 
-    <div class="mobile-nav" id="mobileNav">
-      <a href="#home" onclick="toggleMenu()">Home</a>
-      <a href="#about" onclick="toggleMenu()">About</a>
-      <a href="#services" onclick="toggleMenu()">Services</a>
-      <a href="#contact" onclick="toggleMenu()">Contact</a>
-    </div>
-  </header>
+<!-- CONTACT -->
+<section id="contact" class="section reveal">
+  <div class="container center">
+    <h2>Let’s Create Something Powerful</h2>
 
-  <!-- Hero -->
-  <section id="home" class="section hero">
-    <div class="container center">
-      <h1 id="heroTitle">
-        Elevating Brands Through<br>Strategic Creativity
-      </h1>
-      <p>
-        We design immersive brand experiences that inspire trust
-        and communicate authority across every platform.
-      </p>
-    </div>
-  </section>
+    <form class="form">
+      <input type="text" placeholder="Your Name">
+      <input type="email" placeholder="Your Email">
+      <textarea rows="4" placeholder="Tell us about your project"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
 
-  <!-- About -->
-  <section id="about" class="section">
-    <div class="container center">
-      <h2>About Us</h2>
-      <p class="about-text">
-        Kalachakra Studio is a strategic creative agency focused on
-        building timeless brand systems. We blend design intelligence
-        with modern aesthetics to create digital experiences that feel premium.
-      </p>
-    </div>
-  </section>
+<footer>
+  © 2026 Kalachakra Studio
+</footer>
 
-  <!-- Services -->
-  <section id="services" class="section">
-    <div class="container center">
-      <h2>Our Services</h2>
-
-      <div class="grid">
-        <div class="card">
-          <h3>Brand Identity</h3>
-          <p>Strategic brand systems designed to build recognition and trust.</p>
-        </div>
-
-        <div class="card">
-          <h3>UI/UX Design</h3>
-          <p>Clean and user-centered digital experiences built for performance.</p>
-        </div>
-
-        <div class="card">
-          <h3>Creative Direction</h3>
-          <p>Art direction that aligns storytelling with business positioning.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="section">
-    <div class="container center">
-      <h2>Contact Us</h2>
-
-      <form class="form">
-        <input type="text" placeholder="Your Name">
-        <input type="email" placeholder="Your Email">
-        <textarea rows="4" placeholder="Tell us about your project"></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
-  </section>
-
-  <footer>
-    © 2026 Kalachakra Studio
-  </footer>
-
-  <!-- JS -->
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

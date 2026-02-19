@@ -10,6 +10,20 @@ body {
   background: #141428;
   color: white;
 }
+.nav-container{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 0;
+position:relative;
+}
+
+/* CENTER NAV */
+nav{
+position:absolute;
+left:50%;
+transform:translateX(-50%);
+}
 
 /* HEADER */
 header {

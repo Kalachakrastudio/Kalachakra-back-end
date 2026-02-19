@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kalachakra Studio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kalachakra Studio | Creative Digital Studio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- ================= NAVBAR ================= -->
 <header class="navbar">
-  <div class="container nav-wrapper">
+  <div class="container nav-container">
+    <div class="logo">Kalachakra Studio</div>
 
-    <div class="logo">Kalachakra</div>
-
-    <nav class="nav" id="nav">
+    <nav id="nav-menu">
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -23,8 +23,8 @@
       </ul>
     </nav>
 
-    <div class="right-section">
-      <a href="#contact" class="btn-primary">Start a Project</a>
+    <div class="nav-right">
+      <a href="#contact" class="btn small-btn">Start Project</a>
 
       <div class="hamburger" id="hamburger">
         <span></span>
@@ -32,59 +32,60 @@
         <span></span>
       </div>
     </div>
-
   </div>
 </header>
 
+<!-- Overlay -->
+<div class="overlay" id="overlay"></div>
+
+<!-- ================= HERO ================= -->
 <section class="hero" id="home">
   <div class="container hero-content">
-    <h1>Elevating Brands Through Strategic Creativity</h1>
-    <p>We build immersive brand experiences that inspire trust and authority.</p>
-    <a href="#services" class="btn-outline">Explore Services</a>
+    <h1>Crafting Elite Digital Experiences</h1>
+    <p>We design brands, build immersive digital platforms, and produce cinematic visuals.</p>
+    <a href="#services" class="btn">Explore Our Services</a>
   </div>
 </section>
 
-<section class="section" id="about">
+<!-- ================= ABOUT ================= -->
+<section class="about" id="about">
   <div class="container">
-    <h2>About Us</h2>
-    <p>We are a premium creative studio focused on branding and digital design.</p>
+    <h2>About Kalachakra</h2>
+    <p>Kalachakra Studio is a multidisciplinary creative studio specializing in branding, digital experiences, and cinematic production.</p>
   </div>
 </section>
 
-<section class="section" id="services">
+<!-- ================= SERVICES ================= -->
+<section class="services" id="services">
   <div class="container">
-    <h2>Services</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Brand Identity</h3>
-        <p>Strategic branding and visual storytelling.</p>
-      </div>
-      <div class="card">
-        <h3>UI/UX Design</h3>
-        <p>Modern digital experiences.</p>
-      </div>
-      <div class="card">
-        <h3>Creative Direction</h3>
-        <p>High-level visual leadership.</p>
-      </div>
+    <h2>Our Capabilities</h2>
+    <div class="services-grid">
+      <div class="service-card"><h3>Brand Strategy & Identity</h3></div>
+      <div class="service-card"><h3>Web Design & Development</h3></div>
+      <div class="service-card"><h3>Cinematic Production</h3></div>
+      <div class="service-card"><h3>Digital Growth</h3></div>
     </div>
   </div>
 </section>
 
-<section class="section" id="contact">
+<!-- ================= CONTACT ================= -->
+<section class="contact" id="contact">
   <div class="container">
-    <h2>Contact Us</h2>
+    <h2>Let’s Build Something Exceptional</h2>
     <form class="contact-form">
       <input type="text" placeholder="Your Name" required>
       <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message"></textarea>
-      <button type="submit" class="btn-primary">Send Message</button>
+      <textarea placeholder="Tell us about your project" rows="5" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
     </form>
   </div>
 </section>
 
+<!-- ================= FOOTER ================= -->
 <footer>
-  © 2026 Kalachakra Studio
+  <div class="container">
+    <p>© 2026 Kalachakra Studio</p>
+  </div>
 </footer>
 
 <script src="script.js"></script>

@@ -1,11 +1,5 @@
-// Mobile Toggle
-function toggleMenu(){
-  const nav = document.getElementById("mobileNav");
-  nav.style.display = nav.style.display === "flex" ? "none" : "flex";
-}
-
-// Scroll Navbar Effect
-window.addEventListener("scroll", () => {
+// Navbar shrink
+window.addEventListener("scroll", ()=>{
   const header = document.getElementById("header");
   if(window.scrollY > 50){
     header.classList.add("scrolled");
@@ -14,10 +8,10 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// Scroll Reveal Animation
+// Smooth reveal
 const reveals = document.querySelectorAll(".reveal");
 
-function revealOnScroll(){
+function reveal(){
   const trigger = window.innerHeight * 0.85;
   reveals.forEach(el=>{
     const top = el.getBoundingClientRect().top;
@@ -27,24 +21,30 @@ function revealOnScroll(){
   });
 }
 
-window.addEventListener("scroll", revealOnScroll);
-window.addEventListener("load", revealOnScroll);
+window.addEventListener("scroll", reveal);
+window.addEventListener("load", reveal);
 
-// Contact Form Validation
+// Premium magnetic button effect
+const magneticBtn = document.querySelector(".magnetic");
+
+if(magneticBtn){
+  magneticBtn.addEventListener("mousemove", e=>{
+    const rect = magneticBtn.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width/2;
+    const y = e.clientY - rect.top - rect.height/2;
+    magneticBtn.style.transform = `translate(${x*0.2}px, ${y*0.2}px)`;
+  });
+
+  magneticBtn.addEventListener("mouseleave", ()=>{
+    magneticBtn.style.transform = "translate(0,0)";
+  });
+}
+
+// Contact form
 document.getElementById("contactForm").addEventListener("submit", function(e){
   e.preventDefault();
-
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const message = document.getElementById("message").value.trim();
   const msg = document.getElementById("formMessage");
-
-  if(name === "" || email === "" || message === ""){
-    msg.textContent = "Please fill all fields.";
-    msg.style.color = "red";
-  } else {
-    msg.textContent = "Message sent successfully!";
-    msg.style.color = "lightgreen";
-    this.reset();
-  }
+  msg.textContent = "Message sent successfully!";
+  msg.style.color = "#00f0ff";
+  this.reset();
 });

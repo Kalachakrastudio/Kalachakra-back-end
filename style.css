@@ -7,7 +7,8 @@ html, body {
 ::-webkit-scrollbar {
   display: none; /* Chrome, Safari */
 }
-*{
+
+{
   margin:0;
   padding:0;
   box-sizing:border-box;

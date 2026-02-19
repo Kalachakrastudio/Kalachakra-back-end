@@ -10,20 +10,6 @@ body {
   background: #141428;
   color: white;
 }
-.nav-container{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 0;
-position:relative;
-}
-
-/* CENTER NAV */
-nav{
-position:absolute;
-left:50%;
-transform:translateX(-50%);
-}
 
 /* HEADER */
 header {
@@ -41,6 +27,43 @@ header {
 .logo {
   font-weight: 600;
   font-size: 20px;
+}
+
+@media(max-width:900px){
+
+.about-grid{
+grid-template-columns:1fr;
+}
+
+nav{
+position:absolute;
+top:80px;
+right:-100%;
+background:#1f1f38;
+padding:20px;
+width:220px;
+border-radius:10px;
+transition:0.3s;
+}
+
+nav.active{
+right:20px;
+}
+
+nav ul{
+flex-direction:column;
+gap:20px;
+}
+
+.hamburger{
+display:flex;
+}
+
+/* Hide start button on mobile */
+.small-btn{
+display:none;
+}
+
 }
 
 /* Center Nav */

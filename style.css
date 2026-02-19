@@ -18,6 +18,7 @@ body{
   font-family:'Poppins',sans-serif;
   background:#18182d;
   color:white;
+  overflow-x:hidden;
 }
 
 /* Layout */
@@ -35,13 +36,19 @@ body{
   text-align:center;
 }
 
-/* Navbar */
+/* NAVBAR */
 header{
   position:fixed;
   width:100%;
   background:#18182d;
-  border-bottom:1px solid rgba(255,255,255,0.1);
+  border-bottom:1px solid rgba(255,255,255,0.08);
   z-index:1000;
+  animation:fadeDown 0.8s ease forwards;
+}
+
+@keyframes fadeDown{
+  from{ opacity:0; transform:translateY(-30px); }
+  to{ opacity:1; transform:translateY(0); }
 }
 
 .nav{
@@ -64,13 +71,15 @@ header{
 .desktop-nav a{
   text-decoration:none;
   color:rgba(255,255,255,0.7);
+  transition:0.3s;
 }
 
 .desktop-nav a:hover{
   color:white;
+  transform:translateY(-2px);
 }
 
-/* Mobile */
+/* MOBILE */
 .menu-toggle{
   display:none;
   flex-direction:column;
@@ -82,6 +91,7 @@ header{
   width:25px;
   height:2px;
   background:white;
+  transition:0.3s;
 }
 
 .mobile-nav{
@@ -89,27 +99,31 @@ header{
   flex-direction:column;
   padding:20px;
   background:#18182d;
+  animation:slideDown 0.4s ease forwards;
 }
 
-.mobile-nav a{
-  padding:10px 0;
-  color:white;
-  text-decoration:none;
+@keyframes slideDown{
+  from{ opacity:0; transform:translateY(-20px); }
+  to{ opacity:1; transform:translateY(0); }
 }
 
-/* Hero */
+/* HERO */
 .hero h1{
   font-size:56px;
   line-height:1.1;
-  transition:0.2s ease;
+  transition:0.3s ease;
+  opacity:0;
+  transform:translateY(40px);
 }
 
 .hero p{
   margin-top:25px;
   color:rgba(255,255,255,0.6);
+  opacity:0;
+  transform:translateY(40px);
 }
 
-/* About */
+/* ABOUT */
 .about-text{
   margin-top:25px;
   color:rgba(255,255,255,0.6);
@@ -118,7 +132,7 @@ header{
   margin-right:auto;
 }
 
-/* Services */
+/* SERVICES */
 .grid{
   margin-top:60px;
   display:grid;
@@ -130,19 +144,24 @@ header{
   background:rgba(255,255,255,0.05);
   padding:40px;
   border-radius:20px;
-  transition:0.3s;
+  transition:0.4s;
+  opacity:0;
+  transform:translateY(40px);
 }
 
 .card:hover{
-  transform:scale(1.05);
+  transform:scale(1.05) translateY(-5px);
+  box-shadow:0 20px 40px rgba(0,0,0,0.4);
 }
 
-/* Contact */
+/* CONTACT */
 .form{
   margin-top:40px;
   max-width:600px;
   margin-left:auto;
   margin-right:auto;
+  opacity:0;
+  transform:translateY(40px);
 }
 
 .form input,
@@ -154,6 +173,12 @@ header{
   border:1px solid rgba(255,255,255,0.2);
   color:white;
   border-radius:8px;
+  transition:0.3s;
+}
+
+.form input:focus,
+.form textarea:focus{
+  border-color:white;
 }
 
 .form button{
@@ -164,17 +189,30 @@ header{
   color:#18182d;
   font-weight:600;
   cursor:pointer;
+  transition:0.3s;
 }
 
-/* Footer */
+.form button:hover{
+  transform:translateY(-3px);
+  box-shadow:0 10px 25px rgba(255,255,255,0.2);
+}
+
+/* FOOTER */
 footer{
   text-align:center;
   padding:40px 0;
-  border-top:1px solid rgba(255,255,255,0.1);
+  border-top:1px solid rgba(255,255,255,0.08);
   color:rgba(255,255,255,0.4);
 }
 
-/* Responsive */
+/* ACTIVE ANIMATION CLASS */
+.show{
+  opacity:1 !important;
+  transform:translateY(0) !important;
+  transition:0.8s ease;
+}
+
+/* RESPONSIVE */
 @media(max-width:768px){
   .desktop-nav{
     display:none;

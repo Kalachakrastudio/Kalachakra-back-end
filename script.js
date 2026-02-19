@@ -1,17 +1,17 @@
-const hamburger = document.getElementById("hamburger");
-const nav = document.querySelector(".nav");
-const navLinks = document.querySelectorAll(".nav a");
+document.addEventListener("DOMContentLoaded", function(){
 
-// Toggle menu
-hamburger.addEventListener("click", () => {
-  nav.classList.toggle("active");
-  hamburger.classList.toggle("active");
-});
+  const hamburger = document.getElementById("hamburger");
+  const nav = document.getElementById("nav");
+  const links = document.querySelectorAll(".nav a");
 
-// Close menu after clicking link
-navLinks.forEach(link => {
-  link.addEventListener("click", () => {
-    nav.classList.remove("active");
-    hamburger.classList.remove("active");
+  hamburger.addEventListener("click", function(){
+    nav.classList.toggle("active");
   });
+
+  links.forEach(function(link){
+    link.addEventListener("click", function(){
+      nav.classList.remove("active");
+    });
+  });
+
 });

@@ -6,27 +6,18 @@ window.addEventListener("scroll", function() {
   document.getElementById("progressBar").style.width = progress + "%";
 });
 
-// Fade In Animation
-const sections = document.querySelectorAll("section");
-
-function revealSections() {
-  sections.forEach(section => {
-    const top = section.getBoundingClientRect().top;
-    if (top < window.innerHeight - 100) {
-      section.style.opacity = 1;
-      section.style.transform = "translateY(0)";
-      section.style.transition = "1s ease";
-    }
-  });
-}
-
-window.addEventListener("scroll", revealSections);
-window.addEventListener("load", revealSections);
-
 // Mobile Menu Toggle
 const menuToggle = document.getElementById("menuToggle");
 const navMenu = document.getElementById("navMenu");
+const navLinks = document.querySelectorAll("#navMenu a");
 
 menuToggle.addEventListener("click", () => {
   navMenu.classList.toggle("active");
+});
+
+// Close menu after clicking link
+navLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    navMenu.classList.remove("active");
+  });
 });

@@ -4,18 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kalachakra Studio</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="navbar" id="navbar">
-  <div class="container nav-container">
+  <div class="container nav-wrapper">
 
     <div class="logo">Kalachakra</div>
 
-    <nav id="nav-menu">
+    <nav class="nav" id="nav">
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -24,8 +23,8 @@
       </ul>
     </nav>
 
-    <div class="nav-right">
-      <a href="#contact" class="btn small-btn">Start a Project</a>
+    <div class="right-section">
+      <a href="#contact" class="btn-primary">Start a Project</a>
 
       <div class="hamburger" id="hamburger">
         <span></span>
@@ -37,54 +36,51 @@
   </div>
 </header>
 
-<!-- HERO -->
-<section class="hero reveal" id="home">
-  <div class="container">
+<section class="hero" id="home">
+  <div class="container hero-content">
     <h1>Elevating Brands Through Strategic Creativity</h1>
-    <p class="hero-text">
-      We craft immersive brand experiences that inspire trust and authority across every platform.
+    <p>
+      We build immersive brand experiences that inspire trust and authority
+      across every digital platform.
     </p>
-    <a href="#services" class="btn">Explore Our Services</a>
+    <a href="#services" class="btn-outline">Explore Our Services</a>
   </div>
 </section>
 
-<!-- ABOUT -->
-<section class="about reveal" id="about">
-  <div class="container about-grid">
+<section class="about section" id="about">
+  <div class="container grid-2">
     <div>
       <h2>About Us</h2>
       <p>
-        Kalachakra Studio is a premium creative agency focused on building powerful brand
-        identities and seamless digital experiences. We combine strategic thinking,
-        innovation, and design excellence to craft brands that inspire trust and growth.
+        Kalachakra Studio is a premium creative agency focused on crafting
+        powerful brand identities and seamless digital experiences.
       </p>
     </div>
     <div>
       <p>
-        Our mission is to transform ideas into meaningful visual stories that leave
-        a lasting impression and create measurable business impact.
+        We combine strategy, innovation, and refined design to transform
+        ideas into high-impact visual stories that drive real growth.
       </p>
     </div>
   </div>
 </section>
 
-<!-- SERVICES -->
-<section class="services reveal" id="services">
+<section class="services section" id="services">
   <div class="container">
-    <h2 class="section-title">Our Services</h2>
+    <h2 class="center">Our Services</h2>
 
-    <div class="services-grid">
-      <div class="service-card">
+    <div class="cards">
+      <div class="card">
         <h3>Brand Identity</h3>
-        <p>Strategic branding, logo systems, and complete identity design.</p>
+        <p>Strategic branding, logo systems, and visual storytelling.</p>
       </div>
 
-      <div class="service-card">
+      <div class="card">
         <h3>UI/UX Design</h3>
         <p>Modern digital experiences designed for clarity and engagement.</p>
       </div>
 
-      <div class="service-card">
+      <div class="card">
         <h3>Creative Direction</h3>
         <p>High-level visual leadership across all brand touchpoints.</p>
       </div>
@@ -92,24 +88,21 @@
   </div>
 </section>
 
-<!-- CONTACT -->
-<section class="contact reveal" id="contact">
-  <div class="container contact-container">
-    <h2>Let’s Create Something Exceptional</h2>
+<section class="contact section" id="contact">
+  <div class="container contact-box">
+    <h2 class="center">Let’s Create Something Exceptional</h2>
 
-    <form class="contact-form">
+    <form>
       <input type="text" placeholder="Your Name" required>
       <input type="email" placeholder="Your Email" required>
       <textarea rows="5" placeholder="Tell us about your project"></textarea>
-      <button type="submit" class="btn">Send Message</button>
+      <button type="submit" class="btn-primary">Send Message</button>
     </form>
   </div>
 </section>
 
 <footer>
-  <div class="container">
-    © 2026 Kalachakra Studio. All Rights Reserved.
-  </div>
+  © 2026 Kalachakra Studio
 </footer>
 
 <script src="script.js"></script>

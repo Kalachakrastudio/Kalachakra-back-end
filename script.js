@@ -1,19 +1,16 @@
-// Parallax Hero Effect
+// Parallax Effect
 window.addEventListener("scroll", function() {
-  let scrollPosition = window.scrollY;
-  let heroTitle = document.getElementById("heroTitle");
-
-  heroTitle.style.transform =
-    "translateY(" + (scrollPosition * -0.2) + "px)";
+  const hero = document.getElementById("heroTitle");
+  hero.style.transform = "translateY(" + (window.scrollY * -0.2) + "px)";
 });
 
 // Mobile Menu Toggle
 function toggleMenu(){
-  let menu = document.getElementById("mobileMenu");
+  const nav = document.getElementById("mobileNav");
 
-  if(menu.style.display === "flex"){
-    menu.style.display = "none";
+  if(nav.style.display === "flex"){
+    nav.style.display = "none";
   } else {
-    menu.style.display = "flex";
+    nav.style.display = "flex";
   }
 }

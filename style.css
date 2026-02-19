@@ -5,17 +5,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Progress Bar */
-#progressBar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 4px;
-  background: white;
-  width: 0%;
-  z-index: 999;
-}
-
 /* Header */
 header {
   position: fixed;

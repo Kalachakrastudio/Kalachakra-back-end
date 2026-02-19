@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded",function(){
 
   const hamburger = document.getElementById("hamburger");
   const nav = document.getElementById("nav-menu");
@@ -21,16 +21,15 @@ document.addEventListener("DOMContentLoaded", function(){
     document.body.classList.remove("menu-open");
   }
 
-  hamburger.addEventListener("click", function(e){
+  hamburger.addEventListener("click",function(e){
     e.stopPropagation();
-    if(nav.classList.contains("active")) closeMenu();
-    else openMenu();
+    nav.classList.contains("active") ? closeMenu() : openMenu();
   });
 
-  overlay.addEventListener("click", closeMenu);
+  overlay.addEventListener("click",closeMenu);
 
-  links.forEach(link => {
-    link.addEventListener("click", closeMenu);
+  links.forEach(link=>{
+    link.addEventListener("click",closeMenu);
   });
 
 });

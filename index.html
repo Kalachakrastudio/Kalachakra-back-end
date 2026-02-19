@@ -5,25 +5,20 @@
   <title>Kalachakra Studio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Floating Background -->
-  <div class="floating-bg">
-    <div class="circle" style="top:10%; left:10%;"></div>
-    <div class="circle" style="top:30%; left:70%; animation-duration:25s;"></div>
-    <div class="circle" style="top:60%; left:20%; animation-duration:22s;"></div>
-    <div class="circle" style="top:80%; left:80%; animation-duration:28s;"></div>
-  </div>
-
   <!-- Navbar -->
   <header>
-    <div class="nav-container">
+    <div class="container nav">
       <div class="logo">Kalachakra.</div>
 
-      <nav>
+      <nav class="desktop-nav">
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#services">Services</a>
@@ -37,7 +32,7 @@
       </div>
     </div>
 
-    <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-nav" id="mobileNav">
       <a href="#home" onclick="toggleMenu()">Home</a>
       <a href="#about" onclick="toggleMenu()">About</a>
       <a href="#services" onclick="toggleMenu()">Services</a>
@@ -46,60 +41,60 @@
   </header>
 
   <!-- Hero -->
-  <section class="hero" id="home">
-    <h1 id="heroTitle">
-      Elevating Brands Through<br>
-      Strategic Creativity
-    </h1>
-    <p>
-      We design immersive brand experiences that inspire trust
-      and communicate authority across every platform.
-    </p>
+  <section id="home" class="section hero">
+    <div class="container center">
+      <h1 id="heroTitle">
+        Elevating Brands Through<br>Strategic Creativity
+      </h1>
+      <p>
+        We design immersive brand experiences that inspire trust
+        and communicate authority across every platform.
+      </p>
+    </div>
   </section>
 
   <!-- About -->
-  <section id="about" class="about">
-    <h2>About Us</h2>
-    <p>
-      Kalachakra Studio is a strategic creative agency focused on
-      building timeless brand systems. We blend design intelligence
-      with modern aesthetics to create digital experiences that feel
-      premium and future-ready.
-    </p>
+  <section id="about" class="section">
+    <div class="container center">
+      <h2>About Us</h2>
+      <p class="about-text">
+        Kalachakra Studio is a strategic creative agency focused on
+        building timeless brand systems. We blend design intelligence
+        with modern aesthetics to create digital experiences that feel premium.
+      </p>
+    </div>
   </section>
 
   <!-- Services -->
-  <section class="services" id="services">
-    <h2>Our Services</h2>
+  <section id="services" class="section">
+    <div class="container center">
+      <h2>Our Services</h2>
 
-    <div class="service-grid">
+      <div class="grid">
+        <div class="card">
+          <h3>Brand Identity</h3>
+          <p>Strategic brand systems designed to build recognition and trust.</p>
+        </div>
 
-      <div class="card">
-        <div class="icon"></div>
-        <h3>Brand Identity</h3>
-        <p>Strategic brand systems designed to build recognition and trust.</p>
+        <div class="card">
+          <h3>UI/UX Design</h3>
+          <p>Clean and user-centered digital experiences built for performance.</p>
+        </div>
+
+        <div class="card">
+          <h3>Creative Direction</h3>
+          <p>Art direction that aligns storytelling with business positioning.</p>
+        </div>
       </div>
-
-      <div class="card">
-        <div class="icon"></div>
-        <h3>UI/UX Design</h3>
-        <p>Clean, modern and user-centered experiences built for performance.</p>
-      </div>
-
-      <div class="card">
-        <div class="icon"></div>
-        <h3>Creative Direction</h3>
-        <p>Art direction that aligns storytelling with business positioning.</p>
-      </div>
-
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact">
-    <div class="contact-box">
-      <h2>Let’s Create Something Exceptional</h2>
-      <form>
+  <section id="contact" class="section">
+    <div class="container center">
+      <h2>Contact Us</h2>
+
+      <form class="form">
         <input type="text" placeholder="Your Name">
         <input type="email" placeholder="Your Email">
         <textarea rows="4" placeholder="Tell us about your project"></textarea>
@@ -112,7 +107,7 @@
     © 2026 Kalachakra Studio
   </footer>
 
+  <!-- JS -->
   <script src="script.js"></script>
-
 </body>
 </html>

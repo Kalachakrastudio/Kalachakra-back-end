@@ -10,7 +10,12 @@
 </head>
 <body>
 
-<header>
+<!-- Floating Background Blobs -->
+<div class="blob blob1"></div>
+<div class="blob blob2"></div>
+<div class="blob blob3"></div>
+
+<header id="header">
   <div class="container nav">
     <div class="logo">Kalachakra.</div>
 
@@ -37,33 +42,35 @@
 <!-- HERO -->
 <section id="home" class="section hero">
   <div class="container hero-content">
-    <div class="hero-text">
+
+    <div class="hero-text reveal">
       <h1>Elevating Brands Through Strategic Creativity</h1>
-      <p>We design immersive brand experiences that inspire trust and command attention.</p>
+      <p>We craft powerful brand systems and digital experiences that inspire and convert.</p>
       <button class="cta-btn">Start Your Project</button>
     </div>
 
-    <!-- SVG Illustration -->
-    <div class="hero-illustration">
+    <div class="hero-illustration reveal">
       <svg viewBox="0 0 500 500">
-        <circle cx="250" cy="250" r="200" fill="url(#grad1)" />
         <defs>
-          <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+          <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stop-color="#ff4ecd"/>
             <stop offset="100%" stop-color="#4e7cff"/>
           </linearGradient>
         </defs>
+        <circle cx="250" cy="250" r="200" fill="url(#grad)" />
       </svg>
     </div>
+
   </div>
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="section reveal">
-  <div class="container center">
+<section id="about" class="section">
+  <div class="container center reveal">
     <h2>About Us</h2>
     <p>
-      Kalachakra Studio blends strategy, design, and digital innovation to build powerful brand systems that feel alive.
+      Kalachakra Studio blends strategy, branding, UI/UX, and creative direction 
+      to build premium digital identities that feel alive.
     </p>
   </div>
 </section>
@@ -71,38 +78,57 @@
 <!-- SERVICES -->
 <section id="services" class="section">
   <div class="container center">
-    <h2>Our Services</h2>
+    <h2 class="reveal">Our Services</h2>
 
     <div class="grid">
+
       <div class="card reveal">
         <h3>Brand Identity</h3>
-        <p>Bold identity systems with lasting impact.</p>
+        <p>Logo design, visual systems, brand guidelines.</p>
       </div>
 
       <div class="card reveal">
         <h3>UI/UX Design</h3>
-        <p>Modern digital experiences that convert.</p>
+        <p>Website & app interfaces focused on conversions.</p>
+      </div>
+
+      <div class="card reveal">
+        <h3>Web Development</h3>
+        <p>Responsive, fast and scalable web solutions.</p>
       </div>
 
       <div class="card reveal">
         <h3>Creative Direction</h3>
-        <p>Visual storytelling aligned with strategy.</p>
+        <p>Art direction & campaign visuals.</p>
       </div>
+
+      <div class="card reveal">
+        <h3>Social Media Design</h3>
+        <p>High impact posts and brand presence.</p>
+      </div>
+
+      <div class="card reveal">
+        <h3>Motion Graphics</h3>
+        <p>Animated visuals and brand storytelling.</p>
+      </div>
+
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="section reveal">
-  <div class="container center">
-    <h2>Let’s Create Something Powerful</h2>
+<section id="contact" class="section">
+  <div class="container center reveal">
+    <h2>Let’s Work Together</h2>
 
-    <form class="form">
-      <input type="text" placeholder="Your Name">
-      <input type="email" placeholder="Your Email">
-      <textarea rows="4" placeholder="Tell us about your project"></textarea>
+    <form id="contactForm" class="form">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
       <button type="submit">Send Message</button>
+      <p id="formMessage"></p>
     </form>
+
   </div>
 </section>
 

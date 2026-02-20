@@ -20,10 +20,15 @@
         <li><a href="#services">Services</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+
+      <!-- Start Project button visible in mobile menu -->
+      <a href="#contact" class="btn mobile-btn">Start Project</a>
     </nav>
 
     <div class="nav-right">
-      <a href="#contact" class="btn small-btn">Start Project</a>
+      <a href="#contact" class="btn desktop-btn">Start Project</a>
+
+      <!-- DO NOT CHANGE -->
       <div class="hamburger" id="hamburger">
         <span></span>
         <span></span>
@@ -33,61 +38,76 @@
   </div>
 </header>
 
-<!-- Overlay -->
 <div class="overlay" id="overlay"></div>
 
+<!-- HERO -->
 <section class="hero" id="home">
-  <div class="container hero-content">
-    <h1 class="animate fadeInUp">Crafting Elite Digital Experiences</h1>
-    <p class="animate fadeInUp delay-1">We design brands, build immersive digital platforms, and produce cinematic visuals.</p>
-    <a href="#services" class="btn animate fadeInUp delay-2">Explore Our Services</a>
-    <img src="illustration-hero.png" alt="Creative Illustration" class="hero-illustration animate fadeIn delay-3">
+  <div class="container hero-wrapper">
+    <div class="hero-text">
+      <h1>Crafting Elite Digital Experiences</h1>
+      <p>Premium branding, immersive digital platforms, and cinematic production.</p>
+      <a href="#services" class="btn">Explore Services</a>
+    </div>
+
+    <!-- Animated SVG Illustration -->
+    <div class="hero-illustration">
+      <svg viewBox="0 0 500 500">
+        <circle cx="250" cy="250" r="200" class="circle-bg"/>
+        <circle cx="250" cy="250" r="150" class="circle-animate"/>
+      </svg>
+    </div>
   </div>
 </section>
 
+<!-- ABOUT -->
 <section class="about" id="about">
   <div class="container">
-    <h2 class="animate fadeInUp">About Kalachakra</h2>
-    <p class="animate fadeInUp delay-1">Kalachakra Studio is a premium creative studio focused on branding, digital experiences, and cinematic production. Our work blends creativity, technology, and storytelling to craft unforgettable experiences.</p>
-    <img src="illustration-about.png" alt="About Illustration" class="about-illustration animate fadeIn delay-2">
+    <h2>About Kalachakra</h2>
+    <p>
+      Kalachakra Studio is a premium creative studio blending strategy,
+      storytelling and design to craft powerful digital identities.
+    </p>
   </div>
 </section>
 
+<!-- SERVICES -->
 <section class="services" id="services">
   <div class="container">
-    <h2 class="animate fadeInUp">Our Services</h2>
+    <h2>Our Services</h2>
+
     <div class="services-grid">
-      <div class="service-card animate fadeInUp delay-1">
-        <img src="icon-brand.png" alt="Brand Identity">
+      <div class="card">
         <h3>Brand Identity</h3>
-        <p>Creating unique brand visuals and positioning strategies that resonate.</p>
+        <p>Strategic branding systems & visual storytelling.</p>
       </div>
-      <div class="service-card animate fadeInUp delay-2">
-        <img src="icon-uiux.png" alt="UI/UX Design">
+
+      <div class="card">
         <h3>UI/UX Design</h3>
-        <p>Designing intuitive and engaging digital experiences across platforms.</p>
+        <p>Minimal & elegant digital experience design.</p>
       </div>
-      <div class="service-card animate fadeInUp delay-3">
-        <img src="icon-cinema.png" alt="Cinematic Production">
+
+      <div class="card">
         <h3>Cinematic Production</h3>
-        <p>Crafting cinematic visuals and storytelling that captivates audiences.</p>
+        <p>High-end video & visual direction.</p>
       </div>
-      <div class="service-card animate fadeInUp delay-4">
-        <img src="icon-growth.png" alt="Digital Growth">
+
+      <div class="card">
         <h3>Digital Growth</h3>
-        <p>Driving growth through digital marketing strategies and campaigns.</p>
+        <p>Performance marketing & brand scaling.</p>
       </div>
     </div>
   </div>
 </section>
 
+<!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="container">
-    <h2 class="animate fadeInUp">Let’s Build Something Exceptional</h2>
-    <form class="contact-form animate fadeInUp delay-1">
+    <h2>Let’s Build Something Exceptional</h2>
+
+    <form class="contact-form">
       <input type="text" placeholder="Your Name" required>
       <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Tell us about your project" rows="5" required></textarea>
+      <textarea rows="5" placeholder="Tell us about your project" required></textarea>
       <button type="submit" class="btn">Send Message</button>
     </form>
   </div>

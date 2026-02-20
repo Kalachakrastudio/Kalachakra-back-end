@@ -3,26 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kalachakra Studio | Creative Digital Studio</title>
+<title>Kalachakra Studio | Futuristic Digital Studio</title>
+
+<!-- Poppins Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
 <div class="gradient-bg"></div>
 
 <header class="header">
-    <div class="logo">KS</div>
+    <div class="logo">Kalachakra</div>
 
     <nav class="nav" id="nav">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Projects</a>
-        <a href="#">Contact</a>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
     </nav>
 
     <div class="hamburger" id="hamburger">
@@ -32,31 +31,75 @@
     </div>
 </header>
 
-<section class="hero">
-
-    <div class="hero-left">
+<!-- HERO -->
+<section class="section hero" id="home">
+    <div class="hero-content reveal">
         <h1>
             Futuristic <span>Digital Studio</span>
         </h1>
-
         <p>
-            We create premium websites, UI/UX design, branding,
-            motion graphics and creative digital experiences.
+            We build premium websites, branding systems, UI/UX designs and creative digital experiences that feel next-generation.
         </p>
-
-        <div class="hero-buttons">
-            <button class="btn-primary">Explore Now</button>
-            <button class="btn-outline">View Projects</button>
-        </div>
+        <button class="btn-primary">Explore Now</button>
     </div>
-
-    <div class="hero-right">
-        <div class="image-frame">
-            <img src="images/character.png" alt="Studio Character">
-        </div>
-    </div>
-
 </section>
+
+<!-- ABOUT -->
+<section class="section about" id="about">
+    <div class="container reveal">
+        <h2>About Us</h2>
+        <p>
+            Kalachakra Studio is a creative digital agency focused on futuristic design, interactive experiences,
+            high-performance websites and premium branding solutions.
+        </p>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section services" id="services">
+    <div class="container">
+        <h2 class="reveal">Our Services</h2>
+
+        <div class="service-grid">
+            <div class="card reveal">
+                <h3>Web Development</h3>
+                <p>Premium responsive websites with futuristic UI and smooth animation.</p>
+            </div>
+
+            <div class="card reveal">
+                <h3>UI/UX Design</h3>
+                <p>Elegant, clean and user-focused interface design systems.</p>
+            </div>
+
+            <div class="card reveal">
+                <h3>Branding</h3>
+                <p>Creative brand identity with strong digital presence.</p>
+            </div>
+
+            <div class="card reveal">
+                <h3>Motion Graphics</h3>
+                <p>Modern animations and interactive visual storytelling.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact" id="contact">
+    <div class="container reveal">
+        <h2>Contact Us</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn-primary">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    © 2026 Kalachakra Studio. All Rights Reserved.
+</footer>
 
 <script src="script.js"></script>
 </body>

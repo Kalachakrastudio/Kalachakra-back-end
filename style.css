@@ -373,3 +373,17 @@ body{
   color: #ff4ecd;
   transition: 0.3s ease;
 }
+
+/* ===== Mobile Adjustment ===== */
+@media (max-width: 600px) {
+
+    .site-footer {
+        padding: 18px 10px;
+    }
+
+    .site-footer p {
+        font-size: 13px;
+        letter-spacing: 0.5px;
+    }
+
+}

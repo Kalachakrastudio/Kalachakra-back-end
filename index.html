@@ -3,13 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kalachakra Studio | Futuristic Digital Studio</title>
+<title>Kalachakra Studio</title>
 
-<!-- Poppins Font -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<!-- Poppins -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
+
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
+
 <body>
 
 <div class="gradient-bg"></div>
@@ -32,74 +37,65 @@
 </header>
 
 <!-- HERO -->
-<section class="section hero" id="home">
-    <div class="hero-content reveal">
-        <h1>
-            Futuristic <span>Digital Studio</span>
-        </h1>
-        <p>
-            We build premium websites, branding systems, UI/UX designs and creative digital experiences that feel next-generation.
-        </p>
-        <button class="btn-primary">Explore Now</button>
-    </div>
+<section class="hero" id="home">
+
+    <h2 class="tagline">Creative Digital</h2>
+
+    <h1 class="hero-title">
+        <span>S</span><span>T</span><span>U</span><span>D</span><span>I</span><span>O</span>
+    </h1>
+
+    <p class="hero-sub">
+        We craft futuristic websites, branding systems and immersive digital experiences.
+    </p>
+
+    <button class="cta-btn">Start Your Project</button>
+
 </section>
 
 <!-- ABOUT -->
-<section class="section about" id="about">
-    <div class="container reveal">
-        <h2>About Us</h2>
+<section class="about" id="about">
+    <div class="about-content">
+        <h2>About Kalachakra</h2>
         <p>
-            Kalachakra Studio is a creative digital agency focused on futuristic design, interactive experiences,
-            high-performance websites and premium branding solutions.
+            Kalachakra Studio is a premium creative digital agency focused on
+            futuristic web design, animation, branding and next-generation UI/UX systems.
         </p>
     </div>
 </section>
 
 <!-- SERVICES -->
-<section class="section services" id="services">
-    <div class="container">
-        <h2 class="reveal">Our Services</h2>
+<section class="services" id="services">
+    <h2 class="section-title">Our Services</h2>
 
-        <div class="service-grid">
-            <div class="card reveal">
-                <h3>Web Development</h3>
-                <p>Premium responsive websites with futuristic UI and smooth animation.</p>
-            </div>
+    <div class="service-grid">
+        <div class="service-card">
+            <h3>Web Development</h3>
+            <p>High-performance futuristic websites with smooth animation.</p>
+        </div>
 
-            <div class="card reveal">
-                <h3>UI/UX Design</h3>
-                <p>Elegant, clean and user-focused interface design systems.</p>
-            </div>
+        <div class="service-card">
+            <h3>Brand Identity</h3>
+            <p>Premium branding and digital presence systems.</p>
+        </div>
 
-            <div class="card reveal">
-                <h3>Branding</h3>
-                <p>Creative brand identity with strong digital presence.</p>
-            </div>
+        <div class="service-card">
+            <h3>UI / UX Design</h3>
+            <p>Elegant user-focused design with immersive experiences.</p>
+        </div>
 
-            <div class="card reveal">
-                <h3>Motion Graphics</h3>
-                <p>Modern animations and interactive visual storytelling.</p>
-            </div>
+        <div class="service-card">
+            <h3>Motion Graphics</h3>
+            <p>Advanced animation & interactive storytelling.</p>
         </div>
     </div>
 </section>
 
 <!-- CONTACT -->
-<section class="section contact" id="contact">
-    <div class="container reveal">
-        <h2>Contact Us</h2>
-        <form class="contact-form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit" class="btn-primary">Send Message</button>
-        </form>
-    </div>
+<section class="contact" id="contact">
+    <h2>Let’s Build Something Amazing</h2>
+    <button class="cta-btn">Contact Us</button>
 </section>
-
-<footer>
-    © 2026 Kalachakra Studio. All Rights Reserved.
-</footer>
 
 <script src="script.js"></script>
 </body>

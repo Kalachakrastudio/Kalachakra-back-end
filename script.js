@@ -21,15 +21,15 @@ hamburger.addEventListener("click", () => {
     }
 });
 
-/* Close menu when clicking outside */
-document.addEventListener("click", (e) => {
-    if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
-        nav.classList.remove("active");
-        hamburger.classList.remove("open");
+/* Scroll Reveal */
+window.addEventListener("scroll", () => {
+    document.querySelectorAll(".reveal").forEach(el => {
+        const windowHeight = window.innerHeight;
+        const revealTop = el.getBoundingClientRect().top;
+        const revealPoint = 100;
 
-        const spans = hamburger.querySelectorAll("span");
-        spans[0].style.transform = "none";
-        spans[1].style.opacity = "1";
-        spans[2].style.transform = "none";
-    }
+        if (revealTop < windowHeight - revealPoint) {
+            el.classList.add("active");
+        }
+    });
 });

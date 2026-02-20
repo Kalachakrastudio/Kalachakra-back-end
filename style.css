@@ -4,6 +4,10 @@
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
     font-family:'Poppins',sans-serif;
     background:#0c0c0f;
@@ -23,7 +27,7 @@ body{
     z-index:-1;
 }
 
-/* Header */
+/* HEADER */
 .header{
     position:fixed;
     width:100%;
@@ -43,6 +47,7 @@ body{
 .nav{
     display:flex;
     gap:40px;
+    align-items:center;
 }
 
 .nav a{
@@ -56,18 +61,28 @@ body{
     color:#ff004f;
 }
 
-.hamburger{
-    display:none;
-    flex-direction:column;
-    gap:5px;
-    cursor:pointer;
+/* Right Side */
+.nav-right{
+    display:flex;
+    align-items:center;
+    gap:20px;
 }
 
-.hamburger span{
-    width:25px;
-    height:3px;
-    background:white;
-    transition:0.3s;
+/* Start Project Button */
+.start-btn{
+    padding:10px 25px;
+    border:none;
+    border-radius:30px;
+    background:linear-gradient(45deg,#ff004f,#7b00ff);
+    color:white;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.4s;
+}
+
+.start-btn:hover{
+    transform:translateY(-3px) scale(1.05);
+    box-shadow:0 0 20px #7b00ff;
 }
 
 /* HERO */
@@ -91,14 +106,7 @@ body{
 .hero-title{
     font-size:100px;
     font-weight:900;
-    display:flex;
-    gap:5px;
-    flex-wrap:wrap;
-    justify-content:center;
-}
-
-.hero-title span{
-    display:inline-block;
+    line-height:1.1;
 }
 
 .hero-sub{
@@ -115,11 +123,12 @@ body{
     color:white;
     cursor:pointer;
     font-weight:600;
-    transition:0.3s;
+    transition:0.4s;
 }
 
 .cta-btn:hover{
-    transform:scale(1.1);
+    transform:translateY(-5px) scale(1.08);
+    box-shadow:0 0 25px #ff004f;
 }
 
 /* Sections */
@@ -152,11 +161,77 @@ body{
     box-shadow:0 0 30px #7b00ff;
 }
 
-/* Responsive */
+/* CONTACT FORM */
+.contact-form{
+    max-width:600px;
+    margin:40px auto 0;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    background:rgba(255,255,255,0.08);
+    color:white;
+    font-family:'Poppins',sans-serif;
+    outline:none;
+}
+
+.contact-form textarea{
+    min-height:120px;
+    resize:none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    box-shadow:0 0 10px #7b00ff;
+}
+
+/* HAMBURGER */
+.hamburger{
+    display:none;
+    flex-direction:column;
+    gap:5px;
+    cursor:pointer;
+}
+
+.hamburger span{
+    width:25px;
+    height:3px;
+    background:white;
+    transition:0.4s;
+}
+
+/* Hamburger Animation */
+.hamburger.active span:nth-child(1){
+    transform:rotate(45deg) translate(5px,5px);
+}
+
+.hamburger.active span:nth-child(2){
+    opacity:0;
+}
+
+.hamburger.active span:nth-child(3){
+    transform:rotate(-45deg) translate(6px,-6px);
+}
+
+/* MOBILE */
 @media(max-width:992px){
 
     .hero-title{
-        font-size:60px;
+        font-size:55px;
+    }
+
+    .start-btn.desktop-only{
+        display:none;
+    }
+
+    .hamburger{
+        display:flex;
     }
 
     .nav{
@@ -164,18 +239,16 @@ body{
         right:-100%;
         top:0;
         height:100vh;
-        width:250px;
+        width:220px;
         background:#111;
         flex-direction:column;
-        padding-top:100px;
-        transition:0.4s;
+        align-items:flex-start;
+        padding:100px 30px;
+        gap:30px;
+        transition:0.4s ease;
     }
 
     .nav.active{
         right:0;
-    }
-
-    .hamburger{
-        display:flex;
     }
 }

@@ -348,3 +348,27 @@ body{
         text-align: center;
     }
 }
+/* ===== Footer ===== */
+
+.footer {
+  background: #0a0a0a;
+  padding: 25px 20px;
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer p {
+  color: #aaa;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+.footer p:hover {
+  color: #ff4ecd;
+  transition: 0.3s ease;
+}

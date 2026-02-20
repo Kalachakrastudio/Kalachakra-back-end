@@ -10,7 +10,9 @@ body{
     color:white;
     overflow-x:hidden;
 }
-
+html{
+    scroll-behavior:smooth;
+}
 /* Background Glow */
 .gradient-bg{
     position:fixed;

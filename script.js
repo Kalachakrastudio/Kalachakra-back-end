@@ -25,9 +25,22 @@ document.addEventListener("DOMContentLoaded",function(){
   });
 
   overlay.addEventListener("click",closeMenu);
+  links.forEach(link=>link.addEventListener("click",closeMenu));
 
-  links.forEach(link=>{
-    link.addEventListener("click",closeMenu);
-  });
+  // Scroll reveal animation
+  const reveals = document.querySelectorAll(".reveal");
+
+  function revealOnScroll(){
+    reveals.forEach(el=>{
+      const windowHeight = window.innerHeight;
+      const elementTop = el.getBoundingClientRect().top;
+      if(elementTop < windowHeight - 100){
+        el.classList.add("active");
+      }
+    });
+  }
+
+  window.addEventListener("scroll",revealOnScroll);
+  revealOnScroll();
 
 });

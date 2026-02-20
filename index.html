@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kalachakra Studio | Creative Digital Studio</title>
+<title>Kalachakra Studio | Premium Creative Studio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
@@ -22,84 +22,85 @@
 
   <button class="cta desktop-cta">Start Project</button>
 
-  <div class="hamburger">
+  <div class="hamburger" id="hamburger">
     <span></span>
     <span></span>
     <span></span>
   </div>
 </header>
 
-<!-- Mobile CTA -->
-<div class="mobile-cta-wrapper">
-  <button class="cta mobile-cta">Start Project</button>
-</div>
-
-<!-- Mobile Menu -->
-<div class="mobile-menu">
+<div class="mobile-menu" id="mobileMenu">
   <a href="#home">Home</a>
   <a href="#about">About</a>
   <a href="#services">Services</a>
   <a href="#contact">Contact</a>
 </div>
 
-<section id="home" class="hero">
+<section class="hero" id="home">
+
   <div class="hero-content">
-    <h1>We Build Premium Digital Experiences</h1>
-    <p>Elegant branding, creative strategy, and immersive digital products that build trust and elevate your business.</p>
+    <h1>Crafting Elite Digital Experiences</h1>
+    <p>We design elegant brands, immersive websites and premium digital systems that build long-term trust.</p>
+    <button class="cta hero-cta">Start Project</button>
   </div>
 
   <div class="hero-illustration">
-    <div class="floating-shape"></div>
+    <svg viewBox="0 0 500 500">
+      <circle cx="250" cy="250" r="200" class="circle-bg"/>
+      <circle cx="250" cy="250" r="150" class="circle-accent"/>
+    </svg>
   </div>
+
 </section>
 
-<section id="about" class="about">
-  <h2>About Our Studio</h2>
+<section class="about" id="about">
+  <h2>About Kalachakra</h2>
   <p>
-    Kalachakra Studio is a creative digital studio focused on crafting elegant,
-    high-performance websites and brand experiences. We combine strategy,
-    design and technology to create digital presence that builds long-term trust.
+    We are a premium creative studio combining strategy, aesthetics and technology.
+    Our focus is building digital presence that feels refined, trustworthy and timeless.
   </p>
 </section>
 
-<section id="services" class="services">
+<section class="services" id="services">
   <h2>Our Services</h2>
 
   <div class="service-grid">
-    <div class="service-card">
+
+    <div class="card">
       <h3>Brand Identity</h3>
-      <p>Strategic brand positioning, logo design, visual identity systems and brand guidelines.</p>
+      <p>Strategic brand positioning, identity systems and visual language design.</p>
     </div>
 
-    <div class="service-card">
+    <div class="card">
       <h3>UI / UX Design</h3>
-      <p>User-centered interface design focused on clarity, usability and elegant aesthetics.</p>
+      <p>Elegant, intuitive and high-converting digital interfaces.</p>
     </div>
 
-    <div class="service-card">
+    <div class="card">
       <h3>Web Development</h3>
-      <p>High-performance, responsive, fully animated websites built with modern technologies.</p>
+      <p>High-performance, animated and fully responsive premium websites.</p>
     </div>
 
-    <div class="service-card">
-      <h3>Creative Illustrations</h3>
-      <p>Premium custom illustrations and motion graphics that elevate brand storytelling.</p>
+    <div class="card">
+      <h3>Creative Illustration</h3>
+      <p>Custom motion-driven visuals that elevate storytelling.</p>
     </div>
+
   </div>
 </section>
 
-<section id="contact" class="contact">
+<section class="contact" id="contact">
   <h2>Start Your Project</h2>
 
   <form class="contact-form">
     <input type="text" placeholder="Your Name">
     <input type="email" placeholder="Your Email">
-    <textarea placeholder="Tell us about your project"></textarea>
+    <textarea placeholder="Project Details"></textarea>
     <button type="submit" class="cta">Send Message</button>
   </form>
 </section>
 
-<footer class="footer">
+<footer>
   © 2026 Kalachakra Studio — All Rights Reserved
 </footer>
 

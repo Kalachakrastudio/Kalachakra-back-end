@@ -4,18 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kalachakra Studio</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- PAGE LOADER -->
-<div class="loader">
-  <div class="loader-circle"></div>
-</div>
-
 <header class="navbar">
   <div class="container nav-container">
+
     <div class="logo">Kalachakra Studio</div>
 
     <nav id="nav-menu">
@@ -23,70 +19,123 @@
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <a href="#contact" class="btn mobile-btn">Start Project</a>
     </nav>
 
     <div class="nav-right">
-      <a href="#contact" class="btn desktop-btn">Start Project</a>
+      <a href="#contact" class="btn start-btn">Start Project</a>
 
-      <!-- DO NOT CHANGE -->
+      <!-- HAMBURGER (UNCHANGED) -->
       <div class="hamburger" id="hamburger">
         <span></span>
         <span></span>
         <span></span>
       </div>
     </div>
+
   </div>
 </header>
 
 <div class="overlay" id="overlay"></div>
 
+<!-- HERO -->
 <section class="hero" id="home">
   <div class="container hero-wrapper">
+
     <div class="hero-text reveal">
-      <h1>Designing Timeless Digital Experiences</h1>
-      <p>Where strategy meets elegance and innovation.</p>
+      <h1>Designing Refined Digital Experiences</h1>
+      <p>
+        Kalachakra Studio crafts strategic branding,
+        immersive digital platforms and cinematic storytelling
+        for ambitious brands.
+      </p>
       <a href="#services" class="btn">Explore Services</a>
     </div>
+
+    <div class="hero-illustration">
+      <div class="glow-circle"></div>
+      <div class="glow-circle second"></div>
+    </div>
+
   </div>
 </section>
 
+<!-- ABOUT -->
 <section class="about reveal" id="about">
   <div class="container narrow">
     <h2>About Us</h2>
-    <p>We craft refined brand identities and digital platforms that inspire trust and authority.</p>
+    <p>
+      We are a premium creative studio focused on clarity, strategy and elegance.
+      Every project is crafted to build trust, authority and long-term growth.
+    </p>
   </div>
 </section>
 
+<!-- SERVICES -->
 <section class="services" id="services">
   <div class="container">
     <h2 class="reveal">Our Services</h2>
-    <div class="grid">
-      <div class="card reveal">Brand Identity</div>
-      <div class="card reveal">UI/UX Design</div>
-      <div class="card reveal">Cinematic Production</div>
-      <div class="card reveal">Digital Growth</div>
+
+    <div class="services-grid">
+
+      <div class="service-card reveal">
+        <h3>Brand Identity</h3>
+        <p>
+          Complete brand systems including logo design,
+          typography, visual language and strategic positioning.
+        </p>
+      </div>
+
+      <div class="service-card reveal">
+        <h3>UI / UX Design</h3>
+        <p>
+          Elegant, conversion-focused digital experiences
+          designed for clarity, usability and performance.
+        </p>
+      </div>
+
+      <div class="service-card reveal">
+        <h3>Website Development</h3>
+        <p>
+          Fully responsive, high-performance websites
+          built with modern technology and premium aesthetics.
+        </p>
+      </div>
+
+      <div class="service-card reveal">
+        <h3>Cinematic Production</h3>
+        <p>
+          Professional visual storytelling, motion design
+          and branded cinematic content.
+        </p>
+      </div>
+
+      <div class="service-card reveal">
+        <h3>Digital Growth</h3>
+        <p>
+          Performance marketing, campaign strategy
+          and brand scaling solutions.
+        </p>
+      </div>
+
+      <div class="service-card reveal">
+        <h3>Creative Direction</h3>
+        <p>
+          Strategic oversight ensuring visual consistency
+          and premium execution across platforms.
+        </p>
+      </div>
+
     </div>
   </div>
 </section>
 
-<section class="portfolio" id="portfolio">
-  <div class="container">
-    <h2 class="reveal">Selected Work</h2>
-    <div class="grid">
-      <div class="portfolio-card reveal"></div>
-      <div class="portfolio-card reveal"></div>
-      <div class="portfolio-card reveal"></div>
-    </div>
-  </div>
-</section>
-
+<!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="container narrow">
-    <h2 class="reveal">Let’s Work Together</h2>
+    <h2 class="reveal">Let’s Build Something Exceptional</h2>
+
     <form class="contact-form reveal">
       <input type="text" placeholder="Your Name" required>
       <input type="email" placeholder="Your Email" required>

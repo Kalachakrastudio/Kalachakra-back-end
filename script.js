@@ -27,8 +27,19 @@ nav.classList.contains("active")?closeMenu():openMenu();
 overlay.addEventListener("click",closeMenu);
 links.forEach(link=>link.addEventListener("click",closeMenu));
 
-window.addEventListener("load",()=>{
-document.querySelector(".loader").style.display="none";
+/* Scroll animation */
+const reveals=document.querySelectorAll(".reveal");
+
+function reveal(){
+reveals.forEach(el=>{
+const top=el.getBoundingClientRect().top;
+if(top<window.innerHeight-100){
+el.classList.add("active");
+}
 });
+}
+
+window.addEventListener("scroll",reveal);
+reveal();
 
 });

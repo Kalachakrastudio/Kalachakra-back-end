@@ -2,12 +2,11 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    scroll-behavior:smooth;
 }
 
 body{
     font-family:'Poppins',sans-serif;
-    background:#0b001a;
+    background:#0c0c0f;
     color:white;
     overflow-x:hidden;
 }
@@ -17,10 +16,11 @@ body{
     position:fixed;
     width:100%;
     height:100%;
-    background: radial-gradient(circle at 30% 30%, #6a00ff, transparent 40%),
-                radial-gradient(circle at 70% 70%, #ff00cc, transparent 40%);
+    background:
+        radial-gradient(circle at 20% 30%, #ff004f40, transparent 40%),
+        radial-gradient(circle at 80% 70%, #7b00ff40, transparent 40%);
+    filter:blur(120px);
     z-index:-1;
-    filter: blur(120px);
 }
 
 /* Header */
@@ -37,7 +37,7 @@ body{
 
 .logo{
     font-weight:700;
-    font-size:22px;
+    font-size:20px;
 }
 
 .nav{
@@ -53,10 +53,9 @@ body{
 }
 
 .nav a:hover{
-    color:#ff00cc;
+    color:#ff004f;
 }
 
-/* Hamburger */
 .hamburger{
     display:none;
     flex-direction:column;
@@ -71,122 +70,102 @@ body{
     transition:0.3s;
 }
 
-/* Sections */
-.section{
+/* HERO */
+.hero{
     min-height:100vh;
-    padding:120px 8% 80px;
     display:flex;
+    flex-direction:column;
     justify-content:center;
     align-items:center;
     text-align:center;
+    padding:0 8%;
 }
 
-.hero h1{
-    font-size:60px;
+.tagline{
+    font-weight:300;
+    letter-spacing:3px;
+    margin-bottom:20px;
+    opacity:0.7;
 }
 
-.hero span{
-    background:linear-gradient(45deg,#ff00cc,#6a00ff);
-    -webkit-background-clip:text;
-    color:transparent;
+.hero-title{
+    font-size:100px;
+    font-weight:900;
+    display:flex;
+    gap:5px;
+    flex-wrap:wrap;
+    justify-content:center;
 }
 
-.hero p{
-    margin:20px auto;
+.hero-title span{
+    display:inline-block;
+}
+
+.hero-sub{
     max-width:600px;
+    margin:20px 0;
     opacity:0.8;
 }
 
-/* Button */
-.btn-primary{
-    padding:14px 30px;
+.cta-btn{
+    padding:14px 35px;
     border:none;
-    border-radius:30px;
-    background:linear-gradient(45deg,#ff00cc,#6a00ff);
+    border-radius:40px;
+    background:linear-gradient(45deg,#ff004f,#7b00ff);
     color:white;
     cursor:pointer;
+    font-weight:600;
     transition:0.3s;
 }
 
-.btn-primary:hover{
+.cta-btn:hover{
     transform:scale(1.1);
 }
 
-/* About */
-.about p{
-    max-width:700px;
-    opacity:0.85;
+/* Sections */
+.about, .services, .contact{
+    padding:120px 8%;
+    text-align:center;
 }
 
-/* Services */
+.section-title{
+    margin-bottom:50px;
+    font-size:40px;
+}
+
 .service-grid{
-    margin-top:50px;
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:30px;
 }
 
-.card{
+.service-card{
     padding:30px;
-    border-radius:20px;
     background:rgba(255,255,255,0.05);
+    border-radius:20px;
     backdrop-filter:blur(15px);
     transition:0.4s;
 }
 
-.card:hover{
+.service-card:hover{
     transform:translateY(-10px);
-    box-shadow:0 0 25px #6a00ff;
-}
-
-/* Contact */
-.contact-form{
-    margin-top:30px;
-    display:flex;
-    flex-direction:column;
-    gap:20px;
-    max-width:500px;
-    margin-inline:auto;
-}
-
-.contact-form input,
-.contact-form textarea{
-    padding:15px;
-    border-radius:10px;
-    border:none;
-    background:rgba(255,255,255,0.1);
-    color:white;
-}
-
-/* Footer */
-footer{
-    padding:20px;
-    text-align:center;
-    background:#120024;
-    font-size:14px;
-}
-
-/* Scroll Animation */
-.reveal{
-    opacity:0;
-    transform:translateY(50px);
-    transition:1s ease;
-}
-
-.reveal.active{
-    opacity:1;
-    transform:translateY(0);
+    box-shadow:0 0 30px #7b00ff;
 }
 
 /* Responsive */
 @media(max-width:992px){
+
+    .hero-title{
+        font-size:60px;
+    }
+
     .nav{
         position:fixed;
         right:-100%;
         top:0;
         height:100vh;
         width:250px;
-        background:#13002b;
+        background:#111;
         flex-direction:column;
         padding-top:100px;
         transition:0.4s;
@@ -198,9 +177,5 @@ footer{
 
     .hamburger{
         display:flex;
-    }
-
-    .hero h1{
-        font-size:40px;
     }
 }

@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kalachakra Studio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kalachakra Studio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<!-- PAGE LOADER -->
+<div class="loader">
+  <div class="loader-circle"></div>
+</div>
 
 <header class="navbar">
   <div class="container nav-container">
@@ -18,7 +23,7 @@
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
-        <li><a href="#process">Process</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <a href="#contact" class="btn mobile-btn">Start Project</a>
@@ -27,7 +32,7 @@
     <div class="nav-right">
       <a href="#contact" class="btn desktop-btn">Start Project</a>
 
-      <!-- HAMBURGER UNCHANGED -->
+      <!-- DO NOT CHANGE -->
       <div class="hamburger" id="hamburger">
         <span></span>
         <span></span>
@@ -39,100 +44,49 @@
 
 <div class="overlay" id="overlay"></div>
 
-<!-- HERO -->
 <section class="hero" id="home">
   <div class="container hero-wrapper">
-
     <div class="hero-text reveal">
       <h1>Designing Timeless Digital Experiences</h1>
-      <p>
-        Kalachakra Studio crafts refined branding,
-        immersive platforms, and cinematic storytelling
-        for visionary brands.
-      </p>
+      <p>Where strategy meets elegance and innovation.</p>
       <a href="#services" class="btn">Explore Services</a>
     </div>
-
-    <!-- PREMIUM ABSTRACT ILLUSTRATION -->
-    <div class="hero-visual">
-      <div class="blob"></div>
-      <div class="blob2"></div>
-    </div>
-
   </div>
 </section>
 
-<!-- ABOUT -->
 <section class="about reveal" id="about">
   <div class="container narrow">
-    <h2>About Kalachakra</h2>
-    <p>
-      We are a premium creative studio focused on clarity,
-      elegance, and strategic design. Our philosophy blends
-      storytelling with precision — delivering digital
-      experiences that inspire trust and long-term growth.
-    </p>
+    <h2>About Us</h2>
+    <p>We craft refined brand identities and digital platforms that inspire trust and authority.</p>
   </div>
 </section>
 
-<!-- SERVICES -->
 <section class="services" id="services">
   <div class="container">
-    <h2 class="reveal">Our Expertise</h2>
-
-    <div class="services-grid">
-      <div class="card reveal">
-        <h3>Brand Identity</h3>
-        <p>Strategic positioning and visual systems.</p>
-      </div>
-
-      <div class="card reveal">
-        <h3>UI/UX Design</h3>
-        <p>Minimal & conversion-focused digital design.</p>
-      </div>
-
-      <div class="card reveal">
-        <h3>Cinematic Production</h3>
-        <p>Premium storytelling through motion.</p>
-      </div>
-
-      <div class="card reveal">
-        <h3>Digital Growth</h3>
-        <p>Data-driven performance & brand scaling.</p>
-      </div>
+    <h2 class="reveal">Our Services</h2>
+    <div class="grid">
+      <div class="card reveal">Brand Identity</div>
+      <div class="card reveal">UI/UX Design</div>
+      <div class="card reveal">Cinematic Production</div>
+      <div class="card reveal">Digital Growth</div>
     </div>
   </div>
 </section>
 
-<!-- PROCESS (Trust Builder Section) -->
-<section class="process" id="process">
+<section class="portfolio" id="portfolio">
   <div class="container">
-    <h2 class="reveal">Our Process</h2>
-
-    <div class="process-grid">
-      <div class="step reveal">
-        <h4>01. Discover</h4>
-        <p>We understand your brand, vision & goals.</p>
-      </div>
-
-      <div class="step reveal">
-        <h4>02. Design</h4>
-        <p>We craft elegant strategic solutions.</p>
-      </div>
-
-      <div class="step reveal">
-        <h4>03. Deliver</h4>
-        <p>We launch with precision and excellence.</p>
-      </div>
+    <h2 class="reveal">Selected Work</h2>
+    <div class="grid">
+      <div class="portfolio-card reveal"></div>
+      <div class="portfolio-card reveal"></div>
+      <div class="portfolio-card reveal"></div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="container narrow">
-    <h2 class="reveal">Let’s Build Something Exceptional</h2>
-
+    <h2 class="reveal">Let’s Work Together</h2>
     <form class="contact-form reveal">
       <input type="text" placeholder="Your Name" required>
       <input type="email" placeholder="Your Email" required>

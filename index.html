@@ -29,10 +29,14 @@
         <a href="#contact">Contact</a>
     </nav>
 
-    <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
+    <div class="nav-right">
+        <button class="start-btn desktop-only">Start Project</button>
+
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </div>
 </header>
 
@@ -94,7 +98,13 @@
 <!-- CONTACT -->
 <section class="contact" id="contact">
     <h2>Let’s Build Something Amazing</h2>
-    <button class="cta-btn">Contact Us</button>
+
+    <form class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Tell us about your project" required></textarea>
+        <button type="submit" class="cta-btn">Send Message</button>
+    </form>
 </section>
 
 <script src="script.js"></script>

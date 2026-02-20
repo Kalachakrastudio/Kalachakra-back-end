@@ -10,9 +10,7 @@ body{
     color:white;
     overflow-x:hidden;
 }
-html{
-    scroll-behavior:smooth;
-}
+
 /* Background Glow */
 .gradient-bg{
     position:fixed;
@@ -25,23 +23,24 @@ html{
     z-index:-1;
 }
 
-/* HEADER LAYOUT */
+/* Header */
 .header{
     position:fixed;
     width:100%;
     padding:20px 8%;
     display:flex;
-    align-items:center;
     justify-content:space-between;
+    align-items:center;
     backdrop-filter:blur(20px);
     z-index:1000;
 }
 
-/* Center Nav */
+.logo{
+    font-weight:700;
+    font-size:20px;
+}
+
 .nav{
-    position:absolute;
-    left:50%;
-    transform:translateX(-50%);
     display:flex;
     gap:40px;
 }
@@ -57,97 +56,20 @@ html{
     color:#ff004f;
 }
 
-/* Right Section */
-.nav-right{
-    display:flex;
-    align-items:center;
-    gap:20px;
-}
-
-.start-btn{
-    padding:10px 25px;
-    border:none;
-    border-radius:30px;
-    background:linear-gradient(45deg,#ff004f,#7b00ff);
-    color:white;
-    font-weight:600;
-    cursor:pointer;
-    transition:0.3s;
-}
-
-.start-btn:hover{
-    transform:scale(1.1);
-}
-
-/* Hamburger */
 .hamburger{
     display:none;
     flex-direction:column;
-    justify-content:center;
-    gap:6px;
+    gap:5px;
     cursor:pointer;
-    width:30px;
-    height:24px;
-    position:relative;
 }
 
 .hamburger span{
-    position:absolute;
-    width:100%;
+    width:25px;
     height:3px;
     background:white;
-    transition:0.4s ease;
+    transition:0.3s;
 }
 
-.hamburger span:nth-child(1){
-    top:0;
-}
-
-.hamburger span:nth-child(2){
-    top:10px;
-}
-
-.hamburger span:nth-child(3){
-    bottom:0;
-}
-
-/* X animation */
-.hamburger.active span:nth-child(1){
-    transform:rotate(45deg);
-    top:10px;
-}
-
-.hamburger.active span:nth-child(2){
-    opacity:0;
-}
-
-.hamburger.active span:nth-child(3){
-    transform:rotate(-45deg);
-    bottom:11px;
-}
-
-/* CONTACT FORM */
-.contact-form{
-    max-width:600px;
-    margin:40px auto 0;
-    display:flex;
-    flex-direction:column;
-    gap:20px;
-}
-
-.contact-form input,
-.contact-form textarea{
-    padding:15px;
-    border-radius:10px;
-    border:none;
-    background:rgba(255,255,255,0.08);
-    color:white;
-}
-
-.contact-form textarea{
-    min-height:120px;
-    resize:none;
-}
 /* HERO */
 .hero{
     min-height:100vh;
@@ -233,47 +155,27 @@ html{
 /* Responsive */
 @media(max-width:992px){
 
-    .desktop-only{
-        display:none;
+    .hero-title{
+        font-size:60px;
     }
 
-    /* FULL RESET of desktop nav */
     .nav{
-        position:fixed !important;
+        position:fixed;
+        right:-100%;
         top:0;
-        right:-100% !important;
-        left:auto !important;
-        transform:none !important;
-
-        width:220px;              /* smaller size */
         height:100vh;
-
+        width:250px;
         background:#111;
-        padding-top:100px;
-
-        display:flex;
         flex-direction:column;
-        align-items:center;
-        gap:25px;
-
-        transition:0.4s ease;
-        z-index:999;
+        padding-top:100px;
+        transition:0.4s;
     }
 
     .nav.active{
-        right:0 !important;
-    }
-
-    .nav a{
-        font-size:17px;
+        right:0;
     }
 
     .hamburger{
         display:flex;
-        z-index:1001;
-    }
-
-    .hero-title{
-        font-size:60px;
     }
 }

@@ -1,45 +1,15 @@
-document.addEventListener("DOMContentLoaded",function(){
+const hamburger = document.querySelector('.hamburger');
+const mobileMenu = document.querySelector('.mobile-menu');
 
-const hamburger=document.getElementById("hamburger");
-const nav=document.getElementById("nav-menu");
-const overlay=document.getElementById("overlay");
-const links=document.querySelectorAll("#nav-menu a");
-
-function openMenu(){
-nav.classList.add("active");
-hamburger.classList.add("active");
-overlay.classList.add("active");
-document.body.classList.add("menu-open");
-}
-
-function closeMenu(){
-nav.classList.remove("active");
-hamburger.classList.remove("active");
-overlay.classList.remove("active");
-document.body.classList.remove("menu-open");
-}
-
-hamburger.addEventListener("click",function(e){
-e.stopPropagation();
-nav.classList.contains("active")?closeMenu():openMenu();
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  mobileMenu.classList.toggle('active');
 });
 
-overlay.addEventListener("click",closeMenu);
-links.forEach(link=>link.addEventListener("click",closeMenu));
-
-/* Scroll animation */
-const reveals=document.querySelectorAll(".reveal");
-
-function reveal(){
-reveals.forEach(el=>{
-const top=el.getBoundingClientRect().top;
-if(top<window.innerHeight-100){
-el.classList.add("active");
-}
-});
-}
-
-window.addEventListener("scroll",reveal);
-reveal();
-
+// Close menu when clicking link
+document.querySelectorAll('.mobile-menu a').forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.remove('active');
+    hamburger.classList.remove('active');
+  });
 });

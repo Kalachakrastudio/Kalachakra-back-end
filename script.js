@@ -1,14 +1,35 @@
 const hamburger = document.getElementById("hamburger");
-const mobileMenu = document.getElementById("mobileMenu");
+const nav = document.getElementById("nav");
 
 hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("active");
-  mobileMenu.classList.toggle("active");
+    nav.classList.toggle("active");
+    hamburger.classList.toggle("open");
 });
 
-document.querySelectorAll(".mobile-menu a").forEach(link => {
-  link.addEventListener("click", () => {
-    mobileMenu.classList.remove("active");
-    hamburger.classList.remove("active");
-  });
+/* Hamburger animation */
+hamburger.addEventListener("click", () => {
+    const spans = hamburger.querySelectorAll("span");
+
+    if (hamburger.classList.contains("open")) {
+        spans[0].style.transform = "rotate(45deg) translate(5px,5px)";
+        spans[1].style.opacity = "0";
+        spans[2].style.transform = "rotate(-45deg) translate(6px,-6px)";
+    } else {
+        spans[0].style.transform = "none";
+        spans[1].style.opacity = "1";
+        spans[2].style.transform = "none";
+    }
+});
+
+/* Close menu when clicking outside */
+document.addEventListener("click", (e) => {
+    if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
+        nav.classList.remove("active");
+        hamburger.classList.remove("open");
+
+        const spans = hamburger.querySelectorAll("span");
+        spans[0].style.transform = "none";
+        spans[1].style.opacity = "1";
+        spans[2].style.transform = "none";
+    }
 });

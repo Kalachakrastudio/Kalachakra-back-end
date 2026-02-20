@@ -1,13 +1,13 @@
 const hamburger = document.getElementById("hamburger");
 const nav = document.getElementById("nav");
 
-hamburger.addEventListener("click", () => {
+hamburger.addEventListener("click", function(){
     hamburger.classList.toggle("active");
     nav.classList.toggle("active");
 });
 
 document.querySelectorAll(".nav a").forEach(link => {
-    link.addEventListener("click", () => {
+    link.addEventListener("click", function(){
         hamburger.classList.remove("active");
         nav.classList.remove("active");
     });

@@ -290,76 +290,81 @@ body{
   box-shadow:0 0 25px #3b5bff;
 }
 
-/* =========================================
-   DESKTOP VIEW FIX
-========================================= */
+/* ======================================
+   FINAL DESKTOP FIX
+====================================== */
 
 @media (min-width: 992px){
 
-    /* Fix header overlap */
+    /* Prevent header overlapping content */
     body{
-        padding-top:100px;
+        padding-top:120px;
     }
 
-    /* Improve header glass look */
+    /* Solid glass header */
     .header{
-        background:rgba(7,11,24,0.85);
+        background:rgba(7,11,24,0.95);
         backdrop-filter:blur(25px);
         border-bottom:1px solid rgba(255,255,255,0.06);
     }
 
-    /* Center hero content better */
+    /* Fix hero alignment */
     .hero{
         max-width:1200px;
-        margin:auto;
+        margin:0 auto;
+        padding:0 20px;
+        text-align:center;
     }
 
     .hero-title{
-        font-size:110px;
+        font-size:95px;
         max-width:1000px;
-        margin:auto;
+        margin:0 auto;
     }
 
     .hero-sub{
         font-size:18px;
         margin:30px auto;
+        max-width:650px;
     }
 
-    /* Section width control */
+    /* Proper section container width */
     .about,
     .services,
     .contact{
         max-width:1200px;
-        margin:auto;
+        margin:0 auto;
         padding:140px 20px;
     }
 
-    /* Fix About layout */
+    /* Fix About layout properly */
     .about-container{
-        display:flex;
+        display:flex !important;
+        flex-direction:row !important;
         gap:80px;
         align-items:center;
         justify-content:space-between;
+        text-align:left;
     }
 
     .about-text{
         flex:1;
-        text-align:left;
     }
 
     .about-cards{
         flex:1;
     }
 
-    /* Service grid spacing */
+    /* Service grid fix */
     .service-grid{
-        margin-top:60px;
         gap:40px;
+        margin-top:60px;
     }
 
-    /* Card hover premium */
-    .service-card:hover{
-        transform:translateY(-12px);
+    /* Improve card appearance on desktop */
+    .service-card,
+    .card{
+        padding:35px;
     }
 
 }

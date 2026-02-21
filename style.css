@@ -13,6 +13,7 @@ body{
     background:#070b18;
     color:#d6dcff;
     overflow-x:hidden;
+    padding-top:80px; /* Prevent navbar overlap */
 }
 
 /* Background Glow */
@@ -27,15 +28,21 @@ body{
     z-index:-1;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
+
 .header{
     position:fixed;
+    top:0;
+    left:0;
     width:100%;
-    padding:20px 8%;
+    height:80px;
+    padding:0 8%;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    backdrop-filter:blur(20px);
+    background:rgba(7,11,24,0.95);
+    backdrop-filter:blur(25px);
+    border-bottom:1px solid rgba(255,255,255,0.06);
     z-index:1000;
 }
 
@@ -69,7 +76,7 @@ body{
     gap:20px;
 }
 
-/* Start Project Button */
+/* Buttons */
 .start-btn{
     padding:10px 25px;
     border:none;
@@ -84,39 +91,6 @@ body{
 .start-btn:hover{
     transform:translateY(-3px) scale(1.05);
     box-shadow:0 0 25px #3b5bff;
-}
-
-/* HERO */
-.hero{
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:0 8%;
-}
-
-.tagline{
-    font-weight:300;
-    letter-spacing:3px;
-    margin-bottom:20px;
-    opacity:0.7;
-    color:#9aa6ff;
-}
-
-.hero-title{
-    font-size:100px;
-    font-weight:900;
-    line-height:1.1;
-    color:#ffffff;
-}
-
-.hero-sub{
-    max-width:600px;
-    margin:20px 0;
-    opacity:0.85;
-    color:#c4ccff;
 }
 
 .cta-btn{
@@ -135,9 +109,43 @@ body{
     box-shadow:0 0 30px #6c4cff;
 }
 
-/* Sections */
+/* ================= HERO ================= */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:0 8%;
+}
+
+.tagline{
+    letter-spacing:3px;
+    margin-bottom:20px;
+    opacity:0.7;
+    color:#9aa6ff;
+}
+
+.hero-title{
+    font-size:95px;
+    font-weight:900;
+    line-height:1.1;
+    color:#ffffff;
+}
+
+.hero-sub{
+    max-width:650px;
+    margin:30px auto;
+    opacity:0.85;
+    color:#c4ccff;
+}
+
+/* ================= SECTIONS ================= */
+
 .about, .services, .contact{
-    padding:120px 8%;
+    padding:140px 8%;
     text-align:center;
     background:#0c1226;
 }
@@ -151,11 +159,11 @@ body{
 .service-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:30px;
+    gap:40px;
 }
 
 .service-card{
-    padding:30px;
+    padding:35px;
     background:rgba(255,255,255,0.04);
     border-radius:20px;
     backdrop-filter:blur(15px);
@@ -168,7 +176,8 @@ body{
     box-shadow:0 0 35px #3b5bff;
 }
 
-/* CONTACT FORM */
+/* ================= CONTACT ================= */
+
 .contact-form{
     max-width:600px;
     margin:40px auto 0;
@@ -184,7 +193,6 @@ body{
     border-radius:12px;
     background:rgba(255,255,255,0.06);
     color:#d6dcff;
-    font-family:'Poppins',sans-serif;
     outline:none;
 }
 
@@ -198,7 +206,41 @@ body{
     box-shadow:0 0 15px #00e5ff;
 }
 
-/* HAMBURGER */
+/* ================= ABOUT ================= */
+
+.about{
+  background: linear-gradient(135deg, #0c1226, #111a3d);
+}
+
+.about-container{
+    max-width:1200px;
+    margin:0 auto;
+}
+
+.about-text span{
+  color:#00e5ff;
+}
+
+.about-text p{
+  color:#b7c2ff;
+}
+
+.card{
+  padding:20px;
+  border-radius:12px;
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.08);
+  transition:0.3s ease;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+  border-color:#3b5bff;
+  box-shadow:0 0 25px #3b5bff;
+}
+
+/* ================= HAMBURGER ================= */
+
 .hamburger{
     display:none;
     flex-direction:column;
@@ -213,7 +255,6 @@ body{
     transition:0.4s;
 }
 
-/* Hamburger Animation */
 .hamburger.active span:nth-child(1){
     transform:rotate(45deg) translate(5px,5px);
 }
@@ -226,7 +267,8 @@ body{
     transform:rotate(-45deg) translate(6px,-6px);
 }
 
-/* MOBILE */
+/* ================= MOBILE ================= */
+
 @media(max-width:992px){
 
     .hero-title{
@@ -243,14 +285,14 @@ body{
 
     .nav{
         position:fixed;
+        top:80px;
         right:-100%;
-        top:0;
-        height:100vh;
-        width:220px;
+        height:calc(100vh - 80px);
+        width:240px;
         background:#0c1226;
         flex-direction:column;
         align-items:flex-start;
-        padding:100px 30px;
+        padding:40px 30px;
         gap:30px;
         transition:0.4s ease;
     }
@@ -258,113 +300,4 @@ body{
     .nav.active{
         right:0;
     }
-}
-
-/* ABOUT */
-.about {
-  padding: 80px 20px;
-  background: linear-gradient(135deg, #0c1226, #111a3d);
-  color: #d6dcff;
-}
-
-.about-text span {
-  color: #00e5ff;
-}
-
-.about-text p {
-  line-height: 1.7;
-  color: #b7c2ff;
-}
-
-.card {
-  padding: 20px;
-  border-radius: 12px;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
-  transition: 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  border-color: #3b5bff;
-  box-shadow:0 0 25px #3b5bff;
-}
-
-/* ======================================
-   FINAL DESKTOP FIX
-====================================== */
-
-@media (min-width: 992px){
-
-    /* Prevent header overlapping content */
-    body{
-        padding-top:120px;
-    }
-
-    /* Solid glass header */
-    .header{
-        background:rgba(7,11,24,0.95);
-        backdrop-filter:blur(25px);
-        border-bottom:1px solid rgba(255,255,255,0.06);
-    }
-
-    /* Fix hero alignment */
-    .hero{
-        max-width:1200px;
-        margin:0 auto;
-        padding:0 20px;
-        text-align:center;
-    }
-
-    .hero-title{
-        font-size:95px;
-        max-width:1000px;
-        margin:0 auto;
-    }
-
-    .hero-sub{
-        font-size:18px;
-        margin:30px auto;
-        max-width:650px;
-    }
-
-    /* Proper section container width */
-    .about,
-    .services,
-    .contact{
-        max-width:1200px;
-        margin:0 auto;
-        padding:140px 20px;
-    }
-
-    /* Fix About layout properly */
-    .about-container{
-        display:flex !important;
-        flex-direction:row !important;
-        gap:80px;
-        align-items:center;
-        justify-content:space-between;
-        text-align:left;
-    }
-
-    .about-text{
-        flex:1;
-    }
-
-    .about-cards{
-        flex:1;
-    }
-
-    /* Service grid fix */
-    .service-grid{
-        gap:40px;
-        margin-top:60px;
-    }
-
-    /* Improve card appearance on desktop */
-    .service-card,
-    .card{
-        padding:35px;
-    }
-
 }

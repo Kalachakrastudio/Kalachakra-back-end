@@ -7,6 +7,9 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
@@ -14,7 +17,7 @@
 <div class="gradient-bg"></div>
 
 <header class="header">
-    <div class="logo">KALACHAKRA</div>
+    <div class="logo">Kalachakra</div>
 
     <nav class="nav" id="nav">
         <a href="#home">Home</a>
@@ -23,62 +26,125 @@
         <a href="#contact">Contact</a>
     </nav>
 
-    <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
+    <div class="nav-right">
+        <button class="start-btn desktop-only" onclick="location.href='#contact'">
+            Start Project
+        </button>
+
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </div>
 </header>
 
 <section class="hero" id="home">
-    <h1>Premium Creative Digital Studio</h1>
-    <p>Building futuristic brands with clarity & impact.</p>
-    <a href="#contact" class="btn">Start Project</a>
+
+    <h2 class="tagline">
+        Premium Branding, Social Media & Creative Content Studio
+    </h2>
+
+    <h1 class="hero-title">
+        <span>K</span><span>A</span><span>L</span><span>A</span><span>C</span><span>H</span><span>A</span><span>K</span><span>R</span><span>A</span>
+        <br>
+        <span>S</span><span>T</span><span>U</span><span>D</span><span>I</span><span>O</span>
+    </h1>
+
+    <p class="hero-sub">
+        We help brands build powerful identities, grow digitally with strategy,
+        and communicate with clarity and impact.
+    </p>
+
+    <button class="cta-btn" onclick="location.href='#services'">
+        Explore Our Services
+    </button>
+
 </section>
 
 <section class="about" id="about">
-    <h2>About Us</h2>
-    <p>
-        We help brands build strong identity, premium visuals,
-        and modern digital presence that stands out.
-    </p>
+    <div class="about-container">
+
+        <div class="about-text">
+            <h2>About <span>Kalachakra Studio</span></h2>
+
+            <p class="lead">
+                Kalachakra Studio is a creative branding and digital content studio focused on building powerful brand identities.
+            </p>
+
+            <p>
+                We combine strategy, creativity, and structured execution to craft brands that are memorable and professional.
+            </p>
+
+            <p>
+                We create cohesive brand ecosystems that increase visibility and credibility.
+            </p>
+        </div>
+
+        <div class="about-cards">
+            <div class="card">
+                <h3>Strategic Branding</h3>
+                <p>Clear positioning and structured direction.</p>
+            </div>
+
+            <div class="card">
+                <h3>Creative Excellence</h3>
+                <p>Premium visual systems crafted professionally.</p>
+            </div>
+
+            <div class="card">
+                <h3>Growth Focused</h3>
+                <p>Brand frameworks built for visibility.</p>
+            </div>
+        </div>
+
+    </div>
 </section>
 
 <section class="services" id="services">
-    <h2>Our Services</h2>
+    <h2 class="section-title">Our Services</h2>
 
     <div class="service-grid">
         <div class="service-card">
+            <h3>Web Development</h3>
+            <p>High-performance futuristic websites.</p>
+        </div>
+
+        <div class="service-card">
             <h3>Brand Identity</h3>
-            <p>Logo, brand system, guidelines & visual strategy.</p>
+            <p>Premium branding and digital systems.</p>
         </div>
 
         <div class="service-card">
-            <h3>Social Media</h3>
-            <p>Creative content & premium social presence.</p>
+            <h3>UI / UX Design</h3>
+            <p>Elegant immersive user experiences.</p>
         </div>
 
         <div class="service-card">
-            <h3>Creative Design</h3>
-            <p>Posters, campaigns & high-impact visuals.</p>
+            <h3>Motion Graphics</h3>
+            <p>Advanced animation & storytelling.</p>
         </div>
     </div>
 </section>
 
 <section class="contact" id="contact">
-    <h2>Let’s Work Together</h2>
+    <h2>Let’s Build Something Amazing</h2>
 
     <form class="contact-form">
         <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Email Address" required>
-        <textarea rows="5" placeholder="Your Message"></textarea>
-        <button type="submit" class="btn">Send Message</button>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Tell us about your project" required></textarea>
+        <button type="submit" class="cta-btn">Send Message</button>
     </form>
 </section>
 
-<footer class="footer">
-    <p>© 2026 Kalachakra Studio. All Rights Reserved.</p>
+<footer class="site-footer">
+    <p>© <span id="year"></span> Kalachakra Studio — All Rights Reserved</p>
 </footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 <script src="script.js"></script>
 </body>

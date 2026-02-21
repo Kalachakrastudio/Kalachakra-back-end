@@ -4,7 +4,7 @@ if(isset($_POST['submit'])){
     $email = $_POST['email'];
     $message = $_POST['message'];
 
-    $to = "your@email.com";
+    $to = "kalachakrastudio@email.com";
     $subject = "New Message from Website";
     $body = "Name: $name\nEmail: $email\nMessage: $message";
 

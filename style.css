@@ -1,181 +1,121 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
 body{
     font-family:'Poppins',sans-serif;
     background:#18182d;
-    color:white;
+    color:#e8e9ff;
     overflow-x:hidden;
 }
 
-/* Background Glow */
+/* Background Glow (Very Soft, Luxury) */
 .gradient-bg{
     position:fixed;
     width:100%;
     height:100%;
     background:
-        radial-gradient(circle at 20% 30%, #ff5e0040, transparent 45%),
-        radial-gradient(circle at 80% 70%, #0077ff40, transparent 45%),
-        radial-gradient(circle at 50% 90%, #00c26e30, transparent 55%);
-    filter:blur(130px);
+        radial-gradient(circle at 20% 30%, #c96a1220, transparent 50%),
+        radial-gradient(circle at 80% 70%, #2c3e9f25, transparent 50%);
+    filter:blur(160px);
     z-index:-1;
 }
 
 /* HEADER */
 .header{
-    position:fixed;
-    width:100%;
-    padding:20px 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
     backdrop-filter:blur(20px);
     background:rgba(24,24,45,0.85);
-    z-index:1000;
 }
 
 .logo{
-    font-weight:700;
-    font-size:20px;
-    color:#8b8bff;
+    color:#a8a9ff;
 }
 
 .nav a{
-    color:#e4e6ff;
-    text-decoration:none;
-    font-size:14px;
-    transition:0.3s;
+    color:#dcdcff;
 }
 
 .nav a:hover{
-    color:#ff9a1f;
+    color:#e67e22;
 }
 
-/* Start Project Button */
+/* Buttons */
 .start-btn{
-    padding:10px 25px;
-    border:none;
-    border-radius:30px;
-    background:linear-gradient(45deg,#ff5e00,#0077ff);
-    color:white;
-    font-weight:600;
-    cursor:pointer;
-    transition:0.4s;
+    background:linear-gradient(45deg,#c96a12,#2c3e9f);
 }
 
 .start-btn:hover{
-    transform:translateY(-3px) scale(1.05);
-    box-shadow:0 0 25px #0077ff;
+    box-shadow:0 0 20px rgba(44,62,159,0.4);
+}
+
+.cta-btn{
+    background:linear-gradient(45deg,#e67e22,#3f51b5);
+}
+
+.cta-btn:hover{
+    box-shadow:0 0 25px rgba(230,126,34,0.4);
 }
 
 /* HERO */
 .tagline{
-    opacity:0.8;
-    color:#8b8bff;
+    color:#a8a9ff;
 }
 
 .hero-sub{
-    opacity:0.9;
-    color:#cfd2ff;
-}
-
-.cta-btn{
-    padding:14px 35px;
-    border:none;
-    border-radius:40px;
-    background:linear-gradient(45deg,#ff9a1f,#00b3ff);
-    color:white;
-    cursor:pointer;
-    font-weight:600;
-    transition:0.4s;
-}
-
-.cta-btn:hover{
-    transform:translateY(-5px) scale(1.08);
-    box-shadow:0 0 30px #ff9a1f;
+    color:#cfd1ff;
 }
 
 /* Sections */
-.about, .services, .contact{
-    padding:120px 8%;
-    text-align:center;
+.about,
+.services,
+.contact{
     background:#18182d;
 }
 
+/* Section Title */
 .section-title{
-    margin-bottom:50px;
-    font-size:40px;
-    color:#00b3ff;
+    color:#3f51b5;
 }
 
+/* Cards */
 .service-card{
-    padding:30px;
-    background:rgba(255,255,255,0.04);
-    border-radius:20px;
-    backdrop-filter:blur(15px);
-    border:1px solid rgba(255,255,255,0.08);
-    transition:0.4s;
+    background:rgba(255,255,255,0.03);
+    border:1px solid rgba(255,255,255,0.06);
 }
 
 .service-card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 0 30px #00b3ff;
+    box-shadow:0 10px 40px rgba(44,62,159,0.25);
 }
 
-/* CONTACT FORM */
+/* Contact */
 .contact-form input,
 .contact-form textarea{
-    padding:15px;
-    border:none;
-    border-radius:12px;
-    background:rgba(255,255,255,0.06);
-    color:white;
-    outline:none;
+    background:rgba(255,255,255,0.04);
+    border:1px solid rgba(255,255,255,0.06);
+    color:#e8e9ff;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus{
-    box-shadow:0 0 15px #0077ff;
+    box-shadow:0 0 15px rgba(63,81,181,0.4);
 }
 
-/* HAMBURGER */
-.hamburger span{
-    background:#ffffff;
-}
-
-/* MOBILE */
+/* Mobile Nav */
 @media(max-width:992px){
-
     .nav{
-        background:#1f1f3f;
+        background:#1f1f3a;
     }
 }
 
-/* ABOUT SECTION */
+/* ABOUT */
 .about{
-    background:linear-gradient(135deg,#18182d,#1f1f3f);
+    background:linear-gradient(135deg,#18182d,#1f1f3a);
 }
 
 .about-text span{
-    color:#ff9a1f;
+    color:#e67e22;
 }
 
 .about-text p{
-    color:#cfd2ff;
-}
-
-.card{
-    background:rgba(255,255,255,0.05);
-    border:1px solid rgba(255,255,255,0.08);
+    color:#d2d4ff;
 }
 
 .card:hover{
-    border-color:#00c26e;
+    border-color:#1fa67a;
 }

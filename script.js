@@ -17,7 +17,7 @@ document.querySelectorAll(".nav a").forEach(link => {
 
 gsap.registerPlugin(ScrollTrigger);
 
-/* Hero letter animation */
+/* Hero Letter Animation */
 gsap.from(".hero-title span", {
     y:120,
     opacity:0,
@@ -26,7 +26,7 @@ gsap.from(".hero-title span", {
     ease:"power4.out"
 });
 
-/* Service animation */
+/* Services Scroll Animation */
 gsap.utils.toArray(".service-card").forEach(card=>{
     gsap.from(card,{
         scrollTrigger:{

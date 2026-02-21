@@ -11,7 +11,7 @@ html{
 body{
     font-family:'Poppins',sans-serif;
     background:#18182d;
-    color:#ffffff;
+    color:#e6e6ff;
     overflow-x:hidden;
 }
 
@@ -21,8 +21,8 @@ body{
     width:100%;
     height:100%;
     background:
-        radial-gradient(circle at 20% 30%, #2a2a4a80, transparent 40%),
-        radial-gradient(circle at 80% 70%, #23234480, transparent 40%);
+        radial-gradient(circle at 20% 30%, #23234490, transparent 40%),
+        radial-gradient(circle at 80% 70%, #2f2f5590, transparent 40%);
     filter:blur(120px);
     z-index:-1;
 }
@@ -50,14 +50,14 @@ body{
 }
 
 .nav a{
-    color:white;
+    color:#e6e6ff;
     text-decoration:none;
     font-size:14px;
     transition:0.3s;
 }
 
 .nav a:hover{
-    color:#5c5cff;
+    color:#4c4cff;
 }
 
 .nav-right{
@@ -70,8 +70,8 @@ body{
     padding:10px 25px;
     border:none;
     border-radius:30px;
-    background:linear-gradient(45deg,#232344,#3a3a6a);
-    color:white;
+    background:linear-gradient(45deg,#232344,#2f2f55);
+    color:#ffffff;
     font-weight:600;
     cursor:pointer;
     transition:0.4s;
@@ -79,7 +79,7 @@ body{
 
 .start-btn:hover{
     transform:translateY(-3px) scale(1.05);
-    box-shadow:0 0 20px #3a3a6a;
+    box-shadow:0 0 20px #4c4cff40;
 }
 
 /* Hero */
@@ -93,6 +93,10 @@ body{
     padding:0 8%;
 }
 
+.tagline{
+    opacity:0.7;
+}
+
 .hero-title{
     font-size:100px;
     font-weight:900;
@@ -103,11 +107,17 @@ body{
     display:inline-block;
 }
 
+.hero-sub{
+    max-width:600px;
+    margin:20px 0;
+    color:#b8b8ff;
+}
+
 .cta-btn{
     padding:14px 35px;
     border:none;
     border-radius:40px;
-    background:linear-gradient(45deg,#232344,#3a3a6a);
+    background:linear-gradient(45deg,#232344,#2f2f55);
     color:white;
     cursor:pointer;
     font-weight:600;
@@ -116,7 +126,7 @@ body{
 
 .cta-btn:hover{
     transform:translateY(-5px) scale(1.08);
-    box-shadow:0 0 25px #3a3a6a;
+    box-shadow:0 0 25px #4c4cff40;
 }
 
 /* Sections */
@@ -126,12 +136,20 @@ body{
 }
 
 .about{
-    background:linear-gradient(135deg,#18182d,#1f1f3a);
+    background:linear-gradient(135deg,#18182d,#141423);
 }
 
 .about-container{
     max-width:1200px;
     margin:auto;
+}
+
+.about-text span{
+    color:#4c4cff;
+}
+
+.about-text p{
+    color:#b8b8ff;
 }
 
 .about-cards{
@@ -144,14 +162,14 @@ body{
 .card{
     padding:20px;
     border-radius:12px;
-    background:rgba(255,255,255,0.05);
-    border:1px solid rgba(255,255,255,0.08);
+    background:#232344;
+    border:1px solid #2f2f55;
     transition:0.3s;
 }
 
 .card:hover{
     transform:translateY(-5px);
-    border-color:#3a3a6a;
+    border-color:#4c4cff;
 }
 
 /* Services */
@@ -163,14 +181,14 @@ body{
 
 .service-card{
     padding:30px;
-    background:rgba(255,255,255,0.05);
+    background:#232344;
     border-radius:20px;
     transition:0.4s;
 }
 
 .service-card:hover{
     transform:translateY(-10px);
-    box-shadow:0 0 30px #3a3a6a;
+    box-shadow:0 0 30px #4c4cff30;
 }
 
 /* Contact */
@@ -187,21 +205,25 @@ body{
     padding:15px;
     border:none;
     border-radius:12px;
-    background:rgba(255,255,255,0.08);
-    color:white;
+    background:#232344;
+    color:#e6e6ff;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus{
-    box-shadow:0 0 10px #3a3a6a;
+    box-shadow:0 0 10px #4c4cff60;
 }
 
 /* Footer */
 .site-footer{
     text-align:center;
     padding:20px;
-    background:#151528;
-    border-top:1px solid rgba(255,255,255,0.08);
+    background:#141423;
+    border-top:1px solid #2f2f55;
+}
+
+.site-footer p{
+    color:#b8b8ff;
 }
 
 /* Hamburger */
@@ -215,7 +237,7 @@ body{
 .hamburger span{
     width:25px;
     height:3px;
-    background:white;
+    background:#e6e6ff;
     transition:0.4s;
 }
 
@@ -233,7 +255,9 @@ body{
 @media(max-width:992px){
 
 .hero-title{font-size:55px;}
+
 .start-btn.desktop-only{display:none;}
+
 .hamburger{display:flex;}
 
 .nav{
@@ -242,7 +266,7 @@ right:-100%;
 top:0;
 height:100vh;
 width:220px;
-background:#151528;
+background:#141423;
 flex-direction:column;
 padding:100px 30px;
 gap:30px;

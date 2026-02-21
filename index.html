@@ -156,7 +156,13 @@
 
 </form>
 </section>
-
+<script>
+document.querySelector(".contact-form").addEventListener("submit", function(e){
+    e.preventDefault();
+    alert("Message Sent Successfully 🚀");
+    this.reset();
+});
+</script>
 <script src="script.js"></script>
 </body>
 </html>

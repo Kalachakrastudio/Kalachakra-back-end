@@ -1,262 +1,111 @@
-/* ===============================
-   GLOBAL
-=================================*/
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
 body{
     font-family:'Poppins',sans-serif;
-    background:#18182d;
-    color:#e6ebff;
+    background:#0b0f1a;
+    color:#cbd5ff;
     overflow-x:hidden;
 }
 
-/* ===============================
-   FUTURISTIC BACKGROUND GLOW
-=================================*/
+/* Background Glow */
 .gradient-bg{
     position:fixed;
     width:100%;
     height:100%;
     background:
-        radial-gradient(circle at 15% 25%, #4f6bff25, transparent 50%),
-        radial-gradient(circle at 85% 75%, #00e0ff20, transparent 55%),
-        radial-gradient(circle at 50% 90%, #7a5cff20, transparent 60%);
-    filter:blur(160px);
+        radial-gradient(circle at 20% 30%, #4f6bff40, transparent 40%),
+        radial-gradient(circle at 80% 70%, #7a5cff40, transparent 40%);
+    filter:blur(120px);
     z-index:-1;
 }
 
-/* ===============================
-   HEADER
-=================================*/
+/* HEADER */
 .header{
-    position:fixed;
-    width:100%;
-    padding:20px 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
     backdrop-filter:blur(20px);
-    background:rgba(24,24,45,0.85);
-    border-bottom:1px solid rgba(255,255,255,0.05);
-    z-index:1000;
-}
-
-.logo{
-    font-weight:700;
-    font-size:20px;
-    color:#7a5cff;
-}
-
-.nav{
-    display:flex;
-    gap:40px;
-    align-items:center;
 }
 
 .nav a{
-    color:#cfd6ff;
-    text-decoration:none;
-    font-size:14px;
-    transition:0.3s;
+    color:#cbd5ff;
 }
 
 .nav a:hover{
-    color:#00e0ff;
+    color:#00e5ff;
 }
 
-/* ===============================
-   BUTTONS
-=================================*/
-.start-btn,
+/* Buttons */
+.start-btn{
+    background:linear-gradient(45deg,#4f6bff,#7a5cff);
+}
+
+.start-btn:hover{
+    box-shadow:0 0 25px #4f6bff;
+}
+
 .cta-btn{
-    padding:12px 28px;
-    border:none;
-    border-radius:40px;
-    background:linear-gradient(135deg,#4f6bff,#7a5cff);
-    color:white;
-    font-weight:600;
-    cursor:pointer;
-    transition:0.4s;
+    background:linear-gradient(45deg,#7a5cff,#00e5ff);
 }
 
-.start-btn:hover,
 .cta-btn:hover{
-    transform:translateY(-4px);
-    box-shadow:
-        0 0 20px rgba(79,107,255,0.6),
-        0 0 40px rgba(122,92,255,0.4);
+    box-shadow:0 0 30px #7a5cff;
 }
 
-/* ===============================
-   HERO
-=================================*/
-.hero{
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:0 8%;
+/* Sections */
+.about, .services, .contact{
+    background:#0f172a;
 }
 
-.tagline{
-    color:#9aa8ff;
-    letter-spacing:3px;
-    margin-bottom:20px;
-}
-
-.hero-title{
-    font-size:100px;
-    font-weight:900;
-    line-height:1.1;
-    background:linear-gradient(90deg,#4f6bff,#00e0ff,#7a5cff);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-}
-
-.hero-sub{
-    max-width:600px;
-    margin:20px 0;
-    color:#cfd6ff;
-}
-
-/* ===============================
-   SECTIONS
-=================================*/
-.about,
-.services,
-.contact{
-    padding:120px 8%;
-    text-align:center;
-}
-
+/* Section Title */
 .section-title{
-    font-size:40px;
-    margin-bottom:50px;
     color:#4f6bff;
 }
 
-/* ===============================
-   SERVICE CARDS
-=================================*/
-.service-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:30px;
-}
-
+/* Service Card */
 .service-card{
-    padding:30px;
-    border-radius:20px;
-    background:rgba(255,255,255,0.03);
+    background:rgba(255,255,255,0.04);
     border:1px solid rgba(255,255,255,0.08);
-    backdrop-filter:blur(20px);
-    transition:0.4s;
 }
 
 .service-card:hover{
-    transform:translateY(-10px);
-    border-color:#4f6bff;
-    box-shadow:
-        0 0 30px rgba(79,107,255,0.3),
-        0 0 60px rgba(0,224,255,0.2);
+    box-shadow:0 0 35px #4f6bff;
 }
 
-/* ===============================
-   ABOUT SECTION
-=================================*/
-.about{
-    background:linear-gradient(135deg,#18182d,#1f1f3a);
-}
-
-.about-text span{
-    color:#00e0ff;
-}
-
-.about-text p{
-    color:#cfd6ff;
-}
-
-.card{
-    padding:20px;
-    border-radius:12px;
-    background:rgba(255,255,255,0.04);
-    border:1px solid rgba(255,255,255,0.08);
-    transition:0.3s;
-}
-
-.card:hover{
-    border-color:#7a5cff;
-    box-shadow:0 0 25px rgba(122,92,255,0.3);
-}
-
-/* ===============================
-   CONTACT FORM
-=================================*/
-.contact-form{
-    max-width:600px;
-    margin:40px auto 0;
-    display:flex;
-    flex-direction:column;
-    gap:20px;
-}
-
+/* Contact */
 .contact-form input,
 .contact-form textarea{
-    padding:15px;
-    border-radius:12px;
-    background:rgba(255,255,255,0.04);
-    border:1px solid rgba(255,255,255,0.08);
-    color:#e6ebff;
-    outline:none;
+    background:rgba(255,255,255,0.05);
+    color:#cbd5ff;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus{
-    border-color:#00e0ff;
-    box-shadow:0 0 20px rgba(0,224,255,0.4);
+    box-shadow:0 0 15px #00e5ff;
 }
 
-/* ===============================
-   HAMBURGER
-=================================*/
-.hamburger span{
-    background:#ffffff;
-}
-
-/* ===============================
-   MOBILE
-=================================*/
+/* Mobile Nav */
 @media(max-width:992px){
-
-    .hero-title{
-        font-size:55px;
-    }
-
     .nav{
-        position:fixed;
-        right:-100%;
-        top:0;
-        height:100vh;
-        width:220px;
-        background:#1c1c35;
-        flex-direction:column;
-        align-items:flex-start;
-        padding:100px 30px;
-        gap:30px;
-        transition:0.4s ease;
+        background:#0f172a;
     }
+}
 
-    .nav.active{
-        right:0;
-    }
+/* ABOUT */
+.about{
+    background:linear-gradient(135deg,#0b0f1a,#111c35);
+}
+
+.about-text span{
+    color:#00e5ff;
+}
+
+.about-text p{
+    color:#b8c1ff;
+}
+
+/* Cards */
+.card{
+    background:rgba(255,255,255,0.04);
+    border:1px solid rgba(255,255,255,0.08);
+}
+
+.card:hover{
+    border-color:#4f6bff;
+    box-shadow:0 0 25px #4f6bff;
 }

@@ -247,7 +247,7 @@ body{
         top:0;
         height:100vh;
         width:220px;
-        background:#0d142c;
+        background:#111;
         flex-direction:column;
         align-items:flex-start;
         padding:100px 30px;
@@ -259,12 +259,12 @@ body{
         right:0;
     }
 }
-
-/* ABOUT SECTION */
 .about {
-  padding: 120px 8%;
-  background: linear-gradient(135deg, #070b18, #0d142c);
-  color: #e6f1ff;
+    padding: 120px 8%;
+    background: linear-gradient(135deg, #0f0f0f, #1c1c1c, #111111);
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
 }
 
 .about-container {

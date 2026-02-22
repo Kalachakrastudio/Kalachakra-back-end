@@ -10,8 +10,8 @@ html{
 
 body{
     font-family:'Poppins',sans-serif;
-    background:#18182d;
-    color:#F1F1F1;
+    background:#18182d; /* main background */
+    color:#F1F1F1;      /* main text */
     overflow-x:hidden;
 }
 
@@ -44,7 +44,7 @@ body{
 .logo{
     font-weight:700;
     font-size:20px;
-    background:linear-gradient(90deg,#9e8f78,#a9a5a0);
+    background:linear-gradient(135deg, #F1F1F1, #a9a5a0, #9e8f78);
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
 }
@@ -78,7 +78,7 @@ body{
     padding:10px 25px;
     border:none;
     border-radius:30px;
-    background:linear-gradient(45deg,#9e8f78,#a9a5a0);
+    background:linear-gradient(135deg,#F1F1F1,#a9a5a0,#9e8f78);
     color:#18182d;
     font-weight:600;
     cursor:pointer;
@@ -113,7 +113,7 @@ body{
     font-size:100px;
     font-weight:900;
     line-height:1.1;
-    background:linear-gradient(90deg,#9e8f78,#a9a5a0);
+    background:linear-gradient(135deg,#F1F1F1,#a9a5a0,#9e8f78);
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
 }
@@ -129,7 +129,7 @@ body{
     padding:14px 35px;
     border:none;
     border-radius:40px;
-    background:linear-gradient(45deg,#9e8f78,#a9a5a0);
+    background:linear-gradient(135deg,#F1F1F1,#a9a5a0,#9e8f78);
     color:#18182d;
     cursor:pointer;
     font-weight:600;
@@ -150,7 +150,9 @@ body{
 .section-title{
     margin-bottom:50px;
     font-size:40px;
-    color:#9e8f78;
+    background:linear-gradient(135deg,#F1F1F1,#a9a5a0,#9e8f78);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
 }
 
 /* Services */
@@ -266,7 +268,7 @@ body{
     }
 }
 
-/* ABOUT SECTION (STRUCTURE UNCHANGED, COLORS UPDATED) */
+/* ABOUT SECTION (UNCHANGED STRUCTURE, COLORS UPDATED) */
 .about {
     padding: 120px 8%;
     background:
@@ -286,6 +288,9 @@ body{
 .about-text h2 {
   font-size: 32px;
   margin-bottom: 20px;
+  background:linear-gradient(135deg,#F1F1F1,#a9a5a0,#9e8f78);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
 }
 
 .about-text span {
@@ -326,7 +331,9 @@ body{
 
 .card h3 {
   margin-bottom: 10px;
-  color:#9e8f78;
+  background:linear-gradient(135deg,#F1F1F1,#a9a5a0,#9e8f78);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
 }
 
 /* Desktop Layout */

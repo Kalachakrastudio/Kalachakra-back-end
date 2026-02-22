@@ -149,9 +149,15 @@
         <button type="submit" class="cta-btn">Send Message</button>
     </form>
 </section>
-<footer class="footer">
-    <p>© 2026 Kalachakra Studio. All rights reserved.</p>
-    </footer>
+<footer class="site-footer">
+    <p>
+        © <span id="year"></span> Kalachakra Studio — All Rights Reserved
+    </p>
+</footer>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 <script src="script.js"></script>
 </body>
 </html>

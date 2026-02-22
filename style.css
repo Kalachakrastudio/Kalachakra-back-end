@@ -491,3 +491,25 @@ body{
         border-radius: 28px;
     }
 }
+/* Desktop Layout */
+@media (min-width: 992px) {
+
+  .about-container {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .about-text {
+    flex: 1;
+  }
+
+  .about-cards {
+    flex: 1;
+  }
+
+  .about-text h2 {
+    font-size: 42px;
+  }
+
+}

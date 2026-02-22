@@ -269,7 +269,7 @@ body{
 
 .service-card:hover{
     transform:translateY(-10px);
-    box-shadow:0 0 35px #a9a5a0;
+    box-shadow:0 0 35px #9e8f78;
 }
 
 /* CONTACT FORM */

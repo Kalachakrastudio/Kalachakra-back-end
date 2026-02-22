@@ -271,24 +271,6 @@ body{
     transform:translateY(-10px);
     box-shadow:0 0 35px #a9a5a0;
 }
-.service-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:30px;
-}
-
-.service-card{
-    padding:30px;
-    background:rgba(255,255,255,0.05);
-    border-radius:20px;
-    backdrop-filter:blur(15px);
-    transition:0.4s;
-}
-
-.service-card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 0 30px #7b00ff;
-}
 
 /* CONTACT FORM */
 .contact-form{
@@ -425,18 +407,7 @@ body{
         right:0;
     }
 
-    .about-container {
-        flex-direction:column;
-        text-align:center;
-        gap:50px;
-    }
-    .about-text {
-        text-align:center;
-    }
-    .about-cards {
-        align-items:center;
-    }
-
+ 
   /* ===== Footer ===== */
 
 /* FOOTER - unified for desktop and mobile */

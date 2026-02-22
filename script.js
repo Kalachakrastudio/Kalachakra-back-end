@@ -34,3 +34,16 @@ gsap.utils.toArray(".service-card").forEach(card => {
         ease: "power3.out"
     });
 });
+document.addEventListener("DOMContentLoaded", () => {
+    const line = document.querySelector('.about-header .line');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                line.classList.add('active');
+            }
+        });
+    }, { threshold: 0.5 }); // triggers when 50% of about section is visible
+
+    observer.observe(document.querySelector('.about-header'));
+});

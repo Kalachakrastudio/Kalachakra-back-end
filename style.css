@@ -10,20 +10,20 @@ html{
 
 body{
     font-family:'Poppins',sans-serif;
-    background: linear-gradient(135deg, #03040a, #0a0f24, #050814);
-    color:#eaf2ff;
+    background:#18182d;
+    color:#a9a5a0;
     overflow-x:hidden;
 }
 
-/* Background Glow */
+/* Background Soft Glow */
 .gradient-bg{
     position:fixed;
     width:100%;
     height:100%;
     background:
-        radial-gradient(circle at 20% 30%, rgba(0,255,255,0.22), transparent 40%),
-        radial-gradient(circle at 80% 70%, rgba(90,70,255,0.22), transparent 40%);
-    filter:blur(160px);
+        radial-gradient(circle at 20% 30%, rgba(158,143,120,0.15), transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(123,124,120,0.15), transparent 50%);
+    filter:blur(140px);
     z-index:-1;
 }
 
@@ -35,20 +35,19 @@ body{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    backdrop-filter:blur(25px);
-    background:rgba(8,12,30,0.6);
-    border-bottom:1px solid rgba(90,70,255,0.15);
+    backdrop-filter:blur(20px);
+    background:rgba(24,24,45,0.85);
+    border-bottom:1px solid #6e6b6b;
     z-index:1000;
 }
 
 .logo{
     font-weight:700;
     font-size:20px;
-    background:linear-gradient(90deg,#00eaff,#5a46ff,#7f8cff);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
+    color:#9e8f78;
 }
 
+/* Navigation */
 .nav{
     display:flex;
     gap:40px;
@@ -56,25 +55,24 @@ body{
 }
 
 .nav a{
-    color:#cfd8ff;
+    color:#a9a5a0;
     text-decoration:none;
     font-size:14px;
     transition:0.3s;
 }
 
 .nav a:hover{
-    color:#00eaff;
-    text-shadow:0 0 10px rgba(0,234,255,0.7);
+    color:#9e8f78;
 }
 
 /* Buttons */
 .start-btn,
 .cta-btn{
     padding:12px 30px;
-    border:none;
     border-radius:40px;
-    background: linear-gradient(45deg, #00eaff, #5a46ff);
-    color:white;
+    border:1px solid #9e8f78;
+    background:transparent;
+    color:#9e8f78;
     font-weight:600;
     cursor:pointer;
     transition:0.4s;
@@ -82,8 +80,8 @@ body{
 
 .start-btn:hover,
 .cta-btn:hover{
-    transform:translateY(-5px) scale(1.07);
-    box-shadow:0 0 35px rgba(90,70,255,0.6);
+    background:#9e8f78;
+    color:#18182d;
 }
 
 /* HERO */
@@ -101,24 +99,20 @@ body{
     font-weight:300;
     letter-spacing:3px;
     margin-bottom:20px;
-    opacity:0.8;
-    color:#9fdcff;
+    color:#7b7c78;
 }
 
 .hero-title{
     font-size:100px;
     font-weight:900;
     line-height:1.1;
-    background: linear-gradient(90deg,#00eaff,#5a46ff,#7f8cff);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
+    color:#9e8f78;
 }
 
 .hero-sub{
     max-width:600px;
     margin:20px 0;
-    opacity:0.9;
-    color:#cfd8ff;
+    color:#a9a5a0;
 }
 
 /* Sections */
@@ -130,17 +124,12 @@ body{
 .section-title{
     margin-bottom:50px;
     font-size:40px;
-    background: linear-gradient(90deg,#00eaff,#5a46ff);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
+    color:#9e8f78;
 }
 
 /* ABOUT */
 .about{
-    background:
-        radial-gradient(circle at 15% 30%, rgba(0,234,255,0.12), transparent 50%),
-        radial-gradient(circle at 85% 70%, rgba(90,70,255,0.15), transparent 55%),
-        linear-gradient(135deg, #040613, #0c1330, #050814);
+    background:#18182d;
 }
 
 /* Services */
@@ -152,16 +141,15 @@ body{
 
 .service-card{
     padding:30px;
-    background: rgba(255,255,255,0.05);
+    background:#1f1f35;
     border-radius:20px;
-    backdrop-filter:blur(20px);
-    border:1px solid rgba(90,70,255,0.2);
+    border:1px solid #6e6b6b;
     transition:0.4s;
 }
 
 .service-card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 0 35px rgba(90,70,255,0.5);
+    border-color:#9e8f78;
+    transform:translateY(-8px);
 }
 
 /* CONTACT FORM */
@@ -176,22 +164,17 @@ body{
 .contact-form input,
 .contact-form textarea{
     padding:15px;
-    border:none;
     border-radius:12px;
-    background:rgba(255,255,255,0.08);
-    color:white;
+    border:1px solid #6e6b6b;
+    background:#1f1f35;
+    color:#a9a5a0;
     font-family:'Poppins',sans-serif;
     outline:none;
 }
 
-.contact-form textarea{
-    min-height:120px;
-    resize:none;
-}
-
 .contact-form input:focus,
 .contact-form textarea:focus{
-    box-shadow:0 0 20px rgba(0,234,255,0.6);
+    border-color:#9e8f78;
 }
 
 /* HAMBURGER */
@@ -205,7 +188,7 @@ body{
 .hamburger span{
     width:25px;
     height:3px;
-    background:white;
+    background:#a9a5a0;
     transition:0.4s;
 }
 
@@ -242,7 +225,7 @@ body{
         top:0;
         height:100vh;
         width:220px;
-        background:#070c1f;
+        background:#18182d;
         flex-direction:column;
         align-items:flex-start;
         padding:100px 30px;

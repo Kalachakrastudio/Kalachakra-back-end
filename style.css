@@ -1,4 +1,4 @@
-/* ===== RESET ===== */
+/* RESET */
 *{
     margin:0;
     padding:0;
@@ -75,7 +75,7 @@ body{
     gap:20px;
 }
 
-/* BUTTONS */
+/* BUTTONS - PREMIUM MINIMALISTIC */
 .start-btn, .cta-btn {
     padding: 10px 25px;
     border: 2px solid #9e8f78;
@@ -103,7 +103,7 @@ body{
     display: none;
 }
 
-/* HERO SECTION */
+/* HERO SECTION - FIXED ALIGNMENT */
 .hero{
     display:flex;
     flex-direction:column;
@@ -113,7 +113,6 @@ body{
     padding:160px 8% 100px;
     min-height:calc(100vh - 160px);
 }
-
 .tagline{
     font-weight:300;
     letter-spacing:3px;
@@ -177,21 +176,21 @@ body{
     color: #F1F1F1;
     position: relative;
     overflow: hidden;
-    padding: 120px 8%;
 }
 
 .about-container {
     max-width:1200px;
     margin:auto;
-    display: flex;
-    flex-direction: row;
-    gap: 60px;
-    align-items: flex-start;
-    justify-content: space-between;
+    display:flex;
+    flex-direction:row;
+    gap:60px;
+    align-items:flex-start;
+    justify-content:space-between;
 }
 
+/* Left side text */
 .about-text {
-    flex: 1;
+    flex:1;
     text-align: left;
 }
 
@@ -226,33 +225,33 @@ body{
     margin-bottom:15px;
 }
 
-/* Cards aligned right */
+/* Right side cards */
 .about-cards {
-    flex: 1;
-    display: flex;
+    flex:1;
+    display:flex;
     flex-direction: column;
-    gap: 20px;
-    align-items: flex-end; /* Align cards right */
+    gap:20px;
+    align-items:flex-end; /* align cards to right */
 }
 
 .card {
-    padding: 20px;
-    border-radius: 12px;
+    padding:20px;
+    border-radius:12px;
     background: rgba(241,241,241,0.05);
     border:1px solid rgba(241,241,241,0.08);
-    transition: 0.3s ease;
-    width: 100%;
-    max-width: 350px;
+    transition:0.3s ease;
+    width:100%;
+    max-width:350px;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    border-color: #9e8f78;
+    transform:translateY(-5px);
+    border-color:#9e8f78;
     box-shadow:0 0 15px #9e8f78;
 }
 
 .card h3 {
-    margin-bottom: 10px;
+    margin-bottom:10px;
     font-weight:600;
 }
 
@@ -262,7 +261,7 @@ body{
     line-height:1.5;
 }
 
-/* ===== SERVICES SECTION ===== */
+/* SERVICES */
 .service-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -283,7 +282,7 @@ body{
     box-shadow:0 0 35px #9e8f78;
 }
 
-/* ===== CONTACT FORM ===== */
+/* CONTACT FORM */
 .contact-form{
     max-width:600px;
     margin:40px auto 0;
@@ -340,14 +339,14 @@ body{
     transform:rotate(-45deg) translate(6px,-6px);
 }
 
-/* ===== FOOTER ===== */
+/* ===== TRANSPARENT FOOTER ===== */
 .footer {
-    background: rgba(24, 24, 45, 0.6);
+    background: rgba(24, 24, 45, 0.6); /* transparent dark overlay */
     color: #F1F1F1;
     text-align: center;
     padding: 30px 8%;
     font-size: 14px;
-    border-top: 1px solid rgba(241,241,241,0.08);
+    border-top: 1px solid rgba(241,241,241,0.08); /* subtle line */
     width: 100%;
     position: relative;
 }
@@ -370,25 +369,21 @@ body{
     color: #F1F1F1;
 }
 
-.footer .socials {
-    margin-top: 15px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+/* Centered text for footer */
+.footer .footer-text {
+    margin-bottom: 10px;
 }
 
-.footer .socials a {
-    color: #9e8f78;
-    font-size: 18px;
-    transition: 0.3s;
-}
-
-.footer .socials a:hover {
-    color: #F1F1F1;
-}
-
-/* ===== MOBILE RESPONSIVE ===== */
+/* ===== MOBILE ===== */
 @media(max-width:992px){
+    .footer {
+        padding: 25px 5%;
+        font-size: 13px;
+    }
+    .footer .socials {
+        gap: 10px;
+    }
+
     .hero-title{
         font-size:55px;
     }
@@ -420,11 +415,10 @@ body{
         right:0;
     }
 
-    /* About Section Mobile */
     .about-container {
-        flex-direction: column;
+        flex-direction: column; /* stacked on mobile */
         text-align: center;
-        gap: 40px;
+        gap:40px;
     }
 
     .about-text {
@@ -437,18 +431,9 @@ body{
     }
 
     .card {
-        width: 100%;
-        max-width: 400px;
+        width:100%;
+        max-width:400px;
         text-align: center;
-    }
-
-    /* Footer mobile */
-    .footer {
-        padding: 30px 5%;
-        font-size: 13px;
-    }
-    .footer .socials {
-        gap: 15px;
     }
 
     .start-btn.desktop-only {
@@ -471,17 +456,18 @@ body{
   .about-container {
     display: flex;
     gap: 60px;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: space-between;
   }
 
   .about-text {
-    flex: 1;
+    flex:1;
     text-align: left;
   }
 
   .about-cards {
-    flex: 1;
-    align-items: flex-end;
+    flex:1;
+    align-items:flex-end;
   }
 
   .about-text h2 {

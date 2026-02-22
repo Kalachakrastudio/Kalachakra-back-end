@@ -321,19 +321,23 @@ body{
     transform:rotate(-45deg) translate(6px,-6px);
 }
 
-/* FOOTER */
+/* ===== FOOTER ===== */
 .footer {
-    background: #18182d;
+    background: #18182d; /* matches site color */
     color: #F1F1F1;
     text-align: center;
     padding: 40px 8%;
     font-size: 14px;
     border-top: 1px solid rgba(241,241,241,0.05);
+    width: 100%;
+    position: relative; /* stays below content */
 }
 
 .footer p {
     margin: 0;
     color: #a9a5a0;
+    font-weight: 400;
+    letter-spacing: 0.5px;
 }
 
 .footer a {
@@ -364,6 +368,16 @@ body{
     color: #F1F1F1;
 }
 
+/* MOBILE FOOTER */
+@media(max-width:992px){
+    .footer {
+        padding: 30px 5%;
+        font-size: 13px;
+    }
+    .footer .socials {
+        gap: 15px;
+    }
+}
 /* MOBILE */
 @media(max-width:992px){
     .hero-title{

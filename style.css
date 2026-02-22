@@ -15,19 +15,25 @@ body{
     overflow-x:hidden;
 }
 
+/* ===================== */
 /* BACKGROUND DEPTH */
+/* ===================== */
+
 .gradient-bg{
     position:fixed;
     width:100%;
     height:100%;
     background:
-        radial-gradient(circle at 20% 30%, #9e8f7833, transparent 50%),
-        radial-gradient(circle at 80% 70%, #7b7c7833, transparent 50%);
+        radial-gradient(circle at 20% 30%, #9e8f7822, transparent 50%),
+        radial-gradient(circle at 80% 70%, #7b7c7822, transparent 50%);
     filter:blur(120px);
     z-index:-1;
 }
 
+/* ===================== */
 /* HEADER */
+/* ===================== */
+
 .header{
     position:fixed;
     width:100%;
@@ -35,7 +41,7 @@ body{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    background:#18182de6;
+    background:#18182d;
     border-bottom:1px solid #6e6b6b;
     z-index:1000;
 }
@@ -43,12 +49,11 @@ body{
 .logo{
     font-weight:700;
     font-size:20px;
-    background:linear-gradient(90deg,#9e8f78,#a9a5a0,#7b7c78);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
+    color:#9e8f78;
 }
 
-/* NAV */
+/* NAVIGATION */
+
 .nav{
     display:flex;
     gap:40px;
@@ -66,14 +71,17 @@ body{
     color:#9e8f78;
 }
 
+/* ===================== */
 /* BUTTONS */
+/* ===================== */
+
 .start-btn,
 .cta-btn{
     padding:12px 28px;
     border-radius:40px;
-    border:none;
-    background:linear-gradient(90deg,#9e8f78,#a9a5a0);
-    color:#18182d;
+    border:1px solid #9e8f78;
+    background:transparent;
+    color:#9e8f78;
     font-weight:600;
     cursor:pointer;
     transition:0.3s;
@@ -81,10 +89,14 @@ body{
 
 .start-btn:hover,
 .cta-btn:hover{
-    opacity:0.85;
+    background:#9e8f78;
+    color:#18182d;
 }
 
+/* ===================== */
 /* HERO */
+/* ===================== */
+
 .hero{
     min-height:100vh;
     display:flex;
@@ -96,43 +108,131 @@ body{
 }
 
 .tagline{
-    font-weight:300;
     letter-spacing:3px;
     margin-bottom:20px;
     color:#7b7c78;
 }
 
 .hero-title{
-    font-size:clamp(42px,8vw,100px);
+    font-size:clamp(42px,7vw,90px);
     font-weight:900;
     line-height:1.1;
-    background:linear-gradient(90deg,#9e8f78,#a9a5a0,#7b7c78);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
+    color:#9e8f78;
 }
 
 .hero-sub{
     max-width:600px;
     margin:20px 0;
     color:#F1F1F1;
-    font-size:clamp(14px,2vw,18px);
 }
 
+/* ===================== */
 /* SECTIONS */
-.about, .services, .contact{
+/* ===================== */
+
+.about,
+.services,
+.contact{
     padding:120px 8%;
     text-align:center;
 }
 
 .section-title{
     margin-bottom:50px;
-    font-size:clamp(28px,5vw,40px);
-    background:linear-gradient(90deg,#9e8f78,#a9a5a0);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
+    font-size:clamp(28px,4vw,40px);
+    color:#9e8f78;
 }
 
+/* ===================== */
+/* ABOUT SECTION */
+/* DO NOT CHANGE LAYOUT */
+/* ===================== */
+
+.about {
+    padding: 120px 8%;
+    background:#18182d;
+    color: #F1F1F1;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.about-text h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color:#9e8f78;
+}
+
+.about-text span {
+  color: #9e8f78;
+}
+
+.about-text .lead {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color:#F1F1F1;
+}
+
+.about-text p {
+  line-height: 1.7;
+  color: #a9a5a0;
+  margin-bottom: 15px;
+}
+
+.about-cards {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  padding: 20px;
+  border-radius: 12px;
+  background: #18182d;
+  border: 1px solid #6e6b6b;
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  border-color: #9e8f78;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color:#9e8f78;
+}
+
+/* Desktop Layout (kept same as your earlier structure) */
+@media (min-width: 992px) {
+
+  .about-container {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .about-text {
+    flex: 1;
+  }
+
+  .about-cards {
+    flex: 1;
+  }
+
+  .about-text h2 {
+    font-size: 42px;
+  }
+}
+
+/* ===================== */
 /* SERVICES */
+/* ===================== */
+
 .service-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -149,15 +249,16 @@ body{
 
 .service-card h3{
     color:#9e8f78;
-    margin-bottom:10px;
 }
 
 .service-card:hover{
     border-color:#9e8f78;
-    transform:translateY(-6px);
 }
 
+/* ===================== */
 /* CONTACT */
+/* ===================== */
+
 .contact-form{
     max-width:600px;
     margin:40px auto 0;
@@ -173,7 +274,6 @@ body{
     border:1px solid #6e6b6b;
     background:#18182d;
     color:#F1F1F1;
-    font-family:'Poppins',sans-serif;
     outline:none;
 }
 
@@ -182,7 +282,10 @@ body{
     border-color:#9e8f78;
 }
 
+/* ===================== */
 /* HAMBURGER */
+/* ===================== */
+
 .hamburger{
     display:none;
     flex-direction:column;
@@ -209,11 +312,10 @@ body{
     transform:rotate(-45deg) translate(6px,-6px);
 }
 
-/* ========================= */
-/* RESPONSIVE BREAKPOINTS */
-/* ========================= */
+/* ===================== */
+/* MOBILE */
+/* ===================== */
 
-/* Tablets */
 @media(max-width:992px){
 
     .nav{
@@ -240,29 +342,5 @@ body{
 
     .start-btn.desktop-only{
         display:none;
-    }
-
-    .about, .services, .contact{
-        padding:100px 6%;
-    }
-}
-
-/* Mobile */
-@media(max-width:576px){
-
-    .hero{
-        padding:0 6%;
-    }
-
-    .about, .services, .contact{
-        padding:80px 6%;
-    }
-
-    .service-card{
-        padding:20px;
-    }
-
-    .header{
-        padding:15px 6%;
     }
 }

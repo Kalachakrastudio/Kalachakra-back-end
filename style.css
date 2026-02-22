@@ -66,14 +66,13 @@ body{
     color:#9e8f78;
 }
 
-/* Right Side */
 .nav-right{
     display:flex;
     align-items:center;
     gap:20px;
 }
 
-/* Buttons - Premium Minimalistic */
+/* BUTTONS - Premium Minimalistic */
 .start-btn, .cta-btn {
     padding: 12px 35px;
     border: 2px solid #9e8f78;
@@ -86,6 +85,7 @@ body{
     transition: all 0.3s ease;
 }
 
+/* Hover effect */
 .start-btn:hover, .cta-btn:hover {
     background: rgba(158,143,120,0.15);
     color: #a9a5a0;
@@ -100,15 +100,6 @@ body{
 
 .start-btn.mobile-only {
     display: none;
-}
-
-@media(max-width:992px){
-    .start-btn.desktop-only {
-        display: none;
-    }
-    .start-btn.mobile-only {
-        display: inline-block;
-    }
 }
 
 /* HERO */

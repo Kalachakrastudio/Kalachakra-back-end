@@ -113,6 +113,12 @@ body{
     padding:160px 8% 100px;
     min-height:calc(100vh - 160px);
 }
+.tagline{
+    font-weight:300;
+    letter-spacing:3px;
+    margin-bottom:20px;
+    opacity:0.7;
+}
 
 .hero-title{
     font-size:90px;

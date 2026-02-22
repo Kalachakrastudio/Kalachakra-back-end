@@ -1,3 +1,4 @@
+/* RESET */
 *{
     margin:0;
     padding:0;
@@ -18,7 +19,7 @@ body{
     min-height:100vh;
 }
 
-/* Background Glow */
+/* BACKGROUND GLOW */
 .gradient-bg{
     position:fixed;
     width:100%;
@@ -33,13 +34,15 @@ body{
 /* HEADER */
 .header{
     position:fixed;
+    top:0;
+    left:0;
     width:100%;
     padding:20px 8%;
     display:flex;
     justify-content:space-between;
     align-items:center;
     backdrop-filter:blur(20px);
-    background:rgba(24,24,45,0.6);
+    background:rgba(24,24,45,0.8);
     border-bottom:1px solid rgba(241,241,241,0.05);
     z-index:1000;
 }
@@ -75,7 +78,7 @@ body{
     gap:20px;
 }
 
-/* BUTTONS - Premium Minimalistic */
+/* BUTTONS - PREMIUM MINIMALISTIC */
 .start-btn, .cta-btn {
     padding: 12px 35px;
     border: 2px solid #9e8f78;
@@ -95,7 +98,6 @@ body{
     border-color: #a9a5a0;
 }
 
-/* Visibility for desktop/mobile buttons */
 .start-btn.desktop-only {
     display: inline-block;
 }
@@ -106,13 +108,14 @@ body{
 
 /* HERO */
 .hero{
-    flex:1; /* fill space so footer stays at bottom */
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
     text-align:center;
-    padding:0 8%;
+    padding:140px 8% 80px; /* top padding = header + spacing */
+    flex:1;
+    min-height:calc(100vh - 140px); /* subtract header height */
 }
 
 .tagline{
@@ -135,7 +138,7 @@ body{
     color:#a9a5a0;
 }
 
-/* Sections */
+/* SECTIONS */
 .about, .services, .contact{
     padding:120px 8%;
     text-align:center;
@@ -148,7 +151,6 @@ body{
     position:relative;
 }
 
-/* Subtle line under section titles */
 .section-title::after{
     content:"";
     display:block;
@@ -191,7 +193,6 @@ body{
     position:relative;
 }
 
-/* Line under About title */
 .about-text h2::after{
     content:"";
     display:block;
@@ -412,5 +413,13 @@ body{
 
     .footer .socials {
         gap: 15px;
+    }
+
+    .start-btn.desktop-only {
+        display: none;
+    }
+
+    .start-btn.mobile-only {
+        display: inline-block;
     }
 }

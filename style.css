@@ -260,13 +260,13 @@ body{
 .about-text p.lead {
     font-size: 18px;
     margin-bottom: 15px;
-    color: #F1F1F1;
+    color: #a9a5a0;
 }
 
 .about-text p {
     line-height: 1.7;
     margin-bottom: 15px;
-    color: #a9a5a0;
+    color: #F1F1F1;
 }
 
 /* MOBILE RESPONSIVE */

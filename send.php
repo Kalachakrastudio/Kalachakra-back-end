@@ -1,15 +1,19 @@
 <?php
-if(isset($_POST['submit'])){
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $message = $_POST['message'];
+// contact.php
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+    $name = htmlspecialchars($_POST['name']);
+    $email = htmlspecialchars($_POST['email']);
+    $message = htmlspecialchars($_POST['message']);
 
-    $to = "kalachakrastudio@email.com";
-    $subject = "New Message from Website";
-    $body = "Name: $name\nEmail: $email\nMessage: $message";
+    $to = "youremail@example.com"; // your email
+    $subject = "New Contact Form Message from $name";
+    $body = "Name: $name\nEmail: $email\n\nMessage:\n$message";
+    $headers = "From: $email";
 
-    mail($to, $subject, $body);
-
-    echo "Message Sent Successfully!";
+    if(mail($to, $subject, $body, $headers)){
+        echo "success";
+    } else {
+        echo "fail";
+    }
 }
 ?>

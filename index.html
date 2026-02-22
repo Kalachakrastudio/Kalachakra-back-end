@@ -151,12 +151,12 @@
     <h2 class="section-title">Let’s Build Something Amazing</h2>
     <div class="line"></div>
 
-    <form class="contact-form" id="contact-form">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Tell us about your project" required></textarea>
-        <button type="submit" class="cta-btn">Send Message</button>
-    </form>
+   <form id="contact-form" action="https://your-php-server.com/send.php" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+</form>
 </section>
 <footer class="footer">
     <p class="footer-text">
@@ -167,7 +167,7 @@
 <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 </script>
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
 <script src="script.js"></script>
 </body>
 </html>

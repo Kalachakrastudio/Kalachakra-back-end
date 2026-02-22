@@ -47,3 +47,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
     observer.observe(document.querySelector('.about-header'));
 });
+const form = document.querySelector('.contact-form');
+
+form.addEventListener('submit', function(e) {
+    e.preventDefault(); // prevent default form submission
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+    }).then(response => {
+        if(response.ok) {
+            alert('Message sent successfully!');
+            form.reset();
+        } else {
+            alert('Oops! Something went wrong.');
+        }
+    }).catch(() => {
+        alert('Oops! Something went wrong.');
+    });
+});

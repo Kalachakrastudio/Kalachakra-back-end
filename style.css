@@ -308,9 +308,10 @@ body{
     transform:translateY(-10px);
     box-shadow:0 0 35px #9e8f78;
 }
-.service-card p{
-    color:#a9a5a0;
+.service-card p {
+    color: #a9a5a0;
 }
+
 /* CONTACT FORM */
 .contact-form{
     max-width:600px;

@@ -75,7 +75,7 @@ body{
     gap:20px;
 }
 
-/* BUTTONS - PREMIUM MINIMALISTIC */
+/* BUTTONS */
 .start-btn, .cta-btn {
     padding: 10px 25px;
     border: 2px solid #9e8f78;
@@ -95,15 +95,10 @@ body{
     border-color: #a9a5a0;
 }
 
-.start-btn.desktop-only {
-    display: inline-block;
-}
+.start-btn.desktop-only { display: inline-block; }
+.start-btn.mobile-only { display: none; }
 
-.start-btn.mobile-only {
-    display: none;
-}
-
-/* HERO SECTION */
+/* HERO */
 .hero{
     display:flex;
     flex-direction:column;
@@ -167,7 +162,7 @@ body{
     border-radius:2px;
 }
 
-/* ===== ABOUT SECTION FIXED ===== */
+/* ===== ABOUT SECTION ===== */
 .about {
     background:
         radial-gradient(circle at 20% 25%, rgba(158,143,120,0.08), transparent 60%),
@@ -188,9 +183,45 @@ body{
     justify-content:space-between;
 }
 
-/* LEFT TEXT */
+/* LEFT SIDE - CARDS */
+.about-cards {
+    flex: 1 1 45%; /* 45% width */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start; /* left align */
+}
+
+.card {
+    padding: 20px;
+    border-radius: 12px;
+    background: rgba(241,241,241,0.05);
+    border: 1px solid rgba(241,241,241,0.08);
+    transition: 0.3s ease;
+    width: 100%;
+    max-width: 350px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #9e8f78;
+    box-shadow:0 0 15px #9e8f78;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.card p {
+    color: #ccc;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* RIGHT SIDE - TEXT */
 .about-text {
-    flex: 1 1 55%; /* 55% width */
+    flex: 1 1 50%; /* 50% width */
     text-align: left;
     min-width: 300px;
 }
@@ -225,42 +256,6 @@ body{
     line-height:1.7;
     margin-bottom:15px;
     color:#F1F1F1;
-}
-
-/* RIGHT CARDS */
-.about-cards {
-    flex: 1 1 40%; /* 40% width */
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: flex-end; /* align right side */
-}
-
-.card {
-    padding: 20px;
-    border-radius: 12px;
-    background: rgba(241,241,241,0.05);
-    border: 1px solid rgba(241,241,241,0.08);
-    transition: 0.3s ease;
-    width: 100%;
-    max-width: 350px;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    border-color: #9e8f78;
-    box-shadow:0 0 15px #9e8f78;
-}
-
-.card h3 {
-    margin-bottom: 10px;
-    font-weight: 600;
-}
-
-.card p {
-    color: #ccc;
-    font-size: 14px;
-    line-height: 1.5;
 }
 
 /* SERVICES */
@@ -409,6 +404,7 @@ body{
         right:0;
     }
 
+    /* STACKED MOBILE ABOUT */
     .about-container {
         flex-direction: column;
         text-align: center;

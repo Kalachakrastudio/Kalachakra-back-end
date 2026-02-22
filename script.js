@@ -68,19 +68,24 @@ form.addEventListener("submit", async function (e) {
         });
 
         if (response.ok) {
-            feedback.style.display = "block";
-            feedback.style.color = "#9e8f78";
-            feedback.textContent = "Message sent successfully! 🚀";
-
-            form.reset(); // ✅ This clears the fields
+            showMessage("Message sent successfully! 🚀", "#9e8f78");
+            form.reset(); // clear fields
         } else {
-            feedback.style.display = "block";
-            feedback.style.color = "red";
-            feedback.textContent = "Oops! Something went wrong.";
+            showMessage("Oops! Something went wrong.", "red");
         }
     } catch (error) {
-        feedback.style.display = "block";
-        feedback.style.color = "red";
-        feedback.textContent = "Network error. Please try again.";
+        showMessage("Network error. Please try again.", "red");
     }
 });
+
+function showMessage(message, color) {
+    feedback.style.display = "block";
+    feedback.style.color = color;
+    feedback.textContent = message;
+
+    // Auto hide after 4 seconds
+    setTimeout(() => {
+        feedback.style.display = "none";
+        feedback.textContent = "";
+    }, 4000);
+}

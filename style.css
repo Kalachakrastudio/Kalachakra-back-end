@@ -74,22 +74,23 @@ body{
 }
 
 /* Buttons - Premium Look */
-.start-btn, .cta-btn{
-    padding:12px 30px;
-    border:none;
-    border-radius:40px; /* smooth rounded */
-    background: linear-gradient(145deg, #9e8f78 0%, #a9a5a0 100%);
-    color:#18182d;
+..start-btn, .cta-btn {
+    padding:12px 35px;
+    border: 2px solid #9e8f78; /* subtle premium border */
+    border-radius:40px;
+    background: transparent; /* flat */
+    color: #9e8f78;
     font-weight:600;
     font-size:16px;
     cursor:pointer;
     transition:0.3s ease;
-    box-shadow: 0 4px 10px rgba(158,143,120,0.2); /* subtle soft shadow */
 }
 
-.start-btn:hover, .cta-btn:hover{
-    transform: translateY(-2px) scale(1.03);
-    box-shadow:0 6px 15px rgba(158,143,120,0.35); /* elegant glow on hover */
+.start-btn:hover, .cta-btn:hover {
+    background: rgba(158,143,120,0.1); /* soft subtle hover effect */
+    color: #a9a5a0;
+    transform: translateY(-2px);
+    border-color: #a9a5a0;
 }
 /* HERO */
 .hero{

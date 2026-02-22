@@ -50,6 +50,7 @@ body{
     background:linear-gradient(90deg,#9e8f78,#a9a5a0);
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
+    text-decoration:none;
 }
 
 .nav{

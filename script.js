@@ -50,42 +50,46 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-const form = document.getElementById("contact-form");
-const feedback = document.getElementById("form-feedback");
+document.addEventListener("DOMContentLoaded", function () {
 
-form.addEventListener("submit", async function (e) {
-    e.preventDefault();
+    const form = document.getElementById("contact-form");
+    const feedback = document.getElementById("form-feedback");
 
-    const formData = new FormData(form);
+    form.addEventListener("submit", async function (e) {
+        e.preventDefault();
 
-    try {
-        const response = await fetch(form.action, {
-            method: "POST",
-            body: formData,
-            headers: {
-                Accept: "application/json"
+        const formData = new FormData(form);
+
+        try {
+            const response = await fetch(form.action, {
+                method: "POST",
+                body: formData,
+                headers: {
+                    Accept: "application/json"
+                }
+            });
+
+            if (response.ok) {
+                showMessage("Message sent successfully! 🚀", "#9e8f78");
+                form.reset();
+            } else {
+                showMessage("Oops! Something went wrong.", "red");
             }
-        });
 
-        if (response.ok) {
-            showMessage("Message sent successfully! 🚀", "#9e8f78");
-            form.reset(); // clear fields
-        } else {
-            showMessage("Oops! Something went wrong.", "red");
+        } catch (error) {
+            showMessage("Network error. Please try again.", "red");
         }
-    } catch (error) {
-        showMessage("Network error. Please try again.", "red");
+    });
+
+    function showMessage(message, color) {
+        feedback.style.display = "block";
+        feedback.style.color = color;
+        feedback.textContent = message;
+
+        setTimeout(() => {
+            feedback.style.display = "none";
+            feedback.textContent = "";
+        }, 4000);
     }
+
 });
-
-function showMessage(message, color) {
-    feedback.style.display = "block";
-    feedback.style.color = color;
-    feedback.textContent = message;
-
-    // Auto hide after 4 seconds
-    setTimeout(() => {
-        feedback.style.display = "none";
-        feedback.textContent = "";
-    }, 4000);
-}

@@ -323,25 +323,25 @@ body{
 
 /* ===== FOOTER ===== */
 .footer {
-    background: #18182d; /* matches site color */
+    background: #18182d; /* matches the website color */
     color: #F1F1F1;
     text-align: center;
     padding: 40px 8%;
     font-size: 14px;
     border-top: 1px solid rgba(241,241,241,0.05);
     width: 100%;
-    position: relative; /* stays below content */
+    position: relative; /* ensures it stays below content */
 }
 
 .footer p {
     margin: 0;
-    color: #a9a5a0;
+    color: #a9a5a0; /* subtle text color */
     font-weight: 400;
     letter-spacing: 0.5px;
 }
 
 .footer a {
-    color: #9e8f78;
+    color: #9e8f78; /* link color matches brand */
     text-decoration: none;
     transition: 0.3s;
     font-weight: 500;

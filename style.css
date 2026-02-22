@@ -103,7 +103,7 @@ body{
     display: none;
 }
 
-/* HERO SECTION - FIXED ALIGNMENT */
+/* HERO SECTION */
 .hero{
     display:flex;
     flex-direction:column;
@@ -167,7 +167,7 @@ body{
     border-radius:2px;
 }
 
-/* ===== ABOUT SECTION ===== */
+/* ===== ABOUT SECTION FIXED ===== */
 .about {
     background:
         radial-gradient(circle at 20% 25%, rgba(158,143,120,0.08), transparent 60%),
@@ -182,25 +182,26 @@ body{
     max-width:1200px;
     margin:auto;
     display:flex;
-    flex-direction:row;
-    gap:60px;
+    flex-direction: row;
+    gap: 60px;
     align-items:flex-start;
     justify-content:space-between;
 }
 
-/* Left side text */
+/* LEFT TEXT */
 .about-text {
-    flex:1;
+    flex: 1 1 55%; /* 55% width */
     text-align: left;
+    min-width: 300px;
 }
 
 .about-text h2 {
     font-size:42px;
-    margin-bottom:10px;
-    position:relative;
+    margin-bottom:20px;
+    position: relative;
 }
 
-.about-text h2::after{
+.about-text h2::after {
     content:"";
     display:block;
     width:60px;
@@ -211,7 +212,7 @@ body{
 }
 
 .about-text span {
-    color: #9e8f78;
+    color:#9e8f78;
 }
 
 .about-text .lead {
@@ -223,42 +224,43 @@ body{
 .about-text p {
     line-height:1.7;
     margin-bottom:15px;
+    color:#F1F1F1;
 }
 
-/* Right side cards */
+/* RIGHT CARDS */
 .about-cards {
-    flex:1;
-    display:flex;
+    flex: 1 1 40%; /* 40% width */
+    display: flex;
     flex-direction: column;
-    gap:20px;
-    align-items:flex-end; /* align cards to right */
+    gap: 20px;
+    align-items: flex-end; /* align right side */
 }
 
 .card {
-    padding:20px;
-    border-radius:12px;
+    padding: 20px;
+    border-radius: 12px;
     background: rgba(241,241,241,0.05);
-    border:1px solid rgba(241,241,241,0.08);
-    transition:0.3s ease;
-    width:100%;
-    max-width:350px;
+    border: 1px solid rgba(241,241,241,0.08);
+    transition: 0.3s ease;
+    width: 100%;
+    max-width: 350px;
 }
 
 .card:hover {
-    transform:translateY(-5px);
-    border-color:#9e8f78;
+    transform: translateY(-5px);
+    border-color: #9e8f78;
     box-shadow:0 0 15px #9e8f78;
 }
 
 .card h3 {
-    margin-bottom:10px;
-    font-weight:600;
+    margin-bottom: 10px;
+    font-weight: 600;
 }
 
 .card p {
-    color:#ccc;
-    font-size:14px;
-    line-height:1.5;
+    color: #ccc;
+    font-size: 14px;
+    line-height: 1.5;
 }
 
 /* SERVICES */
@@ -339,14 +341,14 @@ body{
     transform:rotate(-45deg) translate(6px,-6px);
 }
 
-/* ===== TRANSPARENT FOOTER ===== */
+/* FOOTER */
 .footer {
-    background: rgba(24, 24, 45, 0.6); /* transparent dark overlay */
+    background: rgba(24, 24, 45, 0.6);
     color: #F1F1F1;
     text-align: center;
     padding: 30px 8%;
     font-size: 14px;
-    border-top: 1px solid rgba(241,241,241,0.08); /* subtle line */
+    border-top: 1px solid rgba(241,241,241,0.08);
     width: 100%;
     position: relative;
 }
@@ -369,20 +371,12 @@ body{
     color: #F1F1F1;
 }
 
-/* Centered text for footer */
 .footer .footer-text {
     margin-bottom: 10px;
 }
 
-/* ===== MOBILE ===== */
+/* MOBILE FIXES */
 @media(max-width:992px){
-    .footer {
-        padding: 25px 5%;
-        font-size: 13px;
-    }
-    .footer .socials {
-        gap: 10px;
-    }
 
     .hero-title{
         font-size:55px;
@@ -416,23 +410,25 @@ body{
     }
 
     .about-container {
-        flex-direction: column; /* stacked on mobile */
+        flex-direction: column;
         text-align: center;
-        gap:40px;
+        gap: 40px;
     }
 
     .about-text {
+        flex: 1 1 100%;
         text-align: center;
     }
 
     .about-cards {
+        flex: 1 1 100%;
         align-items: center;
         width: 100%;
     }
 
     .card {
-        width:100%;
-        max-width:400px;
+        width: 100%;
+        max-width: 400px;
         text-align: center;
     }
 
@@ -449,28 +445,13 @@ body{
         font-size: 13px;
         border-radius: 28px;
     }
-}
 
-/* Desktop Layout */
-@media (min-width: 992px) {
-  .about-container {
-    display: flex;
-    gap: 60px;
-    align-items: flex-start;
-    justify-content: space-between;
-  }
+    .footer {
+        padding: 30px 5%;
+        font-size: 13px;
+    }
 
-  .about-text {
-    flex:1;
-    text-align: left;
-  }
-
-  .about-cards {
-    flex:1;
-    align-items:flex-end;
-  }
-
-  .about-text h2 {
-    font-size: 42px;
-  }
+    .footer .socials {
+        gap: 15px;
+    }
 }

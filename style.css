@@ -162,8 +162,7 @@ body{
     border-radius:2px;
 }
 
-/* ===== ABOUT SECTION ===== */
-/* ===== ABOUT SECTION ===== */
+/* ABOUT SECTION */
 .about {
     background:
         radial-gradient(circle at 20% 25%, rgba(158,143,120,0.08), transparent 60%),
@@ -180,7 +179,7 @@ body{
     margin: auto;
 }
 
-/* Section Title */
+/* Section header */
 .about-header {
     text-align: center;
     margin-bottom: 50px;
@@ -193,10 +192,6 @@ body{
     font-weight: 700;
 }
 
-.about-header h2.section-title span {
-    color: #ff69b4;
-}
-
 .about-header .line {
     width: 60px;
     height: 3px;
@@ -205,7 +200,7 @@ body{
     border-radius: 2px;
 }
 
-/* Main content - 2 columns */
+/* MAIN CONTENT */
 .about-main {
     display: flex;
     gap: 60px;
@@ -213,7 +208,7 @@ body{
     justify-content: space-between;
 }
 
-/* LEFT - Cards */
+/* CARDS LEFT (Desktop) */
 .about-cards {
     flex: 1 1 45%;
     display: flex;
@@ -226,7 +221,7 @@ body{
     border-radius: 12px;
     background: rgba(241,241,241,0.05);
     border: 1px solid rgba(241,241,241,0.08);
-    transition: 0.3s ease;
+    transition: 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     width: 100%;
 }
 
@@ -242,13 +237,14 @@ body{
     line-height: 1.5;
 }
 
+/* HOVER EFFECT */
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    box-shadow: 0 0 20px #9e8f78;
     border-color: #9e8f78;
-    box-shadow: 0 0 15px #9e8f78;
 }
 
-/* RIGHT - Text */
+/* TEXT RIGHT (Desktop) */
 .about-text {
     flex: 1 1 50%;
     text-align: left;
@@ -266,19 +262,21 @@ body{
     color: #F1F1F1;
 }
 
-/* MOBILE STACK */
-@media(max-width:992px){
+/* MOBILE RESPONSIVE */
+@media (max-width: 992px) {
     .about-main {
-        flex-direction: column-reverse;
+        flex-direction: column;
         text-align: center;
         gap: 40px;
     }
 
     .about-text {
+        order: 0; /* Text on top */
         text-align: center;
     }
 
     .about-cards {
+        order: 1; /* Cards below */
         align-items: center;
         width: 100%;
     }
@@ -288,7 +286,6 @@ body{
         text-align: center;
     }
 }
-
 /* SERVICES */
 .service-grid{
     display:grid;

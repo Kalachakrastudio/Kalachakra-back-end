@@ -75,7 +75,7 @@ body{
     gap:20px;
 }
 
-/* ===== BUTTONS - PREMIUM MINIMALISTIC ===== */
+/* ===== BUTTONS ===== */
 .start-btn, .cta-btn {
     padding: 10px 25px;
     border: 2px solid #9e8f78;
@@ -145,6 +145,29 @@ body{
     margin-top:10px;
 }
 
+/* ===== SECTIONS ===== */
+.about, .services, .contact{
+    padding:120px 8%;
+    text-align:center;
+}
+
+.section-title{
+    margin-bottom:30px;
+    font-size:40px;
+    color:#F1F1F1;
+    position:relative;
+}
+
+.section-title::after{
+    content:"";
+    display:block;
+    width:60px;
+    height:3px;
+    background:#9e8f78;
+    margin:15px auto 0;
+    border-radius:2px;
+}
+
 /* ===== ABOUT SECTION ===== */
 .about {
     background:
@@ -154,75 +177,73 @@ body{
     color: #F1F1F1;
     position: relative;
     overflow: hidden;
-    padding:120px 8%;
 }
 
 .about-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 60px;
-    max-width: 1200px;
-    margin: 0 auto;
-    width: 100%;
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    gap:60px;
+    align-items:flex-start;
+    justify-content:space-between;
 }
 
 /* LEFT SIDE TEXT */
 .about-text {
-    flex: 1;
+    flex:1;
     text-align: left;
 }
 
 .about-text h2 {
-    font-size: 42px;
-    font-weight: 700;
-    margin-bottom: 20px;
+    font-size:42px;
+    font-weight:700;
+    margin-bottom:20px;
 }
 
 .about-text h2 span {
-    color: #9e8f78; /* Highlight color for brand name */
+    color: #9e8f78;
 }
 
 .about-text p {
-    font-size: 18px;
-    line-height: 1.7;
-    margin-bottom: 15px;
-    color: #a9a5a0;
+    font-size:18px;
+    line-height:1.7;
+    margin-bottom:15px;
+    color:#a9a5a0;
 }
 
 /* RIGHT SIDE CARDS */
 .about-cards {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
 }
 
 .card {
-    padding: 25px 30px;
-    border-radius: 15px;
+    padding:25px 30px;
+    border-radius:15px;
     background: rgba(241,241,241,0.05);
-    border: 1px solid rgba(241,241,241,0.08);
+    border:1px solid rgba(241,241,241,0.08);
     transition: all 0.3s ease;
 }
 
 .card h3 {
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 10px;
-    color: #F1F1F1;
+    font-size:18px;
+    font-weight:600;
+    margin-bottom:10px;
+    color:#F1F1F1;
 }
 
 .card p {
-    font-size: 14px;
-    color: #a9a5a0;
-    line-height: 1.5;
+    font-size:14px;
+    color:#a9a5a0;
+    line-height:1.5;
 }
 
 .card:hover {
     transform: translateY(-5px);
     border-color: #9e8f78;
-    box-shadow: 0 0 20px rgba(158,143,120,0.3);
+    box-shadow:0 0 20px rgba(158,143,120,0.3);
 }
 
 /* ===== SERVICES ===== */
@@ -305,52 +326,62 @@ body{
 
 /* ===== FOOTER ===== */
 .footer {
-    background: rgba(24, 24, 45, 0.6);
+    background: rgba(24,24,45,0.6);
     color: #F1F1F1;
     text-align: center;
     padding: 30px 8%;
     font-size: 14px;
-    border-top: 1px solid rgba(241,241,241,0.08);
-    width: 100%;
+    border-top:1px solid rgba(241,241,241,0.08);
+    width:100%;
     position: relative;
 }
 
 .footer p {
-    margin: 0;
-    font-weight: 400;
-    color: #a9a5a0;
-    letter-spacing: 0.5px;
+    margin:0;
+    font-weight:400;
+    color:#a9a5a0;
+    letter-spacing:0.5px;
 }
 
 .footer a {
-    color: #9e8f78;
-    text-decoration: none;
-    font-weight: 500;
-    transition: 0.3s;
+    color:#9e8f78;
+    text-decoration:none;
+    font-weight:500;
+    transition:0.3s;
 }
 
 .footer a:hover {
-    color: #F1F1F1;
+    color:#F1F1F1;
 }
 
 .footer .footer-text {
-    margin-bottom: 10px;
+    margin-bottom:10px;
 }
 
-/* ===== RESPONSIVE - MOBILE ===== */
-@media(max-width: 992px) {
+/* ===== DESKTOP SPECIFIC ===== */
+@media(min-width:992px){
+    .about-container {
+        flex-direction:row; /* Text left, cards right */
+        text-align:left;
+    }
+    .start-btn.desktop-only {
+        display:inline-block;
+    }
+    .start-btn.mobile-only {
+        display:none;
+    }
+}
 
-    /* HERO */
+/* ===== MOBILE ===== */
+@media(max-width:992px){
     .hero-title{
         font-size:55px;
     }
-
     .hero-sub{
         max-width:90%;
         font-size:16px;
     }
 
-    /* NAV */
     .hamburger{
         display:flex;
     }
@@ -373,70 +404,47 @@ body{
         right:0;
     }
 
-    /* ABOUT */
+    /* About Section Mobile */
     .about-container {
-        flex-direction: column;
-        text-align: center;
-        gap: 40px;
+        flex-direction:column;
+        text-align:center;
+        gap:40px;
     }
 
     .about-text {
-        text-align: center;
+        text-align:center;
     }
 
     .about-cards {
-        align-items: center;
-        width: 100%;
+        align-items:center;
+        width:100%;
     }
 
     .card {
-        width: 100%;
-        max-width: 400px;
-        text-align: center;
+        width:100%;
+        max-width:400px;
+        text-align:center;
     }
 
-    /* BUTTONS */
+    /* Buttons */
     .start-btn.desktop-only {
-        display: none;
+        display:none;
     }
-
     .start-btn.mobile-only {
-        display: inline-block;
+        display:inline-block;
     }
-
     .start-btn, .cta-btn {
-        padding: 9px 22px;
-        font-size: 13px;
-        border-radius: 28px;
+        padding:9px 22px;
+        font-size:13px;
+        border-radius:28px;
     }
 
-    /* FOOTER */
+    /* Footer */
     .footer {
-        padding: 25px 5%;
-        font-size: 13px;
+        padding:30px 5%;
+        font-size:13px;
     }
     .footer .socials {
-        gap: 15px;
-    }
-}
-
-/* ===== DESKTOP SPECIFIC ===== */
-@media (min-width: 992px) {
-    .about-container {
-        display: flex;
-        gap: 60px;
-        align-items: center;
-    }
-
-    .about-text {
-        flex: 1;
-    }
-
-    .about-cards {
-        flex: 1;
-    }
-
-    .about-text h2 {
-        font-size: 42px;
+        gap:15px;
     }
 }

@@ -258,10 +258,12 @@ body{
     .nav.active{
         right:0;
     }
-}
 .about {
     padding: 120px 8%;
-    background: linear-gradient(135deg, #0f0f0f, #1c1c1c, #111111);
+    background:
+        radial-gradient(circle at 15% 25%, rgba(0,0,0,0.9), transparent 60%),
+        radial-gradient(circle at 85% 75%, rgba(20,20,20,0.9), transparent 60%),
+        linear-gradient(135deg, #000000, #0c0c14, #000000);
     color: #ffffff;
     position: relative;
     overflow: hidden;

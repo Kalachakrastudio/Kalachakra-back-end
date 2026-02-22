@@ -306,7 +306,7 @@ body{
     transform:translateY(-10px);
     box-shadow:0 0 35px #9e8f78;
 }
-.sevice-p{
+.service-card:p{
     color:#a9a5a0;
 }
 /* CONTACT FORM */

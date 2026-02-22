@@ -321,61 +321,49 @@ body{
     transform:rotate(-45deg) translate(6px,-6px);
 }
 
-/* ===== FOOTER ===== */
+/* ===== TRANSPARENT FOOTER ===== */
 .footer {
-    background: #18182d; /* matches the website color */
+    background: rgba(24, 24, 45, 0.6); /* transparent dark overlay */
     color: #F1F1F1;
     text-align: center;
-    padding: 40px 8%;
+    padding: 30px 8%;
     font-size: 14px;
-    border-top: 1px solid rgba(241,241,241,0.05);
+    border-top: 1px solid rgba(241,241,241,0.08); /* subtle line */
     width: 100%;
-    position: relative; /* ensures it stays below content */
+    position: relative;
 }
 
 .footer p {
     margin: 0;
-    color: #a9a5a0; /* subtle text color */
     font-weight: 400;
+    color: #a9a5a0;
     letter-spacing: 0.5px;
 }
 
 .footer a {
-    color: #9e8f78; /* link color matches brand */
+    color: #9e8f78;
     text-decoration: none;
-    transition: 0.3s;
     font-weight: 500;
+    transition: 0.3s;
 }
 
 .footer a:hover {
     color: #F1F1F1;
 }
 
-.footer .socials {
-    margin-top: 15px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+/* Centered text for footer */
+.footer .footer-text {
+    margin-bottom: 10px;
 }
 
-.footer .socials a {
-    color: #9e8f78;
-    font-size: 18px;
-    transition: 0.3s;
-}
-
-.footer .socials a:hover {
-    color: #F1F1F1;
-}
-
-/* MOBILE FOOTER */
+/* ===== MOBILE ===== */
 @media(max-width:992px){
     .footer {
-        padding: 30px 5%;
+        padding: 25px 5%;
         font-size: 13px;
     }
     .footer .socials {
-        gap: 15px;
+        gap: 10px;
     }
 }
 /* MOBILE */

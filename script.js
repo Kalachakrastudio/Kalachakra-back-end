@@ -49,3 +49,16 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+document.addEventListener("DOMContentLoaded", function(){
+    const form = document.getElementById("contact-form");
+    const feedback = document.getElementById("form-feedback");
+
+    form.addEventListener("submit", function(e){
+        e.preventDefault();
+        
+        // Simulate sending
+        feedback.style.display = "block";
+        feedback.textContent = "Thank you! Your message has been received.";
+        form.reset();
+    });
+});

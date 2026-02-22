@@ -47,3 +47,40 @@ document.addEventListener("DOMContentLoaded", () => {
 
     observer.observe(document.querySelector('.about-header'));
 });
+
+
+
+const form = document.getElementById("contact-form");
+const feedback = document.getElementById("form-feedback");
+
+form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    try {
+        const response = await fetch(form.action, {
+            method: "POST",
+            body: formData,
+            headers: {
+                Accept: "application/json"
+            }
+        });
+
+        if (response.ok) {
+            feedback.style.display = "block";
+            feedback.style.color = "#9e8f78";
+            feedback.textContent = "Message sent successfully! 🚀";
+
+            form.reset(); // ✅ This clears the fields
+        } else {
+            feedback.style.display = "block";
+            feedback.style.color = "red";
+            feedback.textContent = "Oops! Something went wrong.";
+        }
+    } catch (error) {
+        feedback.style.display = "block";
+        feedback.style.color = "red";
+        feedback.textContent = "Network error. Please try again.";
+    }
+});

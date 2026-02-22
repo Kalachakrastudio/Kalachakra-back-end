@@ -360,3 +360,60 @@ body{
         align-items:center;
     }
 }
+/* FOOTER */
+.footer {
+    background: #18182d;
+    color: #F1F1F1;
+    text-align: center;
+    padding: 40px 8%;
+    font-size: 14px;
+    border-top: 1px solid rgba(241,241,241,0.05);
+    position: relative;
+    z-index: 100;
+}
+
+.footer p {
+    margin: 0;
+    color: #a9a5a0;
+}
+
+.footer a {
+    color: #9e8f78;
+    text-decoration: none;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+.footer a:hover {
+    color: #F1F1F1;
+}
+
+/* Optional social icons container */
+.footer .socials {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer .socials a {
+    color: #9e8f78;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.footer .socials a:hover {
+    color: #F1F1F1;
+}
+
+/* MOBILE */
+@media(max-width:992px){
+    .footer {
+        padding: 30px 5%;
+        font-size:13px;
+    }
+
+    .footer .socials {
+        gap: 15px;
+    }
+}

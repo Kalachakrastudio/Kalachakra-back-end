@@ -146,45 +146,22 @@
     </div>
 </section>
 
-<!-- CONTACT -->
 <section class="contact" id="contact">
     <h2 class="section-title">Let’s Build Something Amazing</h2>
     <div class="line"></div>
 
     <form 
         class="contact-form" 
-        action="https://formspree.io/f/mkovqlgv" 
+        id="contact-form"
+        action="https://formspree.io/f/YOUR_FORM_ID"
         method="POST"
     >
-        <input 
-            type="text" 
-            name="name" 
-            placeholder="Your Name" 
-            required
-        >
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Tell us about your project" required></textarea>
 
-        <input 
-            type="email" 
-            name="email" 
-            placeholder="Your Email" 
-            required
-        >
-
-        <textarea 
-            name="message" 
-            placeholder="Tell us about your project" 
-            required
-        ></textarea>
-
-        <!-- Optional: prevent spam -->
-        <input type="text" name="_honey" style="display:none">
-
-        <!-- Optional: redirect after success -->
-        <input type="hidden" name="_subject" value="New Message from Website">
-
-        <button type="submit" class="cta-btn">
-            Send Message
-        </button>
+        <button type="submit" class="cta-btn">Send Message</button>
+        <p id="form-feedback" style="margin-top:10px; display:none;"></p>
     </form>
 </section>
 <footer class="footer">

@@ -73,13 +73,13 @@ body{
     gap:20px;
 }
 
-/* Buttons - Premium Look */
+/* Buttons - Premium Minimalistic */
 .start-btn, .cta-btn {
     padding: 12px 35px;
-    border: 2px solid #9e8f78;       /* subtle premium border */
-    border-radius: 35px;             /* smooth, elegant corners */
-    background: transparent;          /* minimalistic flat look */
-    color: #9e8f78;                  /* premium tone from palette */
+    border: 2px solid #9e8f78;
+    border-radius: 35px;
+    background: transparent;
+    color: #9e8f78;
     font-weight: 600;
     font-size: 16px;
     cursor: pointer;
@@ -87,11 +87,30 @@ body{
 }
 
 .start-btn:hover, .cta-btn:hover {
-    background: rgba(158,143,120,0.15);  /* soft subtle highlight on hover */
-    color: #a9a5a0;                       /* slight color shift for elegance */
-    transform: translateY(-2px);          /* tiny lift for premium feel */
-    border-color: #a9a5a0;                /* subtle hover border change */
+    background: rgba(158,143,120,0.15);
+    color: #a9a5a0;
+    transform: translateY(-2px);
+    border-color: #a9a5a0;
 }
+
+/* Visibility for desktop/mobile buttons */
+.start-btn.desktop-only {
+    display: inline-block;
+}
+
+.start-btn.mobile-only {
+    display: none;
+}
+
+@media(max-width:992px){
+    .start-btn.desktop-only {
+        display: none;
+    }
+    .start-btn.mobile-only {
+        display: inline-block;
+    }
+}
+
 /* HERO */
 .hero{
     min-height:100vh;
@@ -312,10 +331,6 @@ body{
 @media(max-width:992px){
     .hero-title{
         font-size:55px;
-    }
-
-    .start-btn.desktop-only{
-        display:none;
     }
 
     .hamburger{

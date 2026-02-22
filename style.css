@@ -75,22 +75,22 @@ body{
 
 /* Buttons - Premium Look */
 .start-btn, .cta-btn {
-    padding:12px 35px;
-    border: 2px solid #9e8f78; /* subtle premium border */
-    border-radius:40px;
-    background: transparent; /* flat */
-    color: #9e8f78;
-    font-weight:600;
-    font-size:16px;
-    cursor:pointer;
-    transition:0.3s ease;
+    padding: 12px 35px;
+    border: 2px solid #9e8f78;       /* subtle premium border */
+    border-radius: 35px;             /* smooth, elegant corners */
+    background: transparent;          /* minimalistic flat look */
+    color: #9e8f78;                  /* premium tone from palette */
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .start-btn:hover, .cta-btn:hover {
-    background: rgba(158,143,120,0.1); /* soft subtle hover effect */
-    color: #a9a5a0;
-    transform: translateY(-2px);
-    border-color: #a9a5a0;
+    background: rgba(158,143,120,0.15);  /* soft subtle highlight on hover */
+    color: #a9a5a0;                       /* slight color shift for elegance */
+    transform: translateY(-2px);          /* tiny lift for premium feel */
+    border-color: #a9a5a0;                /* subtle hover border change */
 }
 /* HERO */
 .hero{

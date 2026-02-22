@@ -261,9 +261,9 @@ body{
 .about {
     padding: 120px 8%;
     background:
-        radial-gradient(circle at 15% 25%, rgba(0,0,0,0.9), transparent 60%),
-        radial-gradient(circle at 85% 75%, rgba(20,20,20,0.9), transparent 60%),
-        linear-gradient(135deg, #000000, #0c0c14, #000000);
+        radial-gradient(circle at 20% 25%, rgba(120, 60, 255, 0.08), transparent 60%),
+        radial-gradient(circle at 80% 75%, rgba(0, 200, 255, 0.08), transparent 60%),
+        linear-gradient(135deg, #000000, #0a0d18, #000000);
     color: #ffffff;
     position: relative;
     overflow: hidden;

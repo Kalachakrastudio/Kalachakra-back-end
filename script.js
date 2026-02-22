@@ -49,29 +49,3 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// contact.js (or whatever your JS file is named)
-
-// Initialize EmailJS
-(function() {
-    emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
-})();
-
-// Wait until DOM is fully loaded
-document.addEventListener("DOMContentLoaded", function() {
-    const form = document.getElementById('contact-form');
-
-    if(form) {
-        form.addEventListener('submit', function(e) {
-            e.preventDefault(); // Prevent default form submission
-
-            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
-            .then(() => {
-                alert('Message sent successfully!');
-                form.reset(); // Clear the form after success
-            }, (err) => {
-                alert('Failed to send message. Please try again.');
-                console.error('EmailJS error:', err);
-            });
-        });
-    }
-});

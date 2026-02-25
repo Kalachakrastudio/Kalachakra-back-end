@@ -8,17 +8,13 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-
-<!-- GSAP -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
 
 <div class="gradient-bg"></div>
 
-<!-- HEADER (UNCHANGED) -->
+<!-- HEADER -->
 <header class="header">
     <div class="logo"><a href="index.html#home">Kalachakra</a></div>
 
@@ -30,7 +26,8 @@
     </nav>
 
     <div class="nav-right">
-        <button class="start-btn desktop-only" onclick="location.href='index.html#contact'">
+        <button class="start-btn desktop-only"
+            onclick="location.href='index.html#contact'">
             Start Project
         </button>
 
@@ -48,11 +45,8 @@
     <h1 class="hero-title">Brand Identity</h1>
     <p class="hero-sub">
         We build structured brand systems that create clarity,
-        recognition and long-term positioning in competitive markets.
+        recognition and long-term positioning.
     </p>
-    <button class="cta-btn" onclick="location.href='#details'">
-        Explore Details
-    </button>
 </section>
 
 <!-- WHAT WE DELIVER -->
@@ -71,9 +65,8 @@
                     A brand is more than a logo — it is perception.
                 </p>
                 <p>
-                    We create complete identity systems that align
-                    strategy, design, and communication into one
-                    powerful and consistent presence.
+                    We craft complete identity systems aligned with
+                    strategy, design and strong market positioning.
                 </p>
             </div>
 
@@ -81,17 +74,17 @@
 
                 <div class="card">
                     <h3>Logo System</h3>
-                    <p>Primary logo, variations, usage rules & export formats.</p>
+                    <p>Primary logo, variations and structured export files.</p>
                 </div>
 
                 <div class="card">
                     <h3>Brand Guidelines</h3>
-                    <p>Typography, color codes, spacing rules & identity manual.</p>
+                    <p>Typography, color systems and identity manual.</p>
                 </div>
 
                 <div class="card">
                     <h3>Visual Language</h3>
-                    <p>Icons, patterns, imagery style and layout structure.</p>
+                    <p>Icons, layouts and consistent brand elements.</p>
                 </div>
 
                 <div class="card">
@@ -100,9 +93,7 @@
                 </div>
 
             </div>
-
         </div>
-
     </div>
 </section>
 
@@ -114,37 +105,22 @@
 
         <div class="service-card">
             <h3>01. Research & Analysis</h3>
-            <p>
-                We analyze competitors, target audience behavior,
-                business model and industry trends to define
-                clear positioning opportunities.
-            </p>
+            <p>Audience study, competitor mapping and brand audit.</p>
         </div>
 
         <div class="service-card">
             <h3>02. Strategic Planning</h3>
-            <p>
-                We define brand mission, vision, voice,
-                messaging pillars and overall direction
-                before visual design begins.
-            </p>
+            <p>Defining positioning, voice and messaging pillars.</p>
         </div>
 
         <div class="service-card">
-            <h3>03. Design Execution</h3>
-            <p>
-                Logo concepts, typography systems, color psychology,
-                visual assets and structured layouts are developed
-                with premium precision.
-            </p>
+            <h3>03. Identity Design</h3>
+            <p>Logo system, typography and visual structure creation.</p>
         </div>
 
         <div class="service-card">
             <h3>04. Final Delivery</h3>
-            <p>
-                Complete brand kit, guidelines PDF, editable files,
-                and support for smooth implementation.
-            </p>
+            <p>Brand kit, guidelines document and asset support.</p>
         </div>
 
     </div>
@@ -154,10 +130,9 @@
 <section class="pricing" id="pricing">
     <h2 class="section-title">Brand Identity Packages</h2>
 
-    <div class="pricing-grid">
+    <div class="pricing-wrapper">
 
-        <!-- SILVER -->
-        <div class="pricing-card">
+        <div class="pricing-card silver">
             <h3>Silver Package</h3>
             <div class="price">₹15,000</div>
             <ul>
@@ -167,14 +142,9 @@
                 <li>Basic Brand Guidelines</li>
                 <li>2 Revisions</li>
             </ul>
-            <button class="purchase-btn"
-                onclick="document.getElementById('orderForm').scrollIntoView({behavior:'smooth'})">
-                Purchase Package
-            </button>
         </div>
 
-        <!-- GOLD -->
-        <div class="pricing-card popular">
+        <div class="pricing-card gold">
             <h3>Gold Package</h3>
             <div class="price">₹35,000</div>
             <ul>
@@ -184,55 +154,64 @@
                 <li>Social Media Kit</li>
                 <li>4 Revisions</li>
             </ul>
-            <button class="purchase-btn"
-                onclick="document.getElementById('orderForm').scrollIntoView({behavior:'smooth'})">
-                Purchase Package
-            </button>
         </div>
 
-        <!-- PLATINUM -->
-        <div class="pricing-card">
+        <div class="pricing-card platinum">
             <h3>Platinum Package</h3>
             <div class="price">₹65,000</div>
             <ul>
                 <li>Premium Logo System</li>
                 <li>Full Brand Strategy</li>
-                <li>Complete Visual Language</li>
+                <li>Visual Language</li>
                 <li>Stationery Kit</li>
                 <li>Unlimited Revisions</li>
             </ul>
-            <button class="purchase-btn"
-                onclick="document.getElementById('orderForm').scrollIntoView({behavior:'smooth'})">
-                Purchase Package
-            </button>
         </div>
 
     </div>
 
-    <!-- ORDER FORM -->
-    <form id="orderForm"
-          action="https://formspree.io/f/yourformid"
+    <!-- SEND INQUIRY BUTTON -->
+    <div class="pricing-cta">
+        <a href="#inquiryForm" class="cta-btn">Send Inquiry</a>
+    </div>
+
+</section>
+
+<!-- INQUIRY FORM -->
+<section class="contact-form-section" id="inquiryForm">
+    <h2 class="section-title">Start Your Brand Identity Project</h2>
+
+    <form action="https://formspree.io/f/yourformid"
           method="POST"
-          class="order-form">
+          class="contact-form">
 
         <input type="text" name="name" placeholder="Your Name" required>
         <input type="email" name="email" placeholder="Your Email" required>
 
-        <select name="package">
+        <!-- SERVICE (DEFAULT SELECTED) -->
+        <select name="service" required>
+            <option value="Brand Identity" selected>Brand Identity</option>
+            <option value="Website Design">Website Design</option>
+            <option value="Social Media Branding">Social Media Branding</option>
+        </select>
+
+        <!-- PACKAGE -->
+        <select name="package" required>
+            <option value="">Select Package</option>
             <option value="Silver">Silver</option>
             <option value="Gold">Gold</option>
             <option value="Platinum">Platinum</option>
-            <option value="Custom">Custom Package</option>
+            <option value="Custom">Custom Requirement</option>
         </select>
 
         <textarea name="message"
-            placeholder="Describe your requirement"></textarea>
+            placeholder="Tell us about your brand and requirements"></textarea>
 
         <button type="submit" class="cta-btn">
-            Place Order
+            Submit Inquiry
         </button>
-    </form>
 
+    </form>
 </section>
 
 <footer class="footer">
@@ -240,8 +219,6 @@
         © <span id="year"></span> Kalachakra Studio — All Rights Reserved
     </p>
 </footer>
-
-
 
 <script src="script.js"></script>
 

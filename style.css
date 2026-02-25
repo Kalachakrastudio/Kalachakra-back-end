@@ -1,4 +1,7 @@
-/* ================= RESET ================= */
+/* =========================
+   RESET
+========================= */
+
 *{
     margin:0;
     padding:0;
@@ -11,159 +14,142 @@ html{
 
 body{
     font-family:'Poppins',sans-serif;
-    background:#18182d;
+    background:#070b18;
     color:#F1F1F1;
     overflow-x:hidden;
 }
 
-/* ================= BACKGROUND GLOW ================= */
-.gradient-bg{
-    position:fixed;
-    width:100%;
-    height:100%;
-    background:
-        radial-gradient(circle at 20% 30%, #9e8f7840, transparent 40%),
-        radial-gradient(circle at 80% 70%, #a9a5a040, transparent 40%);
-    filter:blur(140px);
-    z-index:-1;
-}
+/* =========================
+   HEADER
+========================= */
 
-/* ================= HEADER ================= */
 .header{
     position:fixed;
     top:0;
     left:0;
     width:100%;
-    padding:20px 8%;
+    background:#18182d;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    backdrop-filter:blur(20px);
-    background:rgba(24,24,45,0.8);
-    border-bottom:1px solid rgba(241,241,241,0.05);
+    padding:15px 8%;
     z-index:1000;
 }
 
-.logo{
-    font-weight:700;
-    font-size:20px;
-    background:linear-gradient(90deg,#9e8f78,#a9a5a0);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
+.logo a{
+    font-size:22px;
+    font-weight:600;
+    text-decoration:none;
+    color:#F1F1F1;
 }
 
-.logo a{
-    text-decoration:none;
-}
+/* =========================
+   NAVIGATION
+========================= */
 
 .nav{
     display:flex;
-    gap:40px;
+    gap:30px;
     align-items:center;
 }
 
 .nav a{
-    color:#F1F1F1;
     text-decoration:none;
-    font-size:14px;
+    color:#F1F1F1;
+    font-size:15px;
     transition:0.3s;
 }
 
 .nav a:hover{
-    color:#9e8f78;
+    color:#d4af37;
 }
 
-.nav-right{
-    display:flex;
-    align-items:center;
-    gap:20px;
-}
+/* =========================
+   DROPDOWN FIX
+========================= */
 
-/* ================= BUTTONS ================= */
-.start-btn, .cta-btn{
-    padding:10px 25px;
-    border:2px solid #9e8f78;
-    border-radius:30px;
-    background:transparent;
-    color:#9e8f78;
-    font-weight:600;
-    font-size:12px;
-    cursor:pointer;
-    transition:0.3s ease;
-}
-
-.start-btn:hover, .cta-btn:hover{
-    background:rgba(158,143,120,0.12);
-    color:#a9a5a0;
-    transform:translateY(-2px);
-}
-
-.start-btn.desktop-only{display:inline-block;}
-.start-btn.mobile-only{display:none;}
-
-/* ================= HERO ================= */
-.hero{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:160px 8% 100px;
-}
-
-.tagline{
-    font-weight:300;
-    letter-spacing:3px;
-    margin-bottom:20px;
-    color:#a9a5a0;
-}
-
-.hero-title{
-    font-size:90px;
-    font-weight:900;
-    line-height:1.1;
-    margin-bottom:20px;
-}
-
-.hero-sub{
-    max-width:650px;
-    margin:20px auto;
-    color:#a9a5a0;
-    line-height:1.5;
-}
-
-/* ================= SECTIONS ================= */
-.about, .services, .contact, .pricing, .contact-form-section{
-    padding:120px 8%;
-    text-align:center;
-}
-
-.section-title{
-    margin-bottom:30px;
-    font-size:40px;
+.dropdown{
     position:relative;
 }
 
-.section-title::after{
-    content:"";
-    display:block;
-    width:60px;
-    height:3px;
-    background:#9e8f78;
-    margin:15px auto 0;
+.dropdown-menu{
+    position:absolute;
+    top:100%;
+    left:0;
+    background:#18182d;
+    min-width:200px;
+    display:none;
+    flex-direction:column;
+    border-radius:8px;
+    padding:10px 0;
+    z-index:999;
 }
 
-/* ================= ABOUT ================= */
-.about-wrapper{
-    max-width:1200px;
-    margin:auto;
+.dropdown-menu a{
+    padding:10px 15px;
+    display:block;
+    color:#F1F1F1;
 }
+
+.dropdown:hover .dropdown-menu{
+    display:flex;
+}
+
+/* =========================
+   MOBILE NAV
+========================= */
+
+.hamburger{
+    display:none;
+    cursor:pointer;
+}
+
+@media(max-width:768px){
+
+    .nav{
+        position:absolute;
+        top:70px;
+        left:-100%;
+        flex-direction:column;
+        background:#18182d;
+        width:100%;
+        padding:30px 0;
+        transition:0.4s;
+    }
+
+    .nav.active{
+        left:0;
+    }
+
+    .hamburger{
+        display:block;
+    }
+
+    .dropdown-menu{
+        position:static;
+        background:transparent;
+        padding-left:20px;
+    }
+}
+
+/* =========================
+   SECTION SPACING
+========================= */
+
+section{
+    padding:100px 8%;
+}
+
+/* =========================
+   ABOUT SECTION
+========================= */
 
 .about-main{
     display:flex;
-    gap:60px;
-    align-items:flex-start;
+    gap:50px;
+    align-items:center;
     justify-content:space-between;
+    flex-wrap:wrap;
 }
 
 .about-text{
@@ -171,189 +157,177 @@ body{
 }
 
 .about-text p{
-    margin-bottom:15px;
+    line-height:1.8;
 }
 
-.about-cards{
+.about-image{
     flex:1;
+}
+
+.about-image img{
+    width:100%;
+    border-radius:16px;
+}
+
+/* =========================
+   PROCESS SECTION
+========================= */
+
+.process-wrapper{
     display:flex;
-    flex-direction:column;
-    gap:20px;
+    justify-content:space-between;
+    gap:30px;
+    flex-wrap:wrap;
 }
 
-.card{
-    padding:25px 20px;
-    border-radius:12px;
-    background:rgba(241,241,241,0.05);
-    border:1px solid rgba(241,241,241,0.08);
-    transition:0.3s ease;
+.process-card{
+    flex:1;
+    min-width:250px;
+    background:#18182d;
+    padding:25px;
+    border-radius:16px;
+    transition:0.3s;
 }
 
-.card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 0 20px #9e8f78;
+.process-card:hover{
+    transform:translateY(-5px);
 }
 
-/* ================= SERVICES ================= */
-.service-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+/* =========================
+   WHAT WE DELIVER
+========================= */
+
+.deliver-wrapper{
+    display:flex;
+    flex-wrap:wrap;
     gap:30px;
 }
 
-.service-card{
-    padding:30px;
-    background:rgba(241,241,241,0.05);
-    border-radius:20px;
-    border:1px solid rgba(241,241,241,0.05);
-    transition:0.4s;
+.deliver-card{
+    flex:1;
+    min-width:250px;
+    background:#18182d;
+    padding:25px;
+    border-radius:16px;
 }
 
-.service-card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 0 35px #9e8f78;
-}
+/* =========================
+   PRICING SECTION FIX
+========================= */
 
-.service-card p{
-    color:#a9a5a0;
-}
-
-/* ================= PRICING ================= */
 .pricing-wrapper{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
+    display:flex;
+    justify-content:center;
     gap:30px;
-    margin-top:60px;
+    flex-wrap:wrap;
+    margin-top:50px;
 }
 
 .pricing-card{
-    padding:40px 30px;
-    background:rgba(241,241,241,0.05);
+    width:300px;
+    background:#18182d;
+    padding:35px;
     border-radius:20px;
-    border:1px solid rgba(241,241,241,0.08);
-    transition:0.4s;
+    text-align:center;
+    transition:0.3s;
 }
 
-.pricing-card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 0 35px #9e8f78;
+.pricing-card h3{
+    margin-bottom:15px;
+}
+
+.pricing-card h2{
+    margin-bottom:20px;
+    font-weight:600;
+}
+
+.pricing-card ul{
+    list-style:none;
+    margin-bottom:25px;
+}
+
+.pricing-card ul li{
+    margin:10px 0;
 }
 
 .pricing-card.gold{
-    border:2px solid #d4af37;
     transform:scale(1.05);
+    border:2px solid #d4af37;
 }
 
-/* ================= CONTACT FORM ================= */
-.contact-form{
+.pricing-card.active-package{
+    border:2px solid #d4af37;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn{
+    display:inline-block;
+    padding:12px 25px;
+    border-radius:30px;
+    text-decoration:none;
+    background:#d4af37;
+    color:#000;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.btn:hover{
+    opacity:0.85;
+}
+
+/* =========================
+   FORM
+========================= */
+
+form{
     max-width:600px;
-    margin:40px auto 0;
+    margin:auto;
     display:flex;
     flex-direction:column;
     gap:20px;
 }
 
-.contact-form input,
-.contact-form textarea,
-.contact-form select{
-    padding:15px;
+input, textarea, select{
+    padding:12px;
+    border-radius:8px;
     border:none;
-    border-radius:12px;
-    background:rgba(241,241,241,0.08);
+    outline:none;
+    background:#18182d;
     color:#F1F1F1;
-    font-family:'Poppins',sans-serif;
 }
 
-.contact-form textarea{
-    min-height:120px;
+textarea{
     resize:none;
+    height:120px;
 }
 
-/* ================= FOOTER ================= */
-.footer{
-    background:rgba(24,24,45,0.6);
-    text-align:center;
-    padding:30px 8%;
-    border-top:1px solid rgba(241,241,241,0.08);
-}
+/* =========================
+   RESPONSIVE FIX
+========================= */
 
-.footer p{
-    color:#a9a5a0;
-}
-
-/* ================= HAMBURGER ================= */
-.hamburger{
-    display:none;
-    flex-direction:column;
-    gap:5px;
-    cursor:pointer;
-}
-
-.hamburger span{
-    width:25px;
-    height:3px;
-    background:#F1F1F1;
-    transition:0.4s;
-}
-
-.hamburger.active span:nth-child(1){
-    transform:rotate(45deg) translate(5px,5px);
-}
-.hamburger.active span:nth-child(2){
-    opacity:0;
-}
-.hamburger.active span:nth-child(3){
-    transform:rotate(-45deg) translate(6px,-6px);
-}
-
-/* ================= MOBILE ================= */
 @media(max-width:992px){
 
-    .hero-title{
-        font-size:55px;
-    }
-
-    .hamburger{
-        display:flex;
-    }
-
-    .nav{
-        position:fixed;
-        right:-100%;
-        top:0;
-        height:100vh;
-        width:220px;
-        background:#18182d;
+    .pricing-wrapper{
         flex-direction:column;
-        align-items:flex-start;
-        padding:100px 30px;
-        gap:30px;
-        transition:0.4s ease;
+        align-items:center;
     }
 
-    .nav.active{
-        right:0;
+    .pricing-card{
+        width:90%;
     }
 
     .about-main{
         flex-direction:column;
-        text-align:center;
-        gap:40px;
     }
 
-    .pricing-wrapper{
-        grid-template-columns:1fr;
+    .process-wrapper{
+        flex-direction:column;
     }
 
-    .pricing-card.gold{
-        transform:scale(1);
-    }
-
-    .start-btn.desktop-only{
-        display:none;
-    }
-
-    .start-btn.mobile-only{
-        display:inline-block;
+    .deliver-wrapper{
+        flex-direction:column;
     }
 }

@@ -4,227 +4,167 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" href="Icon_White.png">
-<title>Brand Identity | Kalachakra Studio</title>
+<title>Kalachakra Studio</title>
 
+<!-- Poppins -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet" href="css/style.css">
+
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
 
 <div class="gradient-bg"></div>
 
-<!-- HEADER -->
 <header class="header">
-    <div class="logo">
-        <a href="index.html#home">Kalachakra</a>
-    </div>
+    <div class="logo"><a href="index.html#home">Kalachakra</a></div>
 
-    <nav class="nav">
-        <a href="index.html#home">Home</a>
-        <a href="index.html#about">About</a>
-        <a href="index.html#services">Services</a>
+    <nav class="nav" id="nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
         <a href="#contact">Contact</a>
     </nav>
 
     <div class="nav-right">
-        <button class="start-btn desktop-only" onclick="location.href='#contact'">
-            Start Project
-        </button>
+  <button class="start-btn desktop-only" onclick="location.href='#contact'">
+    Start Project
+</button>
+
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </div>
 </header>
 
 <!-- HERO -->
-<section class="hero">
-    <h3 class="tagline">Premium Brand Systems</h3>
+<section class="hero" id="home">
+
+    <h3 class="tagline">Where Creativity Meets Precision</h3>
 
     <h1 class="hero-title">
-        Brand Identity
+        <span>K</span><span>A</span><span>L</span><span>A</span><span>C</span><span>H</span><span>A</span><span>K</span><span>R</span><span>A</span>
+  <br>
+  <span>S</span><span>T</span><span>U</span><span>D</span><span>I</span><span>O</span>
     </h1>
 
     <p class="hero-sub">
-        We design powerful brand identities that position your business with clarity,
-        authority and long-term scalability in competitive markets.
+       We help brands build powerful identities, grow digitally with strategy, and communicate with clarity and impact.
     </p>
 
-    <button class="cta-btn" onclick="location.href='#pricing'">
-        View Packages
-    </button>
+    <button class="cta-btn" onclick="location.href='#services'">
+    Explore Our Services
+</button>
+
 </section>
 
-<!-- PROCESS -->
-<section class="about">
+<!-- ABOUT -->
+<section class="about" id="about">
     <div class="about-wrapper">
 
         <div class="about-header">
-            <h2 class="section-title">Our Process</h2>
+           <h2 class="section-title">About Us</h2>
+            
+           
         </div>
 
-        <div class="about-cards">
+        <div class="about-main">
+            <div class="about-text">
+                <p class="lead">
+                    Kalachakra Studio is a creative branding and digital content studio focused on building powerful brand identities in today’s competitive digital landscape.
+                </p>
 
-            <div class="card">
-                <h3>01. Discovery & Strategy</h3>
                 <p>
-                    We conduct in-depth research about your industry, audience and competitors
-                    to define positioning, tone and brand direction.
+                    We merge strategy, creativity, and structured execution to craft brands that are memorable, professional, and growth-driven. Our work goes beyond visuals — we create systems that strengthen identity, enhance perception, and drive measurable impact.
+                </p>
+
+                <p>
+                    Whether launching a new venture or scaling an existing business, we design cohesive brand ecosystems that increase visibility, credibility, and long-term success.
                 </p>
             </div>
 
-            <div class="card">
-                <h3>02. Concept Development</h3>
-                <p>
-                    Multiple logo directions, typography exploration and color systems
-                    built with strategic intent.
-                </p>
-            </div>
+            <div class="about-cards">
+                <div class="card">
+                    <h3>Strategic Branding</h3>
+                    <p>Positioning brands with clarity, purpose, and strong market differentiation.</p>
+                </div>
 
-            <div class="card">
-                <h3>03. Design Execution</h3>
-                <p>
-                    Final logo system refinement, scalable brand elements and
-                    structured visual identity framework.
-                </p>
-            </div>
+                <div class="card">
+                    <h3>Creative Excellence</h3>
+                    <p>Bold visuals and refined design systems crafted for premium perception.</p>
+                </div>
 
-            <div class="card">
-                <h3>04. Final Delivery</h3>
-                <p>
-                    Complete brand guideline document and professional file formats
-                    ready for digital and print usage.
-                </p>
+                <div class="card">
+                    <h3>Growth Focused</h3>
+                    <p>Structured frameworks built to increase visibility and long-term brand authority.</p>
+                </div>
             </div>
-
         </div>
+
     </div>
 </section>
 
-<!-- WHAT WE DELIVER -->
-<section class="services">
-    <h2 class="section-title">What We Deliver</h2>
+<!-- SERVICES -->
+<section class="services" id="services">
+    <h2 class="section-title">Our Services</h2>
 
     <div class="service-grid">
-
-        <div class="service-card">
-            <h3>Logo System</h3>
-            <p>Primary logo, secondary logo and icon variations.</p>
+        <div class="service-card" href="brand-identity.html">
+            <h3>Brand Identity</h3>
+            <p>Premium branding and digital presence systems.</p>
         </div>
 
         <div class="service-card">
-            <h3>Color Palette</h3>
-            <p>Strategic brand colors with HEX, RGB and CMYK values.</p>
+            <h3>Social Media Presence</h3>
+            <p>Professional management and content strategy for consistent growth.</p>
         </div>
 
         <div class="service-card">
-            <h3>Typography System</h3>
-            <p>Professional font pairing and hierarchy guidelines.</p>
+            <h3>Digital Campaigns</h3>
+            <p>Targeted campaigns to boost reach, engagement, and visibility.</p>
         </div>
 
         <div class="service-card">
-            <h3>Brand Elements</h3>
-            <p>Custom patterns, icons and supporting visual assets.</p>
+            <h3>Visual Content</h3>
+            <p>High-quality posts and reels that tell your brand story visually.</p>
         </div>
 
-        <div class="service-card">
-            <h3>Social Media Kit</h3>
-            <p>Profile image, cover and branded post templates.</p>
+         <div class="service-card">
+            <h3>Creative Copy</h3>
+            <p>Strategic copywriting to strengthen brand voice and audience connection.</p>
         </div>
 
-        <div class="service-card">
-            <h3>Brand Guidelines PDF</h3>
-            <p>Complete brand manual ensuring long-term consistency.</p>
+         <div class="service-card">
+            <h3>Brand Strategy & Consultation</h3>
+            <p>Expert guidance to define your brand vision, positioning, and growth roadmap.</p>
         </div>
-
     </div>
 </section>
 
-<!-- PRICING -->
-<section class="services" id="pricing">
-    <h2 class="section-title">Brand Packages</h2>
-
-    <div class="pricing-wrapper">
-
-        <!-- SILVER -->
-        <div class="pricing-card">
-            <h3>Silver</h3>
-            <h2>₹15,000</h2>
-
-            <ul>
-                <li>✔ 2 Logo Concepts</li>
-                <li>✔ Final Logo Files</li>
-                <li>✔ Basic Color Palette</li>
-                <li>✔ 3 Revisions</li>
-            </ul>
-        </div>
-
-        <!-- GOLD -->
-        <div class="pricing-card gold">
-            <h3>Gold</h3>
-            <h2>₹30,000</h2>
-
-            <ul>
-                <li>✔ 3 Logo Concepts</li>
-                <li>✔ Complete Identity System</li>
-                <li>✔ Typography & Color Strategy</li>
-                <li>✔ Social Media Kit</li>
-                <li>✔ 5 Revisions</li>
-            </ul>
-        </div>
-
-        <!-- PLATINUM -->
-        <div class="pricing-card">
-            <h3>Platinum</h3>
-            <h2>₹55,000</h2>
-
-            <ul>
-                <li>✔ Full Brand Strategy</li>
-                <li>✔ Advanced Logo System</li>
-                <li>✔ Brand Pattern & Visual Assets</li>
-                <li>✔ Complete Brand Guidelines PDF</li>
-                <li>✔ Unlimited Revisions</li>
-            </ul>
-        </div>
-
-    </div>
-
-    <div style="margin-top:50px;">
-        <button class="cta-btn" onclick="location.href='#contact'">
-            Send Inquiry
-        </button>
-    </div>
-</section>
-
-<!-- CONTACT -->
 <section class="contact" id="contact">
-    <h2 class="section-title">Start Your Brand Project</h2>
+    <h2 class="section-title">Let’s Build Something Amazing</h2>
+    <div class="line"></div>
 
     <form 
-        class="contact-form"
+        class="contact-form" 
+        id="contact-form"
         action="https://formspree.io/f/mkovqlgv"
         method="POST"
     >
-
-        <!-- Hidden Service -->
-        <input type="hidden" name="service" value="Brand Identity">
-
         <input type="text" name="name" placeholder="Your Name" required>
         <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Tell us about your project" required></textarea>
 
-        <select name="package" required>
-            <option value="">Select Package</option>
-            <option value="Silver">Silver</option>
-            <option value="Gold" selected>Gold</option>
-            <option value="Platinum">Platinum</option>
-        </select>
-
-        <textarea name="message" placeholder="Tell us about your brand vision" required></textarea>
-
-        <button type="submit" class="cta-btn">
-            Send Inquiry
-        </button>
+        <button type="submit" class="cta-btn">Send Message</button>
+        <p id="form-feedback" style="margin-top:10px; display:none;"></p>
     </form>
 </section>
-
-<!-- FOOTER -->
 <footer class="footer">
     <p class="footer-text">
         © <span id="year"></span> Kalachakra Studio — All Rights Reserved
@@ -232,8 +172,9 @@
 </footer>
 
 <script>
-document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
+<script src="js/script.js"></script>
 </body>
 </html>

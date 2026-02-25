@@ -16,7 +16,7 @@ body{
     overflow-x:hidden;
 }
 
-/* ================= BACKGROUND ================= */
+/* ================= BACKGROUND GLOW ================= */
 .gradient-bg{
     position:fixed;
     width:100%;
@@ -47,13 +47,13 @@ body{
 .logo{
     font-weight:700;
     font-size:20px;
+    background:linear-gradient(90deg,#9e8f78,#a9a5a0);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
 }
 
 .logo a{
     text-decoration:none;
-    background:linear-gradient(90deg,#9e8f78,#a9a5a0);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
 }
 
 .nav{
@@ -80,42 +80,56 @@ body{
 }
 
 /* ================= BUTTONS ================= */
-.start-btn, .cta-btn {
-    padding: 10px 25px;
-    border: 2px solid #9e8f78;
-    border-radius: 30px;
-    background: transparent;
-    color: #9e8f78;
-    font-weight: 600;
-    font-size: 12px;
-    cursor: pointer;
-    transition: 0.3s ease;
+.start-btn, .cta-btn{
+    padding:10px 25px;
+    border:2px solid #9e8f78;
+    border-radius:30px;
+    background:transparent;
+    color:#9e8f78;
+    font-weight:600;
+    font-size:12px;
+    cursor:pointer;
+    transition:0.3s ease;
 }
 
-.start-btn:hover, .cta-btn:hover {
-    background: rgba(158,143,120,0.12);
-    color: #a9a5a0;
-    transform: translateY(-2px);
+.start-btn:hover, .cta-btn:hover{
+    background:rgba(158,143,120,0.12);
+    color:#a9a5a0;
+    transform:translateY(-2px);
 }
 
-.start-btn.mobile-only { display:none; }
+.start-btn.desktop-only{display:inline-block;}
+.start-btn.mobile-only{display:none;}
 
 /* ================= HERO ================= */
 .hero{
-    padding:160px 8% 100px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
     text-align:center;
+    padding:160px 8% 100px;
+}
+
+.tagline{
+    font-weight:300;
+    letter-spacing:3px;
+    margin-bottom:20px;
+    color:#a9a5a0;
 }
 
 .hero-title{
-    font-size:70px;
+    font-size:90px;
     font-weight:900;
+    line-height:1.1;
     margin-bottom:20px;
 }
 
 .hero-sub{
     max-width:650px;
-    margin:auto;
+    margin:20px auto;
     color:#a9a5a0;
+    line-height:1.5;
 }
 
 /* ================= SECTIONS ================= */
@@ -125,8 +139,9 @@ body{
 }
 
 .section-title{
-    margin-bottom:40px;
-    font-size:36px;
+    margin-bottom:30px;
+    font-size:40px;
+    position:relative;
 }
 
 .section-title::after{
@@ -139,14 +154,24 @@ body{
 }
 
 /* ================= ABOUT ================= */
+.about-wrapper{
+    max-width:1200px;
+    margin:auto;
+}
+
 .about-main{
     display:flex;
     gap:60px;
+    align-items:flex-start;
     justify-content:space-between;
 }
 
 .about-text{
     flex:1;
+}
+
+.about-text p{
+    margin-bottom:15px;
 }
 
 .about-cards{
@@ -157,11 +182,11 @@ body{
 }
 
 .card{
-    padding:25px;
-    background:rgba(241,241,241,0.05);
+    padding:25px 20px;
     border-radius:12px;
+    background:rgba(241,241,241,0.05);
     border:1px solid rgba(241,241,241,0.08);
-    transition:0.3s;
+    transition:0.3s ease;
 }
 
 .card:hover{
@@ -172,7 +197,7 @@ body{
 /* ================= SERVICES ================= */
 .service-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
     gap:30px;
 }
 
@@ -180,12 +205,17 @@ body{
     padding:30px;
     background:rgba(241,241,241,0.05);
     border-radius:20px;
-    transition:0.3s;
+    border:1px solid rgba(241,241,241,0.05);
+    transition:0.4s;
 }
 
 .service-card:hover{
     transform:translateY(-10px);
-    box-shadow:0 0 25px #9e8f78;
+    box-shadow:0 0 35px #9e8f78;
+}
+
+.service-card p{
+    color:#a9a5a0;
 }
 
 /* ================= PRICING ================= */
@@ -193,18 +223,20 @@ body{
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:30px;
+    margin-top:60px;
 }
 
 .pricing-card{
     padding:40px 30px;
     background:rgba(241,241,241,0.05);
     border-radius:20px;
-    transition:0.3s;
+    border:1px solid rgba(241,241,241,0.08);
+    transition:0.4s;
 }
 
 .pricing-card:hover{
     transform:translateY(-10px);
-    box-shadow:0 0 30px #9e8f78;
+    box-shadow:0 0 35px #9e8f78;
 }
 
 .pricing-card.gold{
@@ -212,10 +244,10 @@ body{
     transform:scale(1.05);
 }
 
-/* ================= FORM ================= */
+/* ================= CONTACT FORM ================= */
 .contact-form{
     max-width:600px;
-    margin:auto;
+    margin:40px auto 0;
     display:flex;
     flex-direction:column;
     gap:20px;
@@ -228,18 +260,24 @@ body{
     border:none;
     border-radius:12px;
     background:rgba(241,241,241,0.08);
-    color:#fff;
+    color:#F1F1F1;
+    font-family:'Poppins',sans-serif;
 }
 
 .contact-form textarea{
     min-height:120px;
+    resize:none;
 }
 
 /* ================= FOOTER ================= */
 .footer{
+    background:rgba(24,24,45,0.6);
     text-align:center;
-    padding:30px;
+    padding:30px 8%;
     border-top:1px solid rgba(241,241,241,0.08);
+}
+
+.footer p{
     color:#a9a5a0;
 }
 
@@ -254,27 +292,29 @@ body{
 .hamburger span{
     width:25px;
     height:3px;
-    background:#fff;
-    transition:0.3s;
+    background:#F1F1F1;
+    transition:0.4s;
 }
 
 .hamburger.active span:nth-child(1){
     transform:rotate(45deg) translate(5px,5px);
 }
-
 .hamburger.active span:nth-child(2){
     opacity:0;
 }
-
 .hamburger.active span:nth-child(3){
     transform:rotate(-45deg) translate(6px,-6px);
 }
 
 /* ================= MOBILE ================= */
-@media (max-width:992px){
+@media(max-width:992px){
 
     .hero-title{
-        font-size:45px;
+        font-size:55px;
+    }
+
+    .hamburger{
+        display:flex;
     }
 
     .nav{
@@ -285,21 +325,20 @@ body{
         width:220px;
         background:#18182d;
         flex-direction:column;
+        align-items:flex-start;
         padding:100px 30px;
         gap:30px;
-        transition:0.4s;
+        transition:0.4s ease;
     }
 
     .nav.active{
         right:0;
     }
 
-    .hamburger{
-        display:flex;
-    }
-
     .about-main{
         flex-direction:column;
+        text-align:center;
+        gap:40px;
     }
 
     .pricing-wrapper{
@@ -308,5 +347,13 @@ body{
 
     .pricing-card.gold{
         transform:scale(1);
+    }
+
+    .start-btn.desktop-only{
+        display:none;
+    }
+
+    .start-btn.mobile-only{
+        display:inline-block;
     }
 }

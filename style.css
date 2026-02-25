@@ -485,6 +485,122 @@ body{
         font-size: 13px;
     }
 
+
+
+    /* ================= PRICING SECTION ================= */
+
+.pricing {
+    padding: 100px 8%;
+    text-align: center;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.pricing-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 20px;
+    padding: 40px 30px;
+    transition: 0.4s ease;
+    backdrop-filter: blur(12px);
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(255,255,255,0.25);
+}
+
+.pricing-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.pricing-card ul li {
+    margin: 12px 0;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.purchase-btn {
+    background: white;
+    color: black;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.purchase-btn:hover {
+    background: #cccccc;
+}
+
+/* Highlight Gold */
+.popular {
+    border: 2px solid white;
+    transform: scale(1.05);
+}
+
+/* Custom Package */
+.custom-package {
+    margin-top: 70px;
+}
+
+.custom-package h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+/* ORDER FORM */
+
+.order-form {
+    margin-top: 40px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.order-form input,
+.order-form select,
+.order-form textarea {
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background: rgba(255,255,255,0.06);
+    color: white;
+}
+
+.order-form textarea {
+    min-height: 100px;
+    resize: none;
+}
+
+.order-form input::placeholder,
+.order-form textarea::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+
     .footer .socials {
         gap: 15px;
     }

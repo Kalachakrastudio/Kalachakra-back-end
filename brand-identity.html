@@ -241,33 +241,7 @@
     </p>
 </footer>
 
-<script>
-document.getElementById("year").textContent = new Date().getFullYear();
 
-gsap.registerPlugin(ScrollTrigger);
-
-gsap.from(".service-card", {
-    opacity: 0,
-    y: 60,
-    duration: 1,
-    stagger: 0.2,
-    scrollTrigger: {
-        trigger: "#process",
-        start: "top 80%"
-    }
-});
-
-gsap.from(".pricing-card", {
-    opacity: 0,
-    y: 60,
-    duration: 1,
-    stagger: 0.2,
-    scrollTrigger: {
-        trigger: "#pricing",
-        start: "top 80%"
-    }
-});
-</script>
 
 <script src="script.js"></script>
 

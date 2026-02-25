@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Brand Identity | Kalachakra Studio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="gradient-bg"></div>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="logo">
+        <a href="index.html">Kalachakra Studio</a>
+    </div>
+
+    <nav class="nav" id="nav">
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#contact">Contact</a>
+    </nav>
+
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <p class="tagline">OUR SERVICE</p>
+    <h1 class="hero-title">Brand Identity</h1>
+    <p class="hero-sub">
+        We create powerful brand systems that define how your business looks, feels, and communicates.
+        A strong identity builds trust, recognition, and long-term impact.
+    </p>
+
+    <div class="hero-buttons">
+        <a href="#service-details" class="cta-btn">Explore Details</a>
+        <a href="index.html#contact" class="start-btn">Start Project</a>
+    </div>
+</section>
+
+<!-- SERVICE DETAILS -->
+<section class="about" id="service-details">
+    <div class="about-wrapper">
+
+        <div class="about-header">
+            <h2 class="section-title">What We Deliver</h2>
+            <div class="line active"></div>
+        </div>
+
+        <div class="about-main">
+
+            <!-- LEFT SIDE CARDS -->
+            <div class="about-cards">
+
+                <div class="card">
+                    <h3>Logo Design</h3>
+                    <p>Minimal, premium and timeless logo concepts crafted for brand recognition.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Brand Guidelines</h3>
+                    <p>Complete brand rulebook including typography, colors, and visual consistency system.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Visual Identity System</h3>
+                    <p>Icons, patterns, layouts and visual language aligned with your positioning.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Brand Positioning</h3>
+                    <p>Clear brand voice and messaging that connects with your target audience.</p>
+                </div>
+
+            </div>
+
+            <!-- RIGHT SIDE TEXT -->
+            <div class="about-text">
+                <p class="lead">
+                    A brand is not just a logo — it is an experience.
+                </p>
+
+                <p>
+                    At Kalachakra Studio, we build identities that feel premium,
+                    strategic, and aligned with your long-term vision.
+                </p>
+
+                <p>
+                    Our approach combines creative thinking with structured strategy,
+                    ensuring your brand stands strong in a competitive market.
+                </p>
+
+                <a href="index.html#contact" class="cta-btn">Discuss Your Brand</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- PROCESS SECTION -->
+<section class="services">
+    <h2 class="section-title">Our Process</h2>
+
+    <div class="service-grid">
+
+        <div class="service-card">
+            <h3>01. Research</h3>
+            <p>Understanding your business, competitors, and target audience.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>02. Strategy</h3>
+            <p>Defining positioning, tone, and creative direction.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>03. Design</h3>
+            <p>Crafting premium visuals aligned with strategy.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>04. Delivery</h3>
+            <p>Final assets, brand guidelines, and implementation support.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <p>© 2026 Kalachakra Studio. All rights reserved.</p>
+</footer>
+
+<!-- MOBILE NAV SCRIPT -->
+<script>
+const hamburger = document.getElementById("hamburger");
+const nav = document.getElementById("nav");
+
+hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    nav.classList.toggle("active");
+});
+</script>
+
+</body>
+</html>

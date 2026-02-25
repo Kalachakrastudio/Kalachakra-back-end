@@ -34,21 +34,26 @@ gsap.utils.toArray(".service-card").forEach(card => {
         ease: "power3.out"
     });
 });
-document.addEventListener("DOMContentLoaded", () => {
-    const line = document.querySelector('.about-header .line');
+document.addEventListener("DOMContentLoaded", function () {
 
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if(entry.isIntersecting){
-                line.classList.add('active');
-            }
+    const hamburger = document.getElementById("hamburger");
+    const nav = document.getElementById("nav");
+
+    if (hamburger && nav) {
+        hamburger.addEventListener("click", function(){
+            hamburger.classList.toggle("active");
+            nav.classList.toggle("active");
         });
-    }, { threshold: 0.5 }); // triggers when 50% of about section is visible
 
-    observer.observe(document.querySelector('.about-header'));
+        document.querySelectorAll(".nav a").forEach(link => {
+            link.addEventListener("click", function(){
+                hamburger.classList.remove("active");
+                nav.classList.remove("active");
+            });
+        });
+    }
+
 });
-
-
 
 document.addEventListener("DOMContentLoaded", function () {
 

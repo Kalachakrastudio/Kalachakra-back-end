@@ -1,50 +1,95 @@
+const hamburger = document.getElementById("hamburger");
+const nav = document.getElementById("nav");
+
+hamburger.addEventListener("click", function(){
+    hamburger.classList.toggle("active");
+    nav.classList.toggle("active");
+});
+
+document.querySelectorAll(".nav a").forEach(link => {
+    link.addEventListener("click", function(){
+        hamburger.classList.remove("active");
+        nav.classList.remove("active");
+    });
+});
+gsap.registerPlugin(ScrollTrigger);
+
+/* HERO LETTER ANIMATION */
+gsap.from(".hero-title span", {
+    y: 120,
+    opacity: 0,
+    stagger: 0.08,
+    duration: 1,
+    ease: "power4.out"
+});
+gsap.utils.toArray(".service-card").forEach(card => {
+    gsap.from(card, {
+        scrollTrigger: {
+            trigger: card,
+            start: "top 85%"
+        },
+        y: 80,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out"
+    });
+});
+document.addEventListener("DOMContentLoaded", () => {
+    const line = document.querySelector('.about-header .line');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                line.classList.add('active');
+            }
+        });
+    }, { threshold: 0.5 }); // triggers when 50% of about section is visible
+
+    observer.observe(document.querySelector('.about-header'));
+});
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
 
-    /* ===============================
-       MOBILE NAV SAFE CHECK
-    =============================== */
+    const form = document.getElementById("contact-form");
+    const feedback = document.getElementById("form-feedback");
 
-    const hamburger = document.getElementById("hamburger");
-    const nav = document.getElementById("nav");
+    form.addEventListener("submit", async function (e) {
+        e.preventDefault();
 
-    if (hamburger && nav) {
-        hamburger.addEventListener("click", function () {
-            hamburger.classList.toggle("active");
-            nav.classList.toggle("active");
-        });
+        const formData = new FormData(form);
 
-        document.querySelectorAll(".nav a").forEach(link => {
-            link.addEventListener("click", function () {
-                hamburger.classList.remove("active");
-                nav.classList.remove("active");
+        try {
+            const response = await fetch(form.action, {
+                method: "POST",
+                body: formData,
+                headers: {
+                    Accept: "application/json"
+                }
             });
-        });
-    }
 
-    /* ===============================
-       SERVICE → AUTO SELECT GOLD
-    =============================== */
+            if (response.ok) {
+                showMessage("Message sent successfully! 🚀", "#9e8f78");
+                form.reset();
+            } else {
+                showMessage("Oops! Something went wrong.", "red");
+            }
 
-    const urlParams = new URLSearchParams(window.location.search);
-    const selectedService = urlParams.get("service");
-
-    if (selectedService) {
-
-        const serviceField = document.getElementById("service");
-        const packageField = document.getElementById("package");
-
-        if (serviceField) {
-            serviceField.value = selectedService;
+        } catch (error) {
+            showMessage("Network error. Please try again.", "red");
         }
+    });
 
-        if (packageField) {
-            packageField.value = "Gold"; // Always highlight gold
-        }
+    function showMessage(message, color) {
+        feedback.style.display = "block";
+        feedback.style.color = color;
+        feedback.textContent = message;
 
-        const goldCard = document.querySelector(".pricing-card.gold");
-        if (goldCard) {
-            goldCard.classList.add("active-package");
-        }
+        setTimeout(() => {
+            feedback.style.display = "none";
+            feedback.textContent = "";
+        }, 4000);
     }
 
 });

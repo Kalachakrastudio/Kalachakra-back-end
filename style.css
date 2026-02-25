@@ -561,3 +561,12 @@ body{
 .dropdown-menu a:hover {
     background: rgba(255,255,255,0.05);
 }
+    .desktop-only {
+    display: block;
+}
+
+@media(max-width: 768px){
+    .desktop-only {
+        display: none;
+    }
+}

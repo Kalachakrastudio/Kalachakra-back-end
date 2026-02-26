@@ -492,9 +492,27 @@ body{
 .service-link {
     text-decoration: none;
     color: inherit;
-    display: block;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .service-card {
     cursor: pointer;
+}
+
+
+/* Remove mobile tap highlight */
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Remove blue focus outline */
+a:focus,
+a:active {
+    outline: none;
+}
+
+/* Keep your original text color */
+a,
+a:visited {
+    color: inherit;
 }

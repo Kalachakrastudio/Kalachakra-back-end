@@ -489,3 +489,12 @@ body{
         gap: 15px;
     }
 }
+.service-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.service-card {
+    cursor: pointer;
+}

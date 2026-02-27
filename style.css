@@ -213,6 +213,7 @@ a:focus-visible{
 .about-text p{
     line-height:1.7;
     margin-bottom:15px;
+   color : #a9a5a0;
 }
 
 .about-cards{
@@ -221,7 +222,11 @@ a:focus-visible{
     flex-direction:column;
     gap:20px;
 }
-
+.about-text p.lead {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #a9a5a0;
+}
 .card{
     padding:25px 20px;
     border-radius:12px;
@@ -234,6 +239,12 @@ a:focus-visible{
     transform:translateY(-8px);
     box-shadow:0 0 20px #9e8f78;
     border-color:#9e8f78;
+}
+
+.card p {
+    color: #a9a5a0;
+    font-size: 14px;
+    line-height: 1.5;
 }
 
 /* =========================
@@ -272,7 +283,9 @@ a:focus-visible{
 .service-grid a:active .service-card{
     transform:scale(0.98);
 }
-
+.service-card p {
+    color: #a9a5a0;
+}
 /* =========================
    MOBILE
 ========================= */

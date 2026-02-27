@@ -19,20 +19,35 @@ body{
 }
 
 /* =========================
-   GLOBAL LINK FIX (IMPORTANT)
+   UNIVERSAL LINK FIX (FINAL)
 ========================= */
-a,
+
+/* Remove all default link styles */
+a{
+    color:inherit;
+    text-decoration:none;
+    background:transparent;
+    -webkit-tap-highlight-color:transparent;
+}
+
+/* Force remove browser link colors in ALL states */
 a:link,
 a:visited,
 a:hover,
-a:active,
-a:focus{
-    text-decoration:none !important;
+a:active{
     color:inherit !important;
-    outline:none !important;
-    background:none !important;
-    -webkit-tap-highlight-color:transparent;
-    display:inline-block; /* prevents height issues */
+    text-decoration:none !important;
+}
+
+/* Remove focus ring (Chrome/Edge/Firefox) */
+a:focus,
+a:focus-visible{
+    outline:none;
+}
+
+/* Remove Safari forced link color */
+a:-webkit-any-link{
+    color:inherit;
 }
 
 /* =========================
@@ -83,7 +98,7 @@ a:focus{
 
 .nav a{
     font-size:14px;
-    transition:0.3s;
+    transition:0.3s ease;
 }
 
 .nav a:hover{
@@ -93,24 +108,25 @@ a:focus{
 /* =========================
    BUTTONS
 ========================= */
-.start-btn, .cta-btn {
-    padding: 10px 25px;
-    border: 2px solid #9e8f78;
-    border-radius: 30px;
-    background: transparent;
-    color: #9e8f78;
-    font-weight: 600;
-    font-size: 12px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+.start-btn, .cta-btn{
+    padding:10px 25px;
+    border:2px solid #9e8f78;
+    border-radius:30px;
+    background:transparent;
+    color:#9e8f78;
+    font-weight:600;
+    font-size:12px;
+    cursor:pointer;
+    transition:all 0.3s ease;
     display:inline-block;
 }
 
-.start-btn:hover, .cta-btn:hover {
-    background: rgba(158,143,120,0.12);
-    color: #a9a5a0;
-    transform: translateY(-2px);
-    border-color: #a9a5a0;
+.start-btn:hover, 
+.cta-btn:hover{
+    background:rgba(158,143,120,0.12);
+    color:#a9a5a0;
+    transform:translateY(-2px);
+    border-color:#a9a5a0;
 }
 
 /* =========================
@@ -159,7 +175,9 @@ a:focus{
 /* =========================
    SECTIONS
 ========================= */
-.about, .services, .contact{
+.about, 
+.services, 
+.contact{
     padding:120px 8%;
     text-align:center;
 }
@@ -229,20 +247,20 @@ a:focus{
     gap:30px;
 }
 
-/* Full clickable card fix */
+/* Make full card clickable without breaking height */
 .service-grid a{
-    display:block;        /* FIXED height issue */
+    display:block;
     height:100%;
 }
 
 .service-card{
+    height:100%;
     padding:30px;
     background:rgba(241,241,241,0.05);
     border-radius:20px;
     backdrop-filter:blur(15px);
     border:1px solid rgba(241,241,241,0.05);
     transition:all 0.4s ease;
-    height:100%;
     display:flex;
     flex-direction:column;
     justify-content:center;
@@ -256,7 +274,6 @@ a:focus{
 
 .service-grid a:active .service-card{
     transform:scale(0.98);
-    box-shadow:0 0 20px #9e8f78;
 }
 
 /* =========================

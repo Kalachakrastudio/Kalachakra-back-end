@@ -16,36 +16,6 @@ body{
     overflow-x:hidden;
 }
 
-/* =========================
-   CLEAN LINK CONTROL
-========================= */
-a{
-    text-decoration:none;
-    -webkit-tap-highlight-color:transparent;
-}
-
-/* Default link color */
-a:link,
-a:visited{
-    color:#F1F1F1;
-}
-
-/* Hover */
-a:hover{
-    color:#9e8f78;
-}
-
-/* Click */
-a:active{
-    color:#a9a5a0;
-}
-
-/* Remove focus outline */
-a:focus,
-a:focus-visible{
-    outline:none;
-}
-
 
 /* BACKGROUND GLOW */
 .gradient-bg{
